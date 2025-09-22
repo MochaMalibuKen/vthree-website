@@ -1,0 +1,120 @@
+{
+  "welcome": {
+    "title": "Bienvenido a VThree Agency",
+    "subtitle": "Construimos sitios web y ofrecemos consultoría digital."
+  },
+  "nav": {
+    "services": "Servicios",
+    "projects": "Proyectos",
+    "pricing": "Precios",
+    "contact": "Contacto",
+    "showChat": "Chat",
+    "hideChat": "Ocultar chat"
+  },
+  "hero": {
+    "title": "Sitios para pequeñas empresas que se ven bien y convierten.",
+    "subtitle": "Sitios rápidos y móviles con HTML semántico, CSS moderno, JavaScript limpio y React. Mensajes claros y rendimiento que convierte visitas en clientes.",
+    "ctaPrimary": "Agenda una consulta de 15 min",
+    "ctaSecondary": "Ver mi trabajo"
+  },
+  "about": {
+    "title": "Acerca de",
+    "lead": "Soy Kenni — desarrollador y solucionador de problemas. Ayudo a pequeñas empresas a lanzar sitios rápidos, fáciles de actualizar y diseñados para convertir. Uso HTML semántico, CSS moderno, JavaScript accesible y React para experiencias interactivas.",
+    "list": [
+      { "label": "Núcleo", "value": "HTML, CSS (Flex/Grid), JS (ES2023), React" },
+      { "label": "Calidad", "value": "a11y, auditorías Lighthouse, SEO básico" },
+      { "label": "Herramientas", "value": "Vite, GitHub, Netlify/Vercel, Figma" }
+    ]
+  },
+  "services": {
+    "title": "Servicios",
+    "subtitle": "Paquetes claros, precios transparentes, optimizados para velocidad y SEO.",
+    "items": [
+      {
+        "title": "Sitio de Lanzamiento",
+        "desc": "Sitio de una página, móvil primero, con un CTA claro. Ideal para nuevos negocios.",
+        "features": ["Diseño alineado con la marca", "Pulido de copy", "Formulario de contacto", "Analítica"]
+      },
+      {
+        "title": "Sitio de Crecimiento",
+        "desc": "Sitio multipágina con blog, SEO básico y optimizaciones de rendimiento.",
+        "features": ["Optimización de velocidad", "SEO local", "Listo para CMS", "Captura de correo"]
+      },
+      {
+        "title": "Listo para E-commerce",
+        "desc": "Páginas de producto, integración de carrito y buenas prácticas de conversión.",
+        "features": ["Integración de pagos", "Listo para pruebas A/B", "Marcado schema", "Seguridad"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Trabajos seleccionados. Pide una demo adaptada a tu sector.",
+    "techUsed": "Tecnologías",
+    "cta": { "live": "Sitio", "source": "Código" },
+    "items": [
+      {
+        "title": "Mighty Matt Kit Landing",
+        "blurb": "Landing page de alta conversión para línea de EPP.",
+        "tags": ["HTML", "CSS", "JS"]
+      },
+      {
+        "title": "Sitio de ONG Local",
+        "blurb": "Catálogo en React con filtros y búsqueda instantánea.",
+        "tags": ["React", "CSS", "Vite"]
+      },
+      {
+        "title": "PPE Catalog Site",
+        "blurb": "Sitio tipo brochure rápido con SEO local y schema.",
+        "tags": ["HTML", "CSS", "JS"]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Precios",
+    "subtitle": "Planes de pago flexibles y descuentos para organizaciones sin fines de lucro y pequeñas empresas.",
+    "cta": "Empezar",
+    "note": "Los precios son puntos de partida. El presupuesto final depende del alcance, contenido e integraciones.",
+    "once": "único",
+    "plans": {
+      "launch": {
+        "title": "Sitio de Lanzamiento",
+        "price": "$750+",
+        "blurb": "Sitio web simple y profesional para estar en línea rápidamente."
+      },
+      "growth": {
+        "title": "Sitio de Crecimiento",
+        "price": "$1500+",
+        "blurb": "Sitio web a medida y escalable para el crecimiento de tu negocio."
+      },
+      "commerce": {
+        "title": "Comercio Electrónico",
+        "price": "$2500+",
+        "blurb": "Tienda en línea con pago seguro, inventario e integraciones."
+      }
+    }
+  },
+  "contact": {
+    "title": "Hablemos",
+    "subtitle": "Cuéntame sobre tu negocio y objetivos.",
+    "labels": {
+      "name": "Nombre",
+      "email": "Correo",
+      "message": "Mensaje"
+    },
+    "placeholders": {
+      "name": "Tu nombre",
+      "email": "tú@dominio.com",
+      "message": "¿Qué necesitas?"
+    },
+    "cta": "Solicitar consulta",
+    "status": {
+      "success": "¡Gracias! Te responderé pronto.",
+      "error": "Algo salió mal. Por favor, envíame un correo."
+    }
+  },
+  "footer": {
+    "name": "Kenni Allen",
+    "built": "Hecho con HTML, CSS, JS y React."
+  }
+}

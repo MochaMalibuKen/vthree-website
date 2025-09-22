@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DOM Gallery Demo</title>
+<style>
+  body{font-family:system-ui;margin:2rem;background:#0b0d12;color:#e8eef5}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+  .tile{aspect-ratio:1/1;background:#111826;border-radius:12px;display:grid;place-items:center}
+  button{padding:.6rem 1rem;border-radius:.6rem}
+</style>
+</head>
+<body>
+  <h1>Vanilla JS: Dynamic Gallery</h1>
+  <button id="add">Add Tile</button>
+  <button id="shuffle">Shuffle</button>
+  <div class="grid" id="grid"></div>
+<script>
+  const grid = document.getElementById('grid');
+  const add = document.getElementById('add');
+  const shuffle = document.getElementById('shuffle');
+
+  function tile(i){
+    const d = document.createElement('div');
+    d.className='tile';
+    d.textContent = `#${i}`;
+    return d;
+  }
+  let n=6; for(let i=1;i<=n;i++) grid.appendChild(tile(i));
+
+  add.onclick = ()=> grid.appendChild(tile(++n));
+  shuffle.onclick = ()=>{
+    const nodes = Array.from(grid.children);
+    nodes.sort(()=>Math.random()-.5);
+    nodes.forEach(node=>grid.appendChild(node));
+  };
+</script>
+</body>
+</html>

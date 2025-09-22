@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Form Validation Demo</title>
+<style>
+  body{font-family:system-ui;margin:2rem;background:#0b0d12;color:#e8eef5}
+  .card{max-width:520px;padding:1rem;border-radius:12px;background:rgba(255,255,255,.06)}
+  input{width:100%;padding:.7rem;border-radius:.5rem;border:1px solid #2b3244;background:#0f1623;color:#e8eef5}
+  .error{color:#fca5a5}
+</style>
+</head>
+<body>
+  <h1>Vanilla JS: Inline Form Validation</h1>
+  <div class="card">
+    <form id="demo-form" novalidate>
+      <label>Email<br><input id="email" type="email" required></label>
+      <p id="msg" class="error" role="alert"></p>
+      <button>Submit</button>
+    </form>
+  </div>
+<script>
+  const form = document.getElementById('demo-form');
+  const email = document.getElementById('email');
+  const msg = document.getElementById('msg');
+  form.addEventListener('submit', e=>{
+    msg.textContent='';
+    if(!email.value.includes('@')){
+      e.preventDefault();
+      msg.textContent = 'Please enter a valid email (includes @).';
+      email.focus();
+    }
+  });
+</script>
+</body>
+</html>

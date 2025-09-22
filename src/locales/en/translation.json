@@ -1,0 +1,120 @@
+{
+  "welcome": {
+    "title": "Welcome to VThree Agency",
+    "subtitle": "We build websites and provide digital consulting."
+  },
+  "nav": {
+    "services": "Services",
+    "projects": "Projects",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "showChat": "Chat",
+    "hideChat": "Hide Chat"
+  },
+  "hero": {
+    "title": "Small-business sites that look great and convert.",
+    "subtitle": "Fast, mobile-first websites built with semantic HTML, modern CSS, clean JavaScript, and React. Clear messaging and performance that turns visitors into customers.",
+    "ctaPrimary": "Get a free 15-min consult",
+    "ctaSecondary": "See my work"
+  },
+  "about": {
+    "title": "About",
+    "lead": "I’m Kenni—developer and problem-solver. I help small businesses launch sites that are fast, easy to update, and built to convert. I use semantic HTML, modern CSS, accessible JavaScript, and React for interactive experiences.",
+    "list": [
+      { "label": "Core", "value": "HTML, CSS (Flex/Grid), JS (ES2023), React" },
+      { "label": "Quality", "value": "a11y, Lighthouse audits, SEO basics" },
+      { "label": "Tools", "value": "Vite, GitHub, Netlify/Vercel, Figma" }
+    ]
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Clear packages, transparent pricing, built for speed and SEO.",
+    "items": [
+      {
+        "title": "Launch Site",
+        "desc": "One-page, mobile-first site with a clear CTA. Perfect for new businesses.",
+        "features": ["Brand-aligned design", "Copy polish", "Contact form", "Analytics"]
+      },
+      {
+        "title": "Growth Site",
+        "desc": "Multi-page site with blog, SEO basics, and performance optimizations.",
+        "features": ["Page speed tuning", "Local SEO", "CMS-ready", "Email capture"]
+      },
+      {
+        "title": "E-commerce Ready",
+        "desc": "Product pages, cart integration, and conversions best practices.",
+        "features": ["Payment integration", "A/B-test ready", "Schema markup", "Security"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Selected builds. Ask for a tailored demo for your industry.",
+    "techUsed": "Tech used",
+    "cta": { "live": "Live", "source": "Source" },
+    "items": [
+      {
+        "title": "Mighty Matt Kit Landing",
+        "blurb": "High-converting landing page for PPE product line.",
+        "tags": ["HTML", "CSS", "JS"]
+      },
+      {
+        "title": "Local Non Profit Site",
+        "blurb": "React catalog with filters and instant search.",
+        "tags": ["React", "CSS", "Vite"]
+      },
+      {
+        "title": "PPE Catalog Site",
+        "blurb": "Fast brochure site with local SEO and schema.",
+        "tags": ["HTML", "CSS", "JS"]
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Flexible payment plans and discounts for Non-profits and Small Businesses.",
+    "cta": "Get Started",
+    "note": "Prices are starting points. Final quotes depend on scope, content, and integrations.",
+    "once": "one-time",
+    "plans": {
+      "launch": {
+        "title": "Launch Site",
+        "price": "$750+",
+        "blurb": "Simple, professional website to get you online fast."
+      },
+      "growth": {
+        "title": "Growth Site",
+        "price": "$1500+",
+        "blurb": "Custom, scalable website built for small-business growth."
+      },
+      "commerce": {
+        "title": "E-commerce",
+        "price": "$2500+",
+        "blurb": "Online store with secure checkout, inventory, and integrations."
+      }
+    }
+  },
+  "contact": {
+    "title": "Let’s talk",
+    "subtitle": "Tell me about your business and goals.",
+    "labels": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "Your name",
+      "email": "you@domain.com",
+      "message": "What do you need?"
+    },
+    "cta": "Request consult",
+    "status": {
+      "success": "Thanks! I’ll reply soon.",
+      "error": "Something went wrong. Please email me."
+    }
+  },
+  "footer": {
+    "name": "Kenni Allen",
+    "built": "Built with HTML, CSS, JS & React."
+  }
+}
