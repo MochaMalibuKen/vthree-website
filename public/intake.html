@@ -1,0 +1,168 @@
+--- /dev/null
++++ b/public/intake.html
+@@ -0,0 +1,165 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Start Your Project - VThree Agency</title>
++  <link rel="stylesheet" href="/assets/css/forms.css">
++  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
++</head>
++<body>
++  <header class="header">
++    <nav class="nav container">
++      <a href="/" class="brand">
++        <img src="/assets/V3logo.png" alt="VTHREE" class="logo">
++        <strong>VTHREE</strong>
++      </a>
++      <div class="nav-links">
++        <a href="/#services">Services</a>
++        <a href="/#projects">Projects</a>
++        <a href="/#contact">Contact</a>
++      </div>
++    </nav>
++  </header>
++
++  <main class="main">
++    <section class="hero-section">
++      <div class="container">
++        <h1>Start Your Project</h1>
++        <p class="lead">Tell us about your business and goals. We'll craft a tailored proposal within 24 hours.</p>
++      </div>
++    </section>
++
++    <section class="form-section">
++      <div class="container">
++        <div id="error-summary" class="error-summary" style="display: none;" role="alert">
++          <h2>Please fix the following errors:</h2>
++          <ul id="error-list"></ul>
++        </div>
++
++        <form 
++          name="intake" 
++          method="POST" 
++          data-netlify="true" 
++          data-netlify-honeypot="bot-field"
++          action="/thanks.html"
++          class="intake-form"
++          novalidate
++        >
++          <input type="hidden" name="form-name" value="intake">
++          <input type="hidden" name="bot-field" style="display: none;">
++          <input type="hidden" name="timestamp" id="timestamp">
++
++          <div class="form-group">
++            <label for="business-name">Business/Organization Name *</label>
++            <input type="text" id="business-name" name="business-name" required>
++          </div>
++
++          <div class="form-group">
++            <label for="email">Email Address *</label>
++            <input type="email" id="email" name="email" required>
++          </div>
++
++          <div class="form-group">
++            <label for="phone">Phone Number</label>
++            <input type="tel" id="phone" name="phone">
++          </div>
++
++          <div class="form-group">
++            <label for="website">Current Website (if any)</label>
++            <input type="url" id="website" name="website" placeholder="https://yoursite.com">
++          </div>
++
++          <div class="form-group">
++            <label for="primary-goal">Primary Business Goal *</label>
++            <select id="primary-goal" name="primary-goal" required>
++              <option value="">Select your main goal</option>
++              <option value="generate-leads">Generate more leads</option>
++              <option value="online-sales">Increase online sales</option>
++              <option value="brand-presence">Establish brand presence</option>
++              <option value="replace-website">Replace existing website</option>
++              <option value="showcase-portfolio">Showcase portfolio/work</option>
++              <option value="other">Other</option>
++            </select>
++          </div>
++
++          <fieldset class="form-group">
++            <legend>Project Type</legend>
++            <div class="checkbox-group">
++              <label><input type="radio" name="project-type" value="landing-page" required> Single landing page</label>
++              <label><input type="radio" name="project-type" value="multi-page" required> Multi-page website</label>
++              <label><input type="radio" name="project-type" value="e-commerce" required> E-commerce store</label>
++              <label><input type="radio" name="project-type" value="web-app" required> Web application</label>
++              <label><input type="radio" name="project-type" value="redesign" required> Website redesign</label>
++            </div>
++          </fieldset>
++
++          <fieldset class="form-group">
++            <legend>Key Features Needed</legend>
++            <div class="checkbox-group">
++              <label><input type="checkbox" name="features" value="contact-form"> Contact forms</label>
++              <label><input type="checkbox" name="features" value="booking"> Online booking/scheduling</label>
++              <label><input type="checkbox" name="features" value="payments"> Payment processing</label>
++              <label><input type="checkbox" name="features" value="gallery"> Photo/video gallery</label>
++              <label><input type="checkbox" name="features" value="blog"> Blog/news section</label>
++              <label><input type="checkbox" name="features" value="social"> Social media integration</label>
++              <label><input type="checkbox" name="features" value="analytics"> Analytics tracking</label>
++              <label><input type="checkbox" name="features" value="seo"> SEO optimization</label>
++              <label><input type="checkbox" name="features" value="multilingual"> Multiple languages</label>
++            </div>
++          </fieldset>
++
++          <div class="form-group">
++            <label for="budget">Investment Range *</label>
++            <select id="budget" name="budget" required>
++              <option value="">Select budget range</option>
++              <option value="1000-2500">$1,000 - $2,500</option>
++              <option value="2500-5000">$2,500 - $5,000</option>
++              <option value="5000-10000">$5,000 - $10,000</option>
++              <option value="10000+">$10,000+</option>
++            </select>
++          </div>
++
++          <div class="form-group">
++            <label for="timeline">Desired Launch Timeline *</label>
++            <select id="timeline" name="timeline" required>
++              <option value="">Select timeline</option>
++              <option value="asap">ASAP (2-4 weeks)</option>
++              <option value="1-2months">1-2 months</option>
++              <option value="3-6months">3-6 months</option>
++              <option value="flexible">Flexible</option>
++            </select>
++          </div>
++
++          <div class="form-group">
++            <label for="inspiration">Inspiration/Reference Sites</label>
++            <textarea id="inspiration" name="inspiration" rows="3" placeholder="Share any websites you admire or want to emulate..."></textarea>
++          </div>
++
++          <div class="form-group">
++            <label for="notes">Additional Details</label>
++            <textarea id="notes" name="notes" rows="4" placeholder="Tell us more about your business, target audience, specific requirements, or anything else we should know..."></textarea>
++          </div>
++
++          <div class="form-group">
++            <label class="checkbox-label">
++              <input type="checkbox" id="consent" name="consent" required>
++              <span>I consent to being contacted about this project and understand VThree Agency will use this information to prepare a tailored proposal. *</span>
++            </label>
++          </div>
++
++          <button type="submit" class="btn btn-primary">Send Project Details</button>
++        </form>
++      </div>
++    </section>
++  </main>
++
++  <footer class="footer">
++    <div class="container">
++      <p>&copy; 2025 VThree Agency. Built with HTML, CSS, JS & React.</p>
++    </div>
++  </footer>
++
++  <script src="/assets/js/intake-form.js"></script>
++</body>
++</html>
