@@ -1,7 +1,7 @@
 {
   "welcome": {
-    "title": "Bienvenido a VThree Agency",
-    "subtitle": "Construimos sitios web y ofrecemos consultoría digital."
+    "title": "Infraestructura Digital Estratégica para Equipos Enfocados en Crecimiento",
+    "subtitle": "Diseñamos infraestructura de ingresos mediante estrategia coordinada, ejecución creativa y entrega técnica."
   },
   "nav": {
     "services": "Servicios",
@@ -12,14 +12,14 @@
     "hideChat": "Ocultar chat"
   },
   "hero": {
-    "title": "Sitios para pequeñas empresas que se ven bien y convierten.",
-    "subtitle": "Sitios rápidos y móviles con HTML semántico, CSS moderno, JavaScript limpio y React. Mensajes claros y rendimiento que convierte visitas en clientes.",
+    "title": "Diseñamos infraestructura de ingresos.",
+    "subtitle": "No es una operación de una sola persona. Ejecutamos con especialistas coordinados en edición de redes sociales, desarrollo, automatización y estrategia de conversión.",
     "ctaPrimary": "Agenda una consulta de 15 min",
     "ctaSecondary": "Ver mi trabajo"
   },
   "about": {
     "title": "Acerca de",
-    "lead": "Soy Kenni — desarrollador y solucionador de problemas. Ayudo a pequeñas empresas a lanzar sitios rápidos, fáciles de actualizar y diseñados para convertir. Uso HTML semántico, CSS moderno, JavaScript accesible y React para experiencias interactivas.",
+    "lead": "VTHREE es un equipo coordinado de ejecución liderado por dirección técnica estratégica. Combinamos desarrolladores, editores de redes sociales, soporte de automatización y planificación enfocada en conversión para generar crecimiento medible.",
     "list": [
       { "label": "Núcleo", "value": "HTML, CSS (Flex/Grid), JS (ES2023), React" },
       { "label": "Calidad", "value": "a11y, auditorías Lighthouse, SEO básico" },
@@ -28,7 +28,7 @@
   },
   "services": {
     "title": "Servicios",
-    "subtitle": "Paquetes claros, precios transparentes, optimizados para velocidad y SEO.",
+    "subtitle": "Ejecución integrada en posicionamiento, operaciones de contenido social, desarrollo web y sistemas de rendimiento.",
     "items": [
       {
         "title": "Sitio de Lanzamiento",
@@ -96,7 +96,7 @@
   },
   "contact": {
     "title": "Hablemos",
-    "subtitle": "Cuéntame sobre tu negocio y objetivos.",
+    "subtitle": "Comparte tus objetivos operativos, prioridades de canal y metas de crecimiento.",
     "labels": {
       "name": "Nombre",
       "email": "Correo",
