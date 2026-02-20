@@ -2,19 +2,19 @@
 
 export const services = [
   {
-    title: "Launch Site",
-    desc: "One-page, mobile-first site with a clear CTA. Perfect for new businesses.",
-    features: ["Brand-aligned design", "Copy polish", "Contact form", "Analytics"],
+    title: "Conversion Foundation",
+    desc: "Single-focus website system engineered for speed, clarity, and lead capture.",
+    features: ["Brand-aligned design system", "Conversion-first copy architecture", "Structured inquiry flow", "Analytics baseline"],
   },
   {
-    title: "Growth Site",
-    desc: "Multi-page site with blog, SEO basics, and performance optimizations.",
-    features: ["Page speed tuning", "Local SEO", "CMS-ready", "Email capture"],
+    title: "Growth Infrastructure",
+    desc: "Multi-page operating framework for demand capture, SEO structure, and conversion depth.",
+    features: ["Page speed tuning", "Search visibility architecture", "Scalable CMS structure", "Lifecycle email capture"],
   },
   {
-    title: "E‑commerce Ready",
-    desc: "Product pages, cart integration, and conversions best practices.",
-    features: ["Payment integration", "A/B-test ready", "Schema markup", "Security"],
+    title: "Commerce Systems",
+    desc: "Revenue-focused commerce build with operational integrations and decision-stage UX.",
+    features: ["Payment and platform integrations", "A/B test-ready flows", "Structured schema markup", "Security hardening"],
   },
 ];
 

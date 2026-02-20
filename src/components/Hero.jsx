@@ -25,20 +25,23 @@ export default function Hero() {
         />
         <h1>
           {t("hero.title", {
-            defaultValue: "Small-business sites that look great and convert."
+            defaultValue: "We engineer revenue infrastructure."
           })}
         </h1>
         <p>
           {t("hero.subtitle", {
             defaultValue:
-              "Fast, mobile-first websites built with semantic HTML, modern CSS, clean JavaScript, and React. Clear messaging and performance that turns visitors into customers."
+              "We design systems that remove friction from growth and turn operational chaos into measurable scale. Strategic architecture, technical execution, and conversion-focused delivery."
           })}
         </p>
             <div className="cta">
               <a className="btn" href="#contact">
                 {t("hero.cta", {
-                  defaultValue: "Get Started"
+                  defaultValue: "Schedule Strategic Review"
                 })}
+              </a>
+              <a className="btn outline" href="#case-studies">
+                View Case Evidence
               </a>
             </div>
           </div>

@@ -74,7 +74,10 @@ nav a:hover{color:var(--brand);opacity:1}
 
 /* sections */
 h2{font-size:clamp(1.4rem,2.6vw,2rem);margin:0 0 .4rem}
+h3{margin:.35rem 0 .6rem}
+h4{margin:1rem 0 .4rem;font-size:1rem;color:var(--text)}
 .sub{color:var(--muted);margin:0 0 1.2rem}
+.muted{color:var(--muted)}
 
 /* cards & tags */
 .card{
@@ -87,6 +90,7 @@ h2{font-size:clamp(1.4rem,2.6vw,2rem);margin:0 0 .4rem}
 }
 .card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--panel-2)}
 .cards{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.case-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
 .tag{
   display:inline-block;padding:.28rem .6rem;border-radius:.5rem;
   background:#10182a;color:var(--muted);font-size:.78rem;margin:.2rem .4rem .2rem 0;
@@ -197,3 +201,8 @@ footer{color:var(--muted);padding:2rem 0;border-top:1px solid rgba(255,255,255,.
 }
 .cards .card img { transition: transform .3s ease, filter .3s ease; }
 .cards .card:hover img { transform: scale(1.02); filter: saturate(1.05); }
+
+@media (max-width: 860px){
+  nav .inner{align-items:flex-start}
+  nav [role="navigation"]{width:100%}
+}

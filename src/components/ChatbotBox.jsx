@@ -24,8 +24,8 @@ export default function ChatbotBox() {
       </div>
 
       <div style={{ flex: 1, padding: 12, overflowY: "auto" }}>
-        <p>Hi! I’m your site assistant 👋</p>
-        <p>Ask me about services, projects, or booking a consult.</p>
+        <p>Site assistant active.</p>
+        <p>Ask about corporate pricing, case studies, technical projects, or a strategy consult.</p>
       </div>
 
       <form

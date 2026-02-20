@@ -17,7 +17,7 @@ export default function About(){
         <p style={{ fontSize: "1.05rem", lineHeight: 1.65, opacity: 0.95, maxWidth: 820 }}>
           {t("about.lead", {
             defaultValue:
-              "I’m Kenni—developer and problem-solver. I help small businesses launch sites that are fast, easy to update, and built to convert. I use semantic HTML, modern CSS, accessible JavaScript, and React for interactive experiences."
+              "VTHREE operates as a strategic digital partner for organizations that require measurable execution. We combine positioning, conversion architecture, and technical delivery to build systems that support sustained growth."
           })}
         </p>
         <ul style={{ marginTop: "1rem" }}>

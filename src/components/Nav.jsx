@@ -12,14 +12,18 @@ export default function Nav() {
     try {
       const saved = localStorage.getItem("lang");
       if (saved && saved !== current) i18n.changeLanguage(saved);
-    } catch {}
+    } catch {
+      // Ignore storage access errors.
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     try {
       localStorage.setItem("lang", current);
-    } catch {}
+    } catch {
+      // Ignore storage access errors.
+    }
   }, [current]);
 
   const langBtn = (code) => ({
@@ -63,10 +67,15 @@ export default function Nav() {
             <strong>VTHREE</strong>
           </a>
 
-          <div role="navigation" aria-label="Site" style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <div
+            role="navigation"
+            aria-label="Site"
+            style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap", justifyContent: "flex-end" }}
+          >
             <a href="#services">{t("nav.services", { defaultValue: "Services" })}</a>
-            <a href="#pricing">{t("nav.pricing", { defaultValue: "Pricing" })}</a>
-            <a href="#projects">{t("nav.projects", { defaultValue: "Projects" })}</a>
+            <a href="#corporate-pricing">{t("nav.corporatePricing", { defaultValue: "Corporate Pricing" })}</a>
+            <a href="#case-studies">{t("nav.caseStudies", { defaultValue: "Case Studies" })}</a>
+            <a href="#technical-projects">{t("nav.technicalProjects", { defaultValue: "Technical Projects" })}</a>
             <a href="#contact" className="btn" style={{ marginLeft: 6 }}>
               {t("nav.contact", { defaultValue: "Contact" })}
             </a>

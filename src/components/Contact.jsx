@@ -37,7 +37,11 @@ export default function Contact() {
       });
 
       let body = {};
-      try { body = await res.json(); } catch {}
+      try {
+        body = await res.json();
+      } catch {
+        // Some responses may not include JSON.
+      }
 
       if (import.meta.env.DEV) {
         console.log("Formspree response:", res.status, body);
@@ -66,7 +70,7 @@ export default function Contact() {
     <section id="contact" className="section">
       <div className="container card">
         <h2>{t("contact.title", { defaultValue: "Let’s talk" })}</h2>
-        <p className="muted">{t("contact.subtitle", { defaultValue: "Tell me about your business and goals." })}</p>
+        <p className="muted">{t("contact.subtitle", { defaultValue: "Share your operating goals, constraints, and growth targets." })}</p>
 
         <form onSubmit={handleSubmit} className="grid" style={{ gridTemplateColumns: "1fr 1fr" }} noValidate>
           {/* Honeypot */}

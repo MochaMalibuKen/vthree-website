@@ -6,9 +6,9 @@ export default function Welcome() {
   return (
     <section id="welcome" className="section">
       <div className="container">
-        <h2>{t("welcome.title", { defaultValue: "Welcome to VThree Agency" })}</h2>
+        <h2>{t("welcome.title", { defaultValue: "Strategic Digital Infrastructure for Growth-Focused Teams" })}</h2>
         <p className="muted">
-          {t("welcome.subtitle", { defaultValue: "We build websites and provide digital consulting." })}
+          {t("welcome.subtitle", { defaultValue: "We engineer revenue infrastructure for businesses that value execution over noise." })}
         </p>
       </div>
     </section>

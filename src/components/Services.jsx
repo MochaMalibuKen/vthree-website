@@ -11,7 +11,7 @@ export default function Services() {
       <div className="container">
         <h2>Services</h2>
         <p className="sub">
-          Clear packages, transparent pricing, built for speed and SEO.
+          We build strategic systems across design, growth infrastructure, and execution operations.
         </p>
 
         <div className="grid cards">
