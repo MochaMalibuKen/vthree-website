@@ -40,6 +40,48 @@ const caseStudies = [
       "Modernized site structure supporting future growth"
     ],
     link: "https://brotherssistersofaikencounty.org/"
+  },
+  {
+    title: "SafeRide Escorts Digital Presence Build",
+    category: "Service Business",
+    challenge:
+      "The brand needed a clear, trustworthy web presence that could communicate services quickly and reduce friction for first-time visitors.",
+    solution:
+      "We structured the site around fast comprehension, clear user pathways, and direct inquiry flow. The implementation focused on conversion clarity and consistent brand presentation.",
+    outcomes: [
+      "Improved service-page clarity",
+      "Clearer conversion path for inbound inquiries",
+      "Stronger trust signaling in core pages"
+    ],
+    link: "https://www.saferideescorts.com"
+  },
+  {
+    title: "TX Elite Meal Prep Growth Site",
+    category: "E-Commerce",
+    challenge:
+      "The business required a clearer product and offer structure to support repeat orders and reduce decision friction for mobile users.",
+    solution:
+      "We streamlined navigation and offer communication while tightening page hierarchy for faster buying decisions. The resulting structure supports both acquisition and retention workflows.",
+    outcomes: [
+      "Stronger product-path clarity",
+      "Improved mobile decision flow",
+      "Foundation for repeat-purchase optimization"
+    ],
+    link: "https://txelitemac.com"
+  },
+  {
+    title: "Citizens Park OCC Community Visibility Platform",
+    category: "Nonprofit",
+    challenge:
+      "The organization needed a stronger digital front door for community communication, events visibility, and stakeholder trust.",
+    solution:
+      "We organized content for easier scanning, simplified primary navigation, and clarified audience pathways across the site. The build prioritized accessibility, readability, and operational ease.",
+    outcomes: [
+      "Clearer communication structure",
+      "Better event and program discoverability",
+      "Upgraded site architecture for future expansion"
+    ],
+    link: "https://www.citizensparkocc.com"
   }
 ];
 
