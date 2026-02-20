@@ -1,7 +1,7 @@
 {
   "welcome": {
-    "title": "Welcome to VThree Agency",
-    "subtitle": "We build websites and provide digital consulting."
+    "title": "Strategic Digital Infrastructure for Growth-Focused Teams",
+    "subtitle": "We engineer revenue infrastructure through coordinated strategy, creative execution, and technical delivery."
   },
   "nav": {
     "services": "Services",
@@ -12,14 +12,14 @@
     "hideChat": "Hide Chat"
   },
   "hero": {
-    "title": "Small-business sites that look great and convert.",
-    "subtitle": "Fast, mobile-first websites built with semantic HTML, modern CSS, clean JavaScript, and React. Clear messaging and performance that turns visitors into customers.",
+    "title": "We engineer revenue infrastructure.",
+    "subtitle": "This is not a one-person operation. We deliver through coordinated specialists across social media editing, development, automation, and conversion strategy.",
     "ctaPrimary": "Get a free 15-min consult",
     "ctaSecondary": "See my work"
   },
   "about": {
     "title": "About",
-    "lead": "I’m Kenni—developer and problem-solver. I help small businesses launch sites that are fast, easy to update, and built to convert. I use semantic HTML, modern CSS, accessible JavaScript, and React for interactive experiences.",
+    "lead": "VTHREE is a coordinated execution team led by strategic technical direction. We combine developers, social media editors, automation support, and conversion-focused planning to build systems that drive measurable growth.",
     "list": [
       { "label": "Core", "value": "HTML, CSS (Flex/Grid), JS (ES2023), React" },
       { "label": "Quality", "value": "a11y, Lighthouse audits, SEO basics" },
@@ -28,7 +28,7 @@
   },
   "services": {
     "title": "Services",
-    "subtitle": "Clear packages, transparent pricing, built for speed and SEO.",
+    "subtitle": "Integrated execution across positioning, social content operations, web development, and performance systems.",
     "items": [
       {
         "title": "Launch Site",
@@ -96,7 +96,7 @@
   },
   "contact": {
     "title": "Let’s talk",
-    "subtitle": "Tell me about your business and goals.",
+    "subtitle": "Share your operating goals, channel priorities, and growth targets.",
     "labels": {
       "name": "Name",
       "email": "Email",

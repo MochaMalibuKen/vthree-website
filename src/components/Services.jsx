@@ -13,6 +13,10 @@ export default function Services() {
         <p className="sub">
           We build strategic systems across design, growth infrastructure, and execution operations.
         </p>
+        <p className="sub" style={{ maxWidth: 860 }}>
+          Delivery is team-based: social media editing, coding developers, technical implementation,
+          and strategic oversight aligned under one operating plan.
+        </p>
 
         <div className="grid cards">
           {services.map((s) => (

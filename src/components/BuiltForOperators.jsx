@@ -8,6 +8,10 @@ export default function BuiltForOperators() {
             We engineer revenue infrastructure. We design systems that remove friction from growth.
             We turn operational chaos into measurable scale.
           </p>
+          <p>
+            Engagements are executed through a collaborative model spanning social media editing,
+            development, automation, and strategic advisory.
+          </p>
           <ul>
             <li>Multi-location strategy frameworks for distributed teams and regional rollouts</li>
             <li>Delivery models aligned to corporate contracts and procurement expectations</li>
