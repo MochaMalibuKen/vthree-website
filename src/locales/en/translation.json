@@ -7,6 +7,9 @@
     "services": "Services",
     "projects": "Projects",
     "pricing": "Pricing",
+    "corporatePricing": "Corporate Pricing",
+    "caseStudies": "Case Studies",
+    "technicalProjects": "Technical Projects",
     "contact": "Contact",
     "showChat": "Chat",
     "hideChat": "Hide Chat"
@@ -14,12 +17,13 @@
   "hero": {
     "title": "We engineer revenue infrastructure.",
     "subtitle": "This is not a one-person operation. We deliver through coordinated specialists across social media editing, development, automation, and conversion strategy.",
+    "cta": "Schedule Strategic Review",
     "ctaPrimary": "Get a free 15-min consult",
     "ctaSecondary": "See my work"
   },
   "about": {
     "title": "About",
-    "lead": "VTHREE is a coordinated execution team led by strategic technical direction. We combine developers, social media editors, automation support, and conversion-focused planning to build systems that drive measurable growth.",
+    "lead": "The VThree Agency is a coordinated execution team led by strategic technical direction. We combine developers, social media editors, automation support, and conversion-focused planning to build systems that drive measurable growth.",
     "list": [
       { "label": "Core", "value": "HTML, CSS (Flex/Grid), JS (ES2023), React" },
       { "label": "Quality", "value": "a11y, Lighthouse audits, SEO basics" },
@@ -107,6 +111,7 @@
       "email": "you@domain.com",
       "message": "What do you need?"
     },
+    "sending": "Sending…",
     "cta": "Request consult",
     "status": {
       "success": "Thanks! I’ll reply soon.",

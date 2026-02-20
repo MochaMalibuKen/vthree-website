@@ -1,4 +1,4 @@
-// VThree Agency - Intake Form JavaScript for Formspree
+// the VThree Agency - Intake Form JavaScript for Formspree
 // Anti-spam, validation, and submission handling
 
 document.addEventListener('DOMContentLoaded', function() {

@@ -7,6 +7,9 @@
     "services": "Servicios",
     "projects": "Proyectos",
     "pricing": "Precios",
+    "corporatePricing": "Precios Corporativos",
+    "caseStudies": "Casos de Estudio",
+    "technicalProjects": "Proyectos Técnicos",
     "contact": "Contacto",
     "showChat": "Chat",
     "hideChat": "Ocultar chat"
@@ -14,12 +17,13 @@
   "hero": {
     "title": "Diseñamos infraestructura de ingresos.",
     "subtitle": "No es una operación de una sola persona. Ejecutamos con especialistas coordinados en edición de redes sociales, desarrollo, automatización y estrategia de conversión.",
+    "cta": "Programar Revisión Estratégica",
     "ctaPrimary": "Agenda una consulta de 15 min",
     "ctaSecondary": "Ver mi trabajo"
   },
   "about": {
     "title": "Acerca de",
-    "lead": "VTHREE es un equipo coordinado de ejecución liderado por dirección técnica estratégica. Combinamos desarrolladores, editores de redes sociales, soporte de automatización y planificación enfocada en conversión para generar crecimiento medible.",
+    "lead": "The VThree Agency es un equipo coordinado de ejecución liderado por dirección técnica estratégica. Combinamos desarrolladores, editores de redes sociales, soporte de automatización y planificación enfocada en conversión para generar crecimiento medible.",
     "list": [
       { "label": "Núcleo", "value": "HTML, CSS (Flex/Grid), JS (ES2023), React" },
       { "label": "Calidad", "value": "a11y, auditorías Lighthouse, SEO básico" },
@@ -107,6 +111,7 @@
       "email": "tú@dominio.com",
       "message": "¿Qué necesitas?"
     },
+    "sending": "Enviando…",
     "cta": "Solicitar consulta",
     "status": {
       "success": "¡Gracias! Te responderé pronto.",
