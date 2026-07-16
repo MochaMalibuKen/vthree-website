@@ -1,125 +1,44 @@
 {
-  "welcome": {
-    "title": "Infraestructura Digital Estratégica para Equipos Enfocados en Crecimiento",
-    "subtitle": "Diseñamos infraestructura de ingresos mediante estrategia coordinada, ejecución creativa y entrega técnica."
-  },
-  "nav": {
-    "services": "Servicios",
-    "projects": "Proyectos",
-    "pricing": "Precios",
-    "corporatePricing": "Precios Corporativos",
-    "caseStudies": "Casos de Estudio",
-    "technicalProjects": "Proyectos Técnicos",
-    "contact": "Contacto",
-    "showChat": "Chat",
-    "hideChat": "Ocultar chat"
-  },
-  "hero": {
-    "title": "Diseñamos infraestructura de ingresos.",
-    "subtitle": "No es una operación de una sola persona. Ejecutamos con especialistas coordinados en edición de redes sociales, desarrollo, automatización y estrategia de conversión.",
-    "cta": "Programar Revisión Estratégica",
-    "ctaPrimary": "Agenda una consulta de 15 min",
-    "ctaSecondary": "Ver mi trabajo"
-  },
-  "about": {
-    "title": "Acerca de",
-    "lead": "The VThree Agency es un equipo coordinado de ejecución liderado por dirección técnica estratégica. Combinamos desarrolladores, editores de redes sociales, soporte de automatización y planificación enfocada en conversión para generar crecimiento medible.",
-    "list": [
-      { "label": "Núcleo", "value": "HTML, CSS (Flex/Grid), JS (ES2023), React" },
-      { "label": "Calidad", "value": "a11y, auditorías Lighthouse, SEO básico" },
-      { "label": "Herramientas", "value": "Vite, GitHub, Netlify/Vercel, Figma" }
-    ]
-  },
-  "services": {
-    "title": "Servicios",
-    "subtitle": "Ejecución integrada en posicionamiento, operaciones de contenido social, desarrollo web y sistemas de rendimiento.",
-    "items": [
-      {
-        "title": "Sitio de Lanzamiento",
-        "desc": "Sitio de una página, móvil primero, con un CTA claro. Ideal para nuevos negocios.",
-        "features": ["Diseño alineado con la marca", "Pulido de copy", "Formulario de contacto", "Analítica"]
-      },
-      {
-        "title": "Sitio de Crecimiento",
-        "desc": "Sitio multipágina con blog, SEO básico y optimizaciones de rendimiento.",
-        "features": ["Optimización de velocidad", "SEO local", "Listo para CMS", "Captura de correo"]
-      },
-      {
-        "title": "Listo para E-commerce",
-        "desc": "Páginas de producto, integración de carrito y buenas prácticas de conversión.",
-        "features": ["Integración de pagos", "Listo para pruebas A/B", "Marcado schema", "Seguridad"]
-      }
-    ]
-  },
-  "projects": {
-    "title": "Proyectos",
-    "subtitle": "Trabajos seleccionados. Pide una demo adaptada a tu sector.",
-    "techUsed": "Tecnologías",
-    "cta": { "live": "Sitio", "source": "Código" },
-    "items": [
-      {
-        "title": "Mighty Matt Kit Landing",
-        "blurb": "Landing page de alta conversión para línea de EPP.",
-        "tags": ["HTML", "CSS", "JS"]
-      },
-      {
-        "title": "Sitio de ONG Local",
-        "blurb": "Catálogo en React con filtros y búsqueda instantánea.",
-        "tags": ["React", "CSS", "Vite"]
-      },
-      {
-        "title": "PPE Catalog Site",
-        "blurb": "Sitio tipo brochure rápido con SEO local y schema.",
-        "tags": ["HTML", "CSS", "JS"]
-      }
-    ]
-  },
-  "pricing": {
-    "title": "Precios",
-    "subtitle": "Planes de pago flexibles y descuentos para organizaciones sin fines de lucro y pequeñas empresas.",
-    "cta": "Empezar",
-    "note": "Los precios son puntos de partida. El presupuesto final depende del alcance, contenido e integraciones.",
-    "once": "único",
-    "plans": {
-      "launch": {
-        "title": "Sitio de Lanzamiento",
-        "price": "$750+",
-        "blurb": "Sitio web simple y profesional para estar en línea rápidamente."
-      },
-      "growth": {
-        "title": "Sitio de Crecimiento",
-        "price": "$1500+",
-        "blurb": "Sitio web a medida y escalable para el crecimiento de tu negocio."
-      },
-      "commerce": {
-        "title": "Comercio Electrónico",
-        "price": "$2500+",
-        "blurb": "Tienda en línea con pago seguro, inventario e integraciones."
-      }
-    }
-  },
-  "contact": {
-    "title": "Hablemos",
-    "subtitle": "Comparte tus objetivos operativos, prioridades de canal y metas de crecimiento.",
-    "labels": {
-      "name": "Nombre",
-      "email": "Correo",
-      "message": "Mensaje"
-    },
-    "placeholders": {
-      "name": "Tu nombre",
-      "email": "tú@dominio.com",
-      "message": "¿Qué necesitas?"
-    },
-    "sending": "Enviando…",
-    "cta": "Solicitar consulta",
-    "status": {
-      "success": "¡Gracias! Te responderé pronto.",
-      "error": "Algo salió mal. Por favor, envíame un correo."
-    }
-  },
-  "footer": {
-    "name": "Kenni Allen",
-    "built": "Hecho con HTML, CSS, JS y React."
-  }
+  "meta": { "title": "VTHREE | Estudio de Arquitectura Digital", "description": "VTHREE diseña sistemas conectados de sitios web, campañas, automatización, analítica y producción creativa para generar crecimiento medible." },
+  "nav": { "primary": "Navegación principal", "home": "Inicio de VTHREE", "menu": "Abrir o cerrar menú", "capabilities": "Capacidades", "work": "Proyectos", "labs": "Labs", "systems": "Sistemas Técnicos", "about": "Nosotros", "insights": "Perspectivas", "contact": "Contacto", "schedule": "Programar Revisión", "language": "Idioma", "showChat": "Chat", "hideChat": "Ocultar Chat" },
+  "hero": { "eyebrow": "Estudio de Arquitectura Digital", "title": "Diseñamos Sistemas de Crecimiento Digital.", "subtitle": "VTHREE conecta investigación, estrategia, narrativa, automatización, analítica y ejecución técnica en sistemas digitales coordinados que producen movimiento empresarial medible.", "capabilities": "Sitios web. Campañas. Producción Creativa. Automatización. Inteligencia.", "cta": "Programar una Revisión Estratégica", "secondary": "Explorar Nuestro Trabajo" },
+  "welcome": { "label": "Posicionamiento de VTHREE", "title": "Arquitecto Digital", "subtitle": "Diseñamos sistemas digitales que convierten la atención en crecimiento medible." },
+  "philosophy": { "eyebrow": "La filosofía operativa", "title": "El marketing debe diseñarse, no improvisarse.", "p1": "Las empresas suelen comprar sitios web, manejo de redes sociales, publicidad, automatización y analítica como servicios desconectados. VTHREE los diseña como un sistema coordinado, donde cada componente fortalece al siguiente.", "p2": "Estudiamos la audiencia, diseñamos la estructura, creamos los recursos, conectamos la tecnología, medimos el rendimiento y mejoramos el sistema con el tiempo.", "close": "Eso es Arquitectura Digital." },
+  "method": { "eyebrow": "El Método VTHREE", "title": "Un sistema para convertir señales en resultados.", "subtitle": "Cada proyecto sigue un ciclo disciplinado. Cada resultado informa lo que sigue.", "stages": {
+    "observe": { "title": "Observar", "desc": "Comprender la organización, la audiencia, el mercado, las preguntas del cliente y el entorno digital actual." },
+    "research": { "title": "Investigar", "desc": "Estudiar datos públicos, comportamiento, competencia, búsquedas, recursos existentes y oportunidades." },
+    "architect": { "title": "Diseñar", "desc": "Diseñar el sitio, la campaña, el contenido, la automatización, los informes y el recorrido del cliente como un sistema." },
+    "build": { "title": "Construir", "desc": "Producir los componentes técnicos, creativos, escritos, visuales y operativos." },
+    "measure": { "title": "Medir", "desc": "Medir tráfico, interacción, consultas, conversiones, campañas y resultados empresariales." },
+    "evolve": { "title": "Evolucionar", "desc": "Usar resultados y aprendizajes para mejorar la próxima campaña, flujo de trabajo o recurso digital." }
+  } },
+  "capabilities": { "eyebrow": "Capacidades conectadas", "title": "Una arquitectura. Seis disciplinas conectadas.", "subtitle": "VTHREE integra trabajo estratégico, creativo, técnico y analítico en un plan operativo para que cada inversión fortalezca las demás.", "automationNote": "Estos sistemas reducen el trabajo repetitivo mientras mantienen al dueño del negocio en control.", "analyticsNote": "No terminamos al publicar. Medimos qué ocurrió, determinamos qué significa y usamos los resultados para mejorar la próxima decisión.", "groups": {
+    "digital": { "title": "Arquitectura Digital", "desc": "Construimos la base digital alrededor de cómo las personas encuentran, comprenden, confían y eligen una organización.", "items": ["Estrategia y desarrollo web", "Arquitectura de información enfocada en conversión", "Landing pages y embudos de consulta", "Reservas, CRM e integración de formularios", "Búsqueda, analítica, accesibilidad y rendimiento", "Comercio electrónico y experiencias multilingües"] },
+    "creative": { "title": "Producción Creativa", "desc": "Creamos recursos útiles para campañas que mantienen una historia clara en distintos formatos y canales.", "items": ["Gráficos y campañas sociales", "Edición de video y contenido corto", "Anuncios y videos promocionales", "Mejora de fotos e imágenes de producto", "Declaraciones de capacidad, folletos y presentaciones", "Copy, narración y reutilización de contenido"] },
+    "intelligence": { "title": "Inteligencia de Marketing", "desc": "La investigación determina qué crear, para quién y por qué; no simplemente cómo llenar un calendario.", "items": ["Investigación de audiencia y competencia", "Monitoreo de mercado y tendencias", "Análisis de intención de búsqueda y preguntas", "Estrategia de campañas y contenido", "Inteligencia estacional y de mercado local", "Recomendaciones de rendimiento"] },
+    "automation": { "title": "Automatización e IA", "desc": "Conectamos procesos rutinarios de ingreso, agenda, seguimiento y conocimiento con implementación revisada por personas.", "items": ["Recepcionista virtual y filtro de llamadas", "Citas e integración con Microsoft Calendar", "CRM, correo y rutas de formularios", "Ingreso de clientes y sistemas de conocimiento", "Flujos de contenido asistidos por IA", "Automatización administrativa y de informes"] },
+    "analytics": { "title": "Analítica y Apoyo a Decisiones", "desc": "Convertimos actividad en evidencia útil para quienes toman la próxima decisión.", "items": ["Analítica web, de campañas y redes", "Seguimiento de prospectos y conversiones", "Informes en Power BI y Tableau", "Análisis y modelado con Python", "Portales e informes ejecutivos", "Recomendaciones de rendimiento de contenido"] },
+    "communications": { "title": "Comunicación Estratégica", "desc": "Ayudamos a explicar trabajo complicado de forma clara, coherente y creíble.", "items": ["Declaraciones de misión y capacidad", "Mensajes corporativos y servicios", "Apoyo para propuestas y memorandos", "Simplificación de contenido técnico", "Comunicación bilingüe inglés-español", "Traducción, capacitación y materiales para clientes"] }
+  } },
+  "pricing": { "eyebrow": "Puntos de entrada", "title": "Comience con la arquitectura que necesita ahora.", "subtitle": "Precios iniciales transparentes para bases digitales enfocadas. Los sistemas amplios se definen mediante revisión estratégica.", "starting": "Desde", "cta": "Hablemos de esta arquitectura", "customTitle": "Sistemas más allá del sitio web", "customLabel": "Disponible mediante revisión estratégica", "note": "El precio final depende del alcance, contenido disponible, integraciones, automatización, apoyo de campaña y necesidades de informes.", "plans": {
+    "launch": { "title": "Arquitectura de Lanzamiento", "price": "$1,500", "blurb": "Una base digital profesional que establece credibilidad y crea una ruta clara de consulta.", "features": ["Descubrimiento y estrategia web", "Diseño adaptable y alineado con la marca", "Fundamentos de SEO y analítica", "Flujo de contacto y consultas", "Accesibilidad, rendimiento, capacitación y lanzamiento"] },
+    "growth": { "title": "Arquitectura de Crecimiento", "price": "$3,000", "blurb": "Una base de marketing escalable que conecta conversiones, contenido, información del cliente y evidencia.", "features": ["Base de Arquitectura de Lanzamiento", "Sistemas de conversión y landing pages", "CRM y captura de correo", "Arquitectura de campañas y contenido", "Panel de analítica e informes"] },
+    "commerce": { "title": "Arquitectura de Comercio", "price": "$5,000", "blurb": "Una experiencia comercial conectada basada en productos, transacciones, decisiones del cliente y crecimiento.", "features": ["Base de Arquitectura de Crecimiento", "Implementación de comercio y pagos", "Arquitectura de productos y clientes", "Optimización de pago y cuentas", "Analítica, integraciones, seguridad e informes"] }
+  }, "custom": {
+    "campaign": { "title": "Arquitectura de Campañas", "desc": "Investigación, mensajes, producción creativa, publicación y análisis de rendimiento." },
+    "automation": { "title": "Arquitectura de Automatización", "desc": "Agenda, ingreso, CRM, recepcionista virtual, seguimiento y flujos automatizados." },
+    "reporting": { "title": "Inteligencia e Informes", "desc": "Analítica, paneles, investigación de mercado, informes y apoyo a decisiones." }
+  } },
+  "cases": { "eyebrow": "Trabajo seleccionado", "title": "Evidencia organizada alrededor del problema.", "subtitle": "Proyectos existentes con alcance y resultados cualitativos claros. Solo añadiremos métricas verificadas cuando existan datos que las respalden.", "cta": "Ver sitio", "labels": { "challenge": "Desafío", "diagnosis": "Diagnóstico estratégico", "solution": "Arquitectura", "deliverables": "Entregables", "outcomes": "Resultados", "capabilities": "Capacidades utilizadas", "future": "Oportunidad futura" }, "futureTemplate": { "label": "Estructura para futuro caso", "eyebrow": "Sistema de caso preparado", "title": "The Lilly Event Center", "body": "Existe una estructura reutilizable para presentar evidencia aprobada sobre recursos de marca, mejoras de reserva, campañas, etiquetado, tráfico, consultas, interacción, Google Business y aprendizajes.", "status": "No se presenta como proyecto terminado; espera afirmaciones aprobadas y datos verificados." } },
+  "industries": { "eyebrow": "A quién apoyamos", "title": "Para organizaciones con trabajo real que explicar y hacer crecer.", "subtitle": "Nuestro enfoque se adapta a la organización y la evidencia disponible. Nunca presentamos familiaridad como experiencia sin trabajo que la respalde.", "items": ["Hotelería y centros de eventos", "Pequeñas empresas", "Contratistas del gobierno", "Seguridad y preparación", "Escuelas y educación", "Organizaciones sin fines de lucro", "Organizaciones religiosas y comunitarias", "Salud y cuidadores", "Servicios profesionales", "Industrias técnicas y reguladas", "Comercio electrónico", "Servicios locales"] },
+  "labs": { "eyebrow": "VTHREE Labs", "title": "Primero probamos con nosotros.", "lead": "Un entorno interno para probar nuevos flujos antes de usarlos con clientes.", "body": "VTHREE Labs prueba formatos de campañas, automatización, modelos analíticos, sistemas de contenido y producción asistida por IA.", "goal": "La meta es práctica: identificar qué mejora la calidad, ahorra tiempo, aumenta la claridad o crea valor medible.", "areas": ["Formatos de contenido", "Landing pages", "Llamados a la acción", "Producción asistida por IA", "Flujos de agenda", "Sistemas de informes", "Métodos de investigación", "Accesibilidad", "Confiabilidad de automatización", "Comportamiento de conversión"] },
+  "technical": { "eyebrow": "Sistemas técnicos", "title": "Sistemas Aplicados, Datos y Automatización", "subtitle": "La Arquitectura Digital se extiende detrás de la interfaz: a la lógica, datos, integraciones y herramientas operativas.", "systems": ["Scripts en Python", "Transformación de datos", "Integraciones API", "Informes automatizados", "Integraciones CRM y marketing", "Desarrollo de paneles", "Lógica de procesos", "Estandarización de flujos", "Inteligencia empresarial", "Ingeniería ad hoc", "Limpieza de datos", "Herramientas operativas"], "project": { "label": "Proyecto técnico seleccionado", "title": "Optimización de Flujo de Seguros Empresariales", "body": "Un equipo regional de seguros empresariales utilizaba un flujo manual de alto volumen que generaba demoras e inconsistencias. Se diseñaron herramientas lógicas internas para estandarizar decisiones y mejorar la confiabilidad.", "items": ["Diagnóstico de ineficiencias en etapas clave", "Herramientas lógicas para manejo más consistente", "Menos trabajo repetitivo en tareas recurrentes", "Mejor confiabilidad de datos e informes", "Estructura de scripts para iteración futura"], "note": "Los detalles se limitan intencionalmente para proteger información operativa confidencial." } },
+  "insights": { "eyebrow": "Perspectivas", "title": "Inteligencia que vale la pena aplicar.", "subtitle": "Una estructura editorial para investigación, aprendizajes, explicaciones técnicas y orientación. Sin artículos de relleno; solo observaciones útiles cuando estén listas.", "label": "Canal editorial", "topics": [{ "title": "Guía de Arquitectura Digital", "desc": "Cómo los sistemas conectados mejoran el recorrido del cliente y la claridad operativa." }, { "title": "Inteligencia de Marketing", "desc": "Preguntas de audiencia, observaciones, aprendizajes de campañas e investigación." }, { "title": "Notas de Automatización", "desc": "Guía práctica para implementar IA y flujos de manera responsable." }] },
+  "about": { "eyebrow": "Acerca de VTHREE", "title": "Estrategia y tecnología organizadas alrededor de resultados.", "p1": "VTHREE es un Estudio de Arquitectura Digital dirigido por orientación estratégica y técnica.", "p2": "Ayudamos a conectar sitios web, campañas, contenido, automatización, analítica y flujos asistidos por IA en sistemas diseñados alrededor de resultados empresariales claros.", "p3": "VTHREE está dirigido por el Arquitecto Digital Kennieth D. Allen y apoyado por recursos técnicos, creativos y especializados según cada proyecto. Somos especialmente efectivos cuando una organización tiene recursos o experiencia valiosa, pero necesita un sistema más claro para presentarlos, gestionarlos y hacerlos crecer.", "principles": { "systems": "Pensamiento sistémico", "clarity": "Comunicación clara", "measure": "Mejora basada en evidencia" } },
+  "founder": { "eyebrow": "Fundador", "role": "Fundador y Arquitecto Digital", "bio": "Kennieth D. Allen trabaja entre comunicación, tecnología, investigación, ejecución creativa y mejora de procesos, traduciendo ideas complicadas en sistemas comprensibles. Las campañas internas sirven como laboratorios antes de adaptar enfoques comprobados para clientes.", "strengths": ["Marketing y CRM", "Desarrollo web", "Analítica y datos", "Diseño de procesos", "Comunicación estratégica", "Flujos de IA revisados por personas"] },
+  "contact": { "eyebrow": "Revisión estratégica", "title": "Diseñemos el sistema que realmente necesita.", "subtitle": "Comparta el objetivo, la fricción y lo que ya existe. Usaremos ese contexto para identificar el próximo paso más útil.", "promptLabel": "Buen punto de partida", "prompt": "¿Qué debería ser más fácil para su cliente o equipo cuando termine este proyecto?", "labels": { "name": "Nombre", "email": "Correo", "organization": "Organización", "website": "Sitio web", "need": "Necesidad principal", "projectType": "Tipo de proyecto", "timeline": "Plazo deseado", "message": "Contexto del proyecto" }, "select": "Seleccione uno", "placeholders": { "message": "Cuéntenos el objetivo, la fricción actual, la audiencia y los recursos existentes." }, "projectTypes": { "website": "Sitio web o landing page", "campaign": "Estrategia de campaña", "social": "Redes sociales y contenido", "creative": "Producción creativa", "automation": "Automatización o recepcionista virtual", "analytics": "Analítica o panel", "communications": "Comunicación estratégica", "media": "Mejora de fotos o medios", "translation": "Traducción o localización", "technical": "Proyecto técnico", "unsure": "Aún no estoy seguro" }, "timeline": { "flexible": "Flexible / explorando", "soon": "2–4 semanas", "quarter": "1–3 meses", "later": "3+ meses" }, "consent": "Acepto ser contactado sobre esta solicitud. VTHREE usará esta información únicamente para responder y evaluar el proyecto.", "sending": "Enviando…", "cta": "Solicitar Revisión Estratégica", "status": { "success": "Gracias. Hemos recibido su solicitud.", "error": "Ocurrió un error. Inténtelo otra vez o comuníquese directamente con VTHREE." } },
+  "visual": { "capabilitiesLabel": "Seis capacidades conectadas mediante un sistema coordinado", "capabilitiesCore": "Sistema coordinado", "exploreCapability": "Explorar capacidad", "flowLabel": "La actividad se convierte en evidencia y la evidencia informa la próxima decisión", "activity": "Actividad", "evidence": "Evidencia", "decision": "Próxima decisión", "reviewEvidence": "Revisar evidencia" },
+  "why": { "eyebrow": "La diferencia", "title": "¿Por qué Arquitectura Digital?", "subtitle": "El valor no es otro servicio. Es la conexión entre todos los servicios.", "disconnected": { "title": "Marketing Desconectado", "items": { "website": "Sitio web separado", "social": "Redes sociales separadas", "analytics": "Analítica separada", "automation": "Automatización separada", "reporting": "Informes separados" }, "outcome": "Más actividad. Menos claridad." }, "connected": { "title": "Arquitectura Digital", "items": { "everything": "Todo conectado", "research": "La investigación informa la estrategia", "strategy": "La estrategia guía el plan", "creative": "La creatividad apoya la tecnología", "technology": "La tecnología alimenta la analítica", "decisions": "La analítica mejora las decisiones" }, "outcome": "Un sistema. Decisiones más claras." } },
+  "explainer": { "eyebrow": "Producción original en desarrollo", "title": "¿Qué Es la Arquitectura Digital?", "placeholder": "Futuro video explicativo original de VTHREE", "noStock": "Ilustrado internamente. Sin video de archivo.", "storyboardLabel": "Guion gráfico del video explicativo", "scenes": { "signal": { "title": "Encontrar la señal", "desc": "Abrir con una organización rodeada de actividad digital desconectada." }, "friction": { "title": "Nombrar la fricción", "desc": "Mostrar preguntas de clientes y trabajo interno que chocan en vez de conectarse." }, "system": { "title": "Diseñar el sistema", "desc": "Una estructura clara une estrategia, creatividad, tecnología y datos." }, "movement": { "title": "Crear movimiento", "desc": "Las rutas conectadas facilitan la acción para clientes y equipos." }, "evolve": { "title": "Medir y evolucionar", "desc": "Los resultados regresan como evidencia para una próxima decisión más inteligente." } }, "notesTitle": "Ver narración y notas de producción", "narrationTitle": "Narración sugerida", "narration": "La mayoría de las organizaciones no tiene un problema de marketing. Tiene un problema de conexión. La Arquitectura Digital conecta investigación, estrategia, creatividad, tecnología, automatización y analítica alrededor de un resultado claro, y usa lo que ocurre después para mejorar el sistema.", "animationTitle": "Notas de ilustración y animación", "animation": "Usar líneas arquitectónicas, movimiento moderado de señales y ritmo documental. El rubí marca decisiones, el cian muestra información, el ámbar identifica investigación y el esmeralda confirma resultados positivos. Sin video de archivo ni efectos tecnológicos decorativos." },
+  "footer": { "name": "Kennieth D. Allen", "built": "Diseñado con investigación. Construido con intención. Medido por resultados." }
 }

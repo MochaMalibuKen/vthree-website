@@ -5,8 +5,9 @@ export default function Footer() {
   return (
     <footer>
       <div className="container">
-        © {new Date().getFullYear()} {t("footer.name", { defaultValue: "Kenni Allen" })}.{" "}
-        {t("footer.built", { defaultValue: "Built with HTML, CSS, JS & React." })}
+        <strong>VTHREE</strong>
+        <span>© {new Date().getFullYear()} {t("footer.name", { defaultValue: "Kennieth D. Allen" })}.</span>
+        <span>{t("footer.built", { defaultValue: "Designed with research. Built with intention. Measured by results." })}</span>
       </div>
     </footer>
   );

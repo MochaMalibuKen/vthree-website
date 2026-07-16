@@ -1,129 +1,31 @@
+import { useTranslation } from "react-i18next";
+
 const caseStudies = [
-  {
-    title: "Hospitality Conversion Platform",
-    category: "Hospitality",
-    challenge:
-      "The business had fragmented digital touchpoints and a booking path with avoidable drop-off. Mobile visitors were not moving from interest to action at a reliable rate.",
-    solution:
-      "We rebuilt the site structure around high-intent pathways, clarified decision-stage messaging, and tightened call-to-action sequencing. The implementation prioritized speed, booking clarity, and measurable funnel behavior.",
-    outcomes: [
-      "Conversion path restructured for faster booking decisions",
-      "Higher quality mobile traffic flow",
-      "Core page-speed and technical structure upgrade"
-    ],
-    link: "https://eaglecorpsessentials.com/"
-  },
-  {
-    title: "Service Business Positioning Rebuild",
-    category: "Service Business",
-    challenge:
-      "The company had solid service delivery but weak digital positioning and unclear offer hierarchy. Sales calls were frequently spent clarifying fundamentals instead of moving prospects forward.",
-    solution:
-      "We redesigned the information architecture, aligned service copy to buyer intent, and implemented a cleaner lead routing structure. The result was a more coherent sales narrative supported by clearer user journeys.",
-    outcomes: [
-      "Improved conversion clarity across service pages",
-      "Stronger qualification quality from inbound leads",
-      "Structural rebrand with clearer market positioning"
-    ],
-    link: "https://eaglecorpsessentials.com/mighty-matt-lifesavers-kit/"
-  },
-  {
-    title: "Nonprofit Program Visibility Upgrade",
-    category: "Nonprofit",
-    challenge:
-      "Program information was difficult to scan, and key trust signals were buried in dense page layouts. Stakeholders needed clearer pathways for participation and outreach.",
-    solution:
-      "We simplified navigation, rebuilt content hierarchy, and improved readability standards across devices. This created a cleaner public-facing structure for program visibility and community engagement.",
-    outcomes: [
-      "Clearer organization of program information",
-      "Improved content readability and access",
-      "Modernized site structure supporting future growth"
-    ],
-    link: "https://brotherssistersofaikencounty.org/"
-  },
-  {
-    title: "SafeRide Escorts Digital Presence Build",
-    category: "Service Business",
-    challenge:
-      "The brand needed a clear, trustworthy web presence that could communicate services quickly and reduce friction for first-time visitors.",
-    solution:
-      "We structured the site around fast comprehension, clear user pathways, and direct inquiry flow. The implementation focused on conversion clarity and consistent brand presentation.",
-    outcomes: [
-      "Improved service-page clarity",
-      "Clearer conversion path for inbound inquiries",
-      "Stronger trust signaling in core pages"
-    ],
-    link: "https://www.saferideescorts.com"
-  },
-  {
-    title: "TX Elite Meal Prep Growth Site",
-    category: "E-Commerce",
-    challenge:
-      "The business required a clearer product and offer structure to support repeat orders and reduce decision friction for mobile users.",
-    solution:
-      "We streamlined navigation and offer communication while tightening page hierarchy for faster buying decisions. The resulting structure supports both acquisition and retention workflows.",
-    outcomes: [
-      "Stronger product-path clarity",
-      "Improved mobile decision flow",
-      "Foundation for repeat-purchase optimization"
-    ],
-    link: "https://txelitemac.com"
-  },
-  {
-    title: "Citizens Park OCC Community Visibility Platform",
-    category: "Nonprofit",
-    challenge:
-      "The organization needed a stronger digital front door for community communication, events visibility, and stakeholder trust.",
-    solution:
-      "We organized content for easier scanning, simplified primary navigation, and clarified audience pathways across the site. The build prioritized accessibility, readability, and operational ease.",
-    outcomes: [
-      "Clearer communication structure",
-      "Better event and program discoverability",
-      "Upgraded site architecture for future expansion"
-    ],
-    link: "https://www.citizensparkocc.com"
-  }
+  { title: "Hospitality Conversion Platform", category: "Hospitality", challenge: "The business had fragmented digital touchpoints and a booking path with avoidable friction.", diagnosis: "High-intent mobile visitors needed a faster route from interest to action.", solution: "We rebuilt the structure around decision-stage messaging, booking clarity, and sequenced calls to action.", deliverables: ["Information architecture", "Responsive web experience", "Inquiry-path refinement"], outcomes: ["Clearer customer journey", "Improved mobile usability", "Foundation created for future measurement"], capabilities: ["Web strategy", "Conversion architecture", "Performance"], future: "Connect booking and analytics data for clearer funnel reporting.", link: "https://eaglecorpsessentials.com/" },
+  { title: "Service Business Positioning Rebuild", category: "Service business", challenge: "The company had solid service delivery but unclear positioning and offer hierarchy.", diagnosis: "Sales conversations were carrying explanatory work the website should handle first.", solution: "We aligned information architecture and service copy to buyer questions and built a clearer lead route.", deliverables: ["Offer architecture", "Conversion copy", "Lead routing"], outcomes: ["Improved conversion clarity", "Better service organization", "Reduced communication friction"], capabilities: ["Strategy", "Messaging", "Web development"], future: "Add structured lead-source and qualification reporting.", link: "https://eaglecorpsessentials.com/mighty-matt-lifesavers-kit/" },
+  { title: "Nonprofit Program Visibility Upgrade", category: "Nonprofit", challenge: "Program information was difficult to scan and trust signals were buried in dense layouts.", diagnosis: "Stakeholders needed audience-specific pathways for participation and outreach.", solution: "We simplified navigation, rebuilt content hierarchy, and improved readability across devices.", deliverables: ["Navigation redesign", "Content hierarchy", "Accessibility review"], outcomes: ["Clearer program information", "Increased content accessibility", "Modernized site structure"], capabilities: ["Content strategy", "Accessibility", "Web development"], future: "Build program-level engagement measurement.", link: "https://brotherssistersofaikencounty.org/" },
+  { title: "SafeRide Escorts Digital Presence Build", category: "Service business", challenge: "The brand needed a trustworthy presence that communicated its services quickly.", diagnosis: "First-time visitors needed reassurance and direct inquiry paths without excess detail.", solution: "We structured the site around fast comprehension, consistent presentation, and direct action.", deliverables: ["Website architecture", "Service messaging", "Inquiry flow"], outcomes: ["Improved service-page clarity", "Clearer inquiry path", "Stronger trust signaling"], capabilities: ["Web strategy", "Messaging", "Conversion design"], future: "Add source-aware inquiry tracking.", link: "https://www.saferideescorts.com" },
+  { title: "TX Elite Meal Prep Growth Site", category: "E-commerce", challenge: "The business needed a clearer product and offer structure for mobile customers.", diagnosis: "Buying decisions carried unnecessary navigation and comparison friction.", solution: "We streamlined navigation and offer communication to support faster product decisions.", deliverables: ["Product-path architecture", "Mobile UX", "Offer hierarchy"], outcomes: ["Stronger product-path clarity", "Improved mobile decision flow", "Foundation for retention optimization"], capabilities: ["Commerce architecture", "Mobile UX", "Conversion strategy"], future: "Connect repeat-purchase behavior to campaign reporting.", link: "https://txelitemac.com" },
+  { title: "Citizens Park OCC Community Visibility Platform", category: "Community organization", challenge: "The organization needed a stronger digital front door for communication and events.", diagnosis: "Multiple audiences needed clearer pathways to relevant information.", solution: "We reorganized content, simplified navigation, and prioritized accessibility and operational ease.", deliverables: ["Audience pathways", "Event visibility", "Responsive site structure"], outcomes: ["Clearer communication structure", "Better event discoverability", "Architecture ready for expansion"], capabilities: ["Information architecture", "Accessibility", "Community communications"], future: "Add event engagement and participation reporting.", link: "https://www.citizensparkocc.com" }
 ];
 
 export default function CaseStudies() {
-  return (
-    <section id="case-studies" className="section">
-      <div className="container">
-        <h2>Case Studies</h2>
-        <p className="sub">Execution Over Explanation.</p>
-        <p style={{ maxWidth: 860 }}>
-          We don&apos;t theorize growth. We build it. Below are selected projects demonstrating strategic
-          design, marketing infrastructure, and operational clarity.
-        </p>
-
-        <div className="grid case-grid" style={{ marginTop: "1.2rem" }}>
-          {caseStudies.map((study) => (
-            <article key={study.title} className="card">
-              <p className="tag">{study.category}</p>
-              <h3>{study.title}</h3>
-
-              <h4>Challenge</h4>
-              <p>{study.challenge}</p>
-
-              <h4>Solution</h4>
-              <p>{study.solution}</p>
-
-              <p>
-                <a href={study.link} target="_blank" rel="noreferrer" className="btn">
-                  View Live Site
-                </a>
-              </p>
-
-              <h4>Outcomes</h4>
-              <ul>
-                {study.outcomes.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
+  const { t } = useTranslation();
+  const labels = t("cases.labels", { returnObjects: true });
+  return <section id="case-studies" className="section work-section" aria-labelledby="work-title"><div className="container">
+    <p className="eyebrow">{t("cases.eyebrow")}</p><h2 id="work-title">{t("cases.title")}</h2><p className="sub section-intro">{t("cases.subtitle")}</p>
+    <div className="case-list">{caseStudies.map((study, index) => <article className="case-study" key={study.title}>
+      <div className="case-heading"><span className="case-number">0{index + 1}</span><div><p className="tag">{study.category}</p><h3>{study.title}</h3></div></div>
+      <details className="case-details">
+        <summary><span>{t("visual.reviewEvidence", { defaultValue: "Review evidence" })}</span><i aria-hidden="true">+</i></summary>
+      <div className="case-content">
+        <div><h4>{labels.challenge}</h4><p>{study.challenge}</p><h4>{labels.diagnosis}</h4><p>{study.diagnosis}</p><h4>{labels.solution}</h4><p>{study.solution}</p></div>
+        <div><h4>{labels.deliverables}</h4><ul>{study.deliverables.map(x => <li key={x}>{x}</li>)}</ul><h4>{labels.outcomes}</h4><ul>{study.outcomes.map(x => <li key={x}>{x}</li>)}</ul></div>
+        <div><h4>{labels.capabilities}</h4><div>{study.capabilities.map(x => <span className="tag" key={x}>{x}</span>)}</div><h4>{labels.future}</h4><p>{study.future}</p><a href={study.link} target="_blank" rel="noreferrer" className="text-link" onClick={() => window.dataLayer?.push({ event: "case_study_click", case_study: study.title })}>{t("cases.cta")} <span aria-hidden="true">↗</span></a></div>
       </div>
-    </section>
-  );
+      </details>
+      <span className="metric-field" data-status="awaiting-verification" hidden>Verified metrics field reserved</span>
+    </article>)}</div>
+    <aside className="future-case" aria-label={t("cases.futureTemplate.label")}><p className="eyebrow">{t("cases.futureTemplate.eyebrow")}</p><h3>{t("cases.futureTemplate.title")}</h3><p>{t("cases.futureTemplate.body")}</p><span>{t("cases.futureTemplate.status")}</span></aside>
+  </div></section>;
 }

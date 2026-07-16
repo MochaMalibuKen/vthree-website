@@ -1,32 +1,20 @@
 import { useTranslation } from "react-i18next";
 
-export default function About(){
+export default function About() {
   const { t } = useTranslation();
-
-  const fallbackPoints = [
-    { label: "Core",    value: "HTML, CSS (Flex/Grid), JS (ES2023), React" },
-    { label: "Quality", value: "a11y, Lighthouse audits, SEO basics" },
-    { label: "Tools",   value: "Vite, GitHub, Netlify/Vercel, Figma" }
-  ];
-  const points = t("about.list", { returnObjects: true }) || fallbackPoints;
-
   return (
-    <section id="about" className="section">
-      <div className="container">
-        <h2>{t("about.title", { defaultValue: "About" })}</h2>
-        <p style={{ fontSize: "1.05rem", lineHeight: 1.65, opacity: 0.95, maxWidth: 820 }}>
-          {t("about.lead", {
-            defaultValue:
-              "The VThree Agency operates as a strategic digital partner for organizations that require measurable execution. We combine positioning, conversion architecture, and technical delivery to build systems that support sustained growth."
-          })}
-        </p>
-        <ul style={{ marginTop: "1rem" }}>
-          {points.map((p, i) => (
-            <li key={i} style={{ marginBottom: ".35rem" }}>
-              <strong>{p.label}:</strong> {p.value}
-            </li>
-          ))}
-        </ul>
+    <section id="about" className="section about-section" aria-labelledby="about-title">
+      <div className="container split-layout">
+        <div>
+          <p className="eyebrow">{t("about.eyebrow", { defaultValue: "About VTHREE" })}</p>
+          <h2 id="about-title">{t("about.title", { defaultValue: "Strategy and technology, organized around outcomes." })}</h2>
+        </div>
+        <div className="prose-large">
+          <p>{t("about.p1")}</p><p>{t("about.p2")}</p><p>{t("about.p3")}</p>
+          <div className="principle-grid">
+            <span>{t("about.principles.systems")}</span><span>{t("about.principles.clarity")}</span><span>{t("about.principles.measure")}</span>
+          </div>
+        </div>
       </div>
     </section>
   );

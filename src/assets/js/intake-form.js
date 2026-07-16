@@ -3,6 +3,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('intake-form');
+  if (!form) return;
   const submitBtn = form.querySelector('button[type="submit"]');
   const errorSummary = document.getElementById('error-summary');
   const errorList = document.getElementById('error-list');

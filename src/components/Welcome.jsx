@@ -4,12 +4,10 @@ export default function Welcome() {
   const { t } = useTranslation();
 
   return (
-    <section id="welcome" className="section">
+    <section id="welcome" className="signal-strip" aria-label={t("welcome.label", { defaultValue: "VTHREE positioning" })}>
       <div className="container">
-        <h2>{t("welcome.title", { defaultValue: "Strategic Digital Infrastructure for Growth-Focused Teams" })}</h2>
-        <p className="muted">
-          {t("welcome.subtitle", { defaultValue: "We engineer revenue infrastructure for businesses that value execution over noise." })}
-        </p>
+        <span>{t("welcome.title", { defaultValue: "Digital Architect" })}</span>
+        <strong>{t("welcome.subtitle", { defaultValue: "We architect digital systems that turn attention into measurable growth." })}</strong>
       </div>
     </section>
   );

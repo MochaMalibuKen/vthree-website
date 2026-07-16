@@ -1,50 +1,17 @@
+import { useTranslation } from "react-i18next";
+import { DecisionDiagram } from "./VisualDiagrams.jsx";
+
 export default function TechnicalProjects() {
-  return (
-    <section id="technical-projects" className="section">
-      <div className="container">
-        <h2>Applied Systems &amp; Automation</h2>
-        <p className="sub">
-          Beyond marketing, we build operational tools. From automation scripts to analytics systems,
-          our technical work bridges business logic and code.
-        </p>
-
-        <div className="grid cards" style={{ marginTop: "1rem" }}>
-          <article className="card">
-            <h3>Data &amp; Automation Projects</h3>
-            <ul>
-              <li>Built automated reporting workflows</li>
-              <li>Created backend data transformations</li>
-              <li>API integrations for CRM + marketing systems</li>
-            </ul>
-          </article>
-
-          <article className="card">
-            <h3>Python &amp; Ad Hoc Engineering</h3>
-            <ul>
-              <li>Data cleaning and structuring pipelines</li>
-              <li>Business logic scripting</li>
-              <li>Process automation tools</li>
-              <li>Performance analytics dashboards</li>
-            </ul>
-          </article>
-        </div>
-
-        <article className="card" style={{ marginTop: "1.25rem" }}>
-          <h3>Enterprise Insurance Workflow Optimization Project</h3>
-          <p>
-            A regional enterprise insurance team was running a high-volume manual workflow that created
-            delays and inconsistent record quality. We designed internal logic tooling to standardize
-            processing decisions, reduce repetitive handling, and improve reliability across submissions.
-          </p>
-          <ul>
-            <li>Diagnosed manual process inefficiency across key workflow stages</li>
-            <li>Built internal logic tools for consistent case handling</li>
-            <li>Reduced time-to-completion across recurring process tasks</li>
-            <li>Improved data reliability and reporting confidence</li>
-            <li>Established a scalable scripting structure for future iteration</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-  );
+  const { t } = useTranslation();
+  const systems = t("technical.systems", { returnObjects: true });
+  const project = t("technical.project.items", { returnObjects: true });
+  return <section id="technical-projects" className="section technical-section" aria-labelledby="technical-title"><div className="container">
+    <p className="eyebrow">{t("technical.eyebrow")}</p><h2 id="technical-title">{t("technical.title")}</h2><p className="sub section-intro">{t("technical.subtitle")}</p>
+    <div className="decision-flow" aria-label={t("visual.flowLabel", { defaultValue: "Activity becomes evidence, and evidence informs the next decision" })}>
+      <DecisionDiagram />
+      <div className="decision-labels"><span>{t("visual.activity", { defaultValue: "Activity" })}</span><span>{t("visual.evidence", { defaultValue: "Evidence" })}</span><span>{t("visual.decision", { defaultValue: "Next decision" })}</span></div>
+    </div>
+    <div className="technical-layout"><div className="system-list">{Array.isArray(systems) && systems.map((item, i) => <span key={item}><small>{String(i+1).padStart(2,"0")}</small>{item}</span>)}</div>
+    <article className="card evidence-card"><p className="tag">{t("technical.project.label")}</p><h3>{t("technical.project.title")}</h3><p>{t("technical.project.body")}</p><ul>{Array.isArray(project) && project.map(item => <li key={item}>{item}</li>)}</ul><p className="fine-print">{t("technical.project.note")}</p></article></div>
+  </div></section>;
 }
