@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Nav from "./components/Nav.jsx";
 import Footer from "./components/Footer.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
@@ -16,25 +17,29 @@ import PrivacyPage from "./pages/PrivacyPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 export default function App() {
+  const { t } = useTranslation();
   return (
     <>
       <ScrollToTop />
+      <a className="skip-link" href="#site-content">{t("nav.skip", { defaultValue: "Skip to main content" })}</a>
       <Nav />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/method" element={<MethodPage />} />
-        <Route path="/work" element={<WorkPage />} />
-        <Route path="/work/:slug" element={<CaseStudyPage />} />
-        <Route path="/intelligence" element={<IntelligencePage />} />
-        <Route path="/intelligence/:slug" element={<IntelligenceArticlePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/pricing" element={<PricingPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/assessment" element={<ContactPage />} />
-        <Route path="/privacy" element={<PrivacyPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <div id="site-content" tabIndex="-1">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/method" element={<MethodPage />} />
+          <Route path="/work" element={<WorkPage />} />
+          <Route path="/work/:slug" element={<CaseStudyPage />} />
+          <Route path="/intelligence" element={<IntelligencePage />} />
+          <Route path="/intelligence/:slug" element={<IntelligenceArticlePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/assessment" element={<ContactPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </div>
       <Footer />
     </>
   );

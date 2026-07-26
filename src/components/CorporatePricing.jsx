@@ -6,16 +6,17 @@ const planKeys = ["launch", "growth", "commerce"];
 const serviceKeys = ["digital", "creative", "marketing", "business", "automation", "ai"];
 const partnershipKeys = ["essential", "growth", "strategic"];
 
-export default function CorporatePricing() {
+export default function CorporatePricing({ headingLevel = "h2" }) {
   const { i18n } = useTranslation();
   const language = i18n.language?.startsWith("es") ? "es" : "en";
   const content = pricingContent[language];
+  const Heading = headingLevel;
 
   return (
     <section id="corporate-pricing" className="section pricing-section" aria-labelledby="pricing-title">
       <div className="container pricing-intro">
         <p className="eyebrow">{content.eyebrow}</p>
-        <h2 id="pricing-title">{content.title}</h2>
+        <Heading className="section-title" id="pricing-title">{content.title}</Heading>
         <p className="sub section-intro">{content.subtitle}</p>
         <div className="pricing-principle"><span>{content.principleLabel}</span><p>{content.principle}</p></div>
       </div>

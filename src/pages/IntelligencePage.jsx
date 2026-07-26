@@ -5,5 +5,5 @@ import Labs from "../components/Labs.jsx";
 
 export default function IntelligencePage() {
   const { t } = useTranslation();
-  return <main><PageMeta title={t("insights.title")} description={t("insights.subtitle")} path="/intelligence" /><Insights /><Labs /></main>;
+  return <main><PageMeta title={t("insights.title")} description={t("insights.subtitle")} path="/intelligence" /><Insights headingLevel="h1" /><Labs /></main>;
 }

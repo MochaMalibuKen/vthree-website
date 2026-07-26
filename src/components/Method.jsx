@@ -13,7 +13,7 @@ export default function Method() {
         <p className="sub">{t("method.subtitle", { defaultValue: "Every engagement follows a disciplined loop. Each result informs what comes next." })}</p>
         <ol className="method-grid method-visual">
           {stages.map((stage, index) => (
-            <li key={stage} tabIndex={0}>
+            <li key={stage}>
               <span>{String(index + 1).padStart(2, "0")}</span>
               <span className={`method-symbol method-symbol-${index + 1}`} aria-hidden="true"><MethodIcon type={index + 1} /></span>
               <h3>{t(`method.stages.${stage}.title`)}</h3>

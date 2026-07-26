@@ -5,5 +5,5 @@ import Founder from "../components/Founder.jsx";
 
 export default function AboutPage() {
   const { t } = useTranslation();
-  return <main><PageMeta title={t("about.eyebrow")} description={t("about.p2")} path="/about" /><About /><Founder /></main>;
+  return <main><PageMeta title={t("about.eyebrow")} description={t("about.p2")} path="/about" /><About headingLevel="h1" /><Founder /></main>;
 }
