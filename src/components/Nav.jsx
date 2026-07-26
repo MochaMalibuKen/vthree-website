@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import logo from "../assets/V3logo.png";
@@ -7,6 +7,7 @@ export default function Nav() {
   const { t, i18n } = useTranslation();
   const { pathname } = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuToggleRef = useRef(null);
   const current = i18n.language?.startsWith("es") ? "es" : "en";
 
   useEffect(() => {
@@ -24,21 +25,28 @@ export default function Nav() {
 
   useEffect(() => { setMenuOpen(false); }, [pathname]);
 
+  useEffect(() => {
+    if (!menuOpen) return undefined;
+    function closeOnEscape(event) {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+        menuToggleRef.current?.focus();
+      }
+    }
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [menuOpen]);
+
   function track(event, details = {}) { window.dataLayer?.push({ event, ...details }); }
   const navClass = ({ isActive }) => isActive ? "active" : undefined;
-  const langBtn = (code) => ({
-    padding: "6px 10px", borderRadius: 8, border: "1px solid rgba(255,255,255,.14)",
-    background: current === code ? "rgba(255,255,255,.12)" : "transparent",
-    color: "inherit", cursor: current === code ? "default" : "pointer"
-  });
 
   return <nav aria-label={t("nav.primary", { defaultValue: "Primary navigation" })}>
     <div className="container inner">
       <Link to="/" className="brand" aria-label={t("nav.home", { defaultValue: "VTHREE home" })}>
         <img src={logo} alt="" /><span><strong>VTHREE</strong><small>Digital Architecture</small></span>
       </Link>
-      <button className="menu-toggle" onClick={() => setMenuOpen(value => !value)} aria-expanded={menuOpen} aria-controls="site-links">
-        <span className="sr-only">{t("nav.menu", { defaultValue: "Toggle menu" })}</span><span aria-hidden="true">☰</span>
+      <button ref={menuToggleRef} type="button" className="menu-toggle" onClick={() => setMenuOpen(value => !value)} aria-expanded={menuOpen} aria-controls="site-links">
+        <span className="sr-only">{t("nav.menu", { defaultValue: "Toggle menu" })}</span><span aria-hidden="true">{menuOpen ? "×" : "☰"}</span>
       </button>
       <div id="site-links" className={`site-links ${menuOpen ? "open" : ""}`}>
         <NavLink to="/services" className={navClass}>{t("nav.capabilities", { defaultValue: "Services" })}</NavLink>
@@ -48,9 +56,9 @@ export default function Nav() {
         <NavLink to="/about" className={navClass}>{t("nav.about", { defaultValue: "About" })}</NavLink>
         <NavLink to="/pricing" className={navClass}>{t("nav.pricing", { defaultValue: "Pricing" })}</NavLink>
         <NavLink to="/contact" className={navClass}>{t("nav.contact", { defaultValue: "Contact" })}</NavLink>
-        <span className="language-switcher" aria-label={t("nav.language", { defaultValue: "Language" })}>
-          <button style={langBtn("en")} onClick={() => { i18n.changeLanguage("en"); track("language_select", { language: "en" }); }} disabled={current === "en"} aria-pressed={current === "en"}>EN</button>
-          <button style={langBtn("es")} onClick={() => { i18n.changeLanguage("es"); track("language_select", { language: "es" }); }} disabled={current === "es"} aria-pressed={current === "es"}>ES</button>
+        <span className="language-switcher" role="group" aria-label={t("nav.language", { defaultValue: "Language" })}>
+          <button type="button" className={current === "en" ? "active" : undefined} onClick={() => { i18n.changeLanguage("en"); track("language_select", { language: "en" }); }} disabled={current === "en"} aria-pressed={current === "en"}>EN</button>
+          <button type="button" className={current === "es" ? "active" : undefined} onClick={() => { i18n.changeLanguage("es"); track("language_select", { language: "es" }); }} disabled={current === "es"} aria-pressed={current === "es"}>ES</button>
         </span>
         <Link onClick={() => track("cta_click", { cta: "nav_start_assessment" })} to="/contact" className="btn nav-cta">{t("nav.schedule", { defaultValue: "Start an Assessment" })}</Link>
       </div>

@@ -4,5 +4,5 @@ import CorporatePricing from "../components/CorporatePricing.jsx";
 
 export default function PricingPage() {
   const { t } = useTranslation();
-  return <main><PageMeta title={t("pricing.title")} description={t("pricing.subtitle")} path="/pricing" /><CorporatePricing /></main>;
+  return <main><PageMeta title={t("pricing.title")} description={t("pricing.subtitle")} path="/pricing" /><CorporatePricing headingLevel="h1" /></main>;
 }

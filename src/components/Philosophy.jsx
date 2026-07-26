@@ -1,13 +1,14 @@
 import { useTranslation } from "react-i18next";
 
-export default function Philosophy() {
+export default function Philosophy({ headingLevel = "h2" }) {
   const { t } = useTranslation();
+  const Heading = headingLevel;
   return (
     <section className="section philosophy" aria-labelledby="philosophy-title">
       <div className="container split-layout">
         <div>
           <p className="eyebrow">{t("philosophy.eyebrow", { defaultValue: "The operating philosophy" })}</p>
-          <h2 id="philosophy-title">{t("philosophy.title", { defaultValue: "Marketing should be engineered—not improvised." })}</h2>
+          <Heading className="section-title" id="philosophy-title">{t("philosophy.title", { defaultValue: "Marketing should be engineered—not improvised." })}</Heading>
         </div>
         <div className="prose-large">
           <p>{t("philosophy.p1", { defaultValue: "Businesses often purchase websites, social media management, advertising, automation, and analytics as disconnected services. VTHREE designs them as one coordinated system, where each component supports the next." })}</p>

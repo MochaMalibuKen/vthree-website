@@ -47,3 +47,12 @@
 - Scheduling rules and Microsoft Bookings configuration
 
 These dependencies must not be resolved through implementation assumptions.
+
+## C-02 shared component refinement
+
+- Refined the existing navigation, footer, page hero, routed-page heading levels, contact form, case links, shared controls, and responsive CSS without adding a component library or changing the route architecture.
+- Added a localized skip link, clearer focus and disabled states, larger touch targets, an Escape-close mobile menu, semantic language controls, contextual external-link names, and improved form-status announcements.
+- Constrained the responsive menu to the available viewport, normalized shared control sizing and spacing, improved narrow-screen CTA behavior, and preserved reduced-motion preferences.
+- Kept existing components and CSS architecture in place; no speculative layout framework or dependency was added.
+- Preserved all no-index and sitemap publication controls. Case approval, privacy language, Intelligence publication, Bookings configuration, and page-specific production work remain dependencies.
+- Deferred routed-page copy and page-specific layout changes to their authorized production packages so C-02 does not rewrite content or perform C-03 homepage work.

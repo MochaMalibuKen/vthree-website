@@ -3,13 +3,14 @@ import { CapabilityBlueprint } from "./VisualDiagrams.jsx";
 
 const capabilityKeys = ["digital", "creative", "intelligence", "automation", "analytics", "communications"];
 
-export default function Services() {
+export default function Services({ headingLevel = "h2" }) {
   const { t } = useTranslation();
+  const Heading = headingLevel;
   return (
     <section id="services" className="section services" aria-labelledby="capabilities-title">
       <div className="container">
         <p className="eyebrow">{t("capabilities.eyebrow", { defaultValue: "Connected capabilities" })}</p>
-        <h2 id="capabilities-title">{t("capabilities.title", { defaultValue: "One architecture. Six connected disciplines." })}</h2>
+        <Heading className="section-title" id="capabilities-title">{t("capabilities.title", { defaultValue: "One architecture. Six connected disciplines." })}</Heading>
         <p className="sub section-intro">{t("capabilities.subtitle", { defaultValue: "VTHREE brings strategic, creative, technical, and analytical work into one operating plan—so each investment makes the others more useful." })}</p>
         <div className="system-map" aria-label={t("visual.capabilitiesLabel", { defaultValue: "Six capabilities connected through one coordinated system" })}>
           <CapabilityBlueprint />

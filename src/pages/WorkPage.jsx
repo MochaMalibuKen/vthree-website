@@ -4,5 +4,5 @@ import CaseStudies from "../components/CaseStudies.jsx";
 
 export default function WorkPage() {
   const { t } = useTranslation();
-  return <main><PageMeta title={t("nav.work")} description={t("cases.subtitle")} path="/work" /><CaseStudies /></main>;
+  return <main><PageMeta title={t("nav.work")} description={t("cases.subtitle")} path="/work" /><CaseStudies headingLevel="h1" /></main>;
 }
