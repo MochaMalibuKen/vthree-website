@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { pricingContent } from "../pricingContent.js";
 
 const planKeys = ["launch", "growth", "commerce"];
@@ -74,7 +75,7 @@ export default function CorporatePricing() {
       </div>
 
       <div id="schedule-review" className="container scheduling-section">
-        <div className="scheduling-copy"><p className="eyebrow">{content.scheduling.eyebrow}</p><h2>{content.scheduling.title}</h2><p>{content.scheduling.copy}</p><a className="btn" href="#contact">{content.scheduling.cta}</a></div>
+        <div className="scheduling-copy"><p className="eyebrow">{content.scheduling.eyebrow}</p><h2>{content.scheduling.title}</h2><p>{content.scheduling.copy}</p><Link className="btn" to="/contact">{content.scheduling.cta}</Link></div>
         <div className="bookings-placeholder" aria-label={content.scheduling.placeholderLabel}>
           {/* Microsoft Bookings embed will be inserted inside this container. */}
           <div className="booking-calendar" aria-hidden="true"><span /><span /><span /><span /><span /><span /><span /><span /><span /></div>
@@ -85,7 +86,7 @@ export default function CorporatePricing() {
       <div className="container trust-section" aria-labelledby="trust-title">
         <p className="eyebrow">{content.trust.eyebrow}</p><h2 id="trust-title">{content.trust.title}</h2>
         <div className="trust-grid">{content.trust.items.map((item, index) => <div key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</div>)}</div>
-        <div className="pricing-final-cta"><p>{content.finalCta.copy}</p><a className="btn" href="#contact">{content.finalCta.cta}</a></div>
+        <div className="pricing-final-cta"><p>{content.finalCta.copy}</p><Link className="btn" to="/contact">{content.finalCta.cta}</Link></div>
       </div>
     </section>
   );
