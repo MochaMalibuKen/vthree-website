@@ -30,6 +30,7 @@
 
 - Existing customer-facing copy was reused; no case evidence or Intelligence articles were invented.
 - Case data now has stable slugs and one content source for index and detail routes.
+- Case architecture and all six detail routes are ready, but case claims, outcomes, permissions, and publication remain dependent on Founder and Delivery approval; detail pages are no-index and excluded from the public sitemap until approved.
 - Intelligence content has an intentionally empty data model until approved articles exist.
 - Privacy and assessment routes remain no-index until approved disclosure and routing decisions are supplied.
 - BrowserRouter is retained because the existing GitHub Pages `404.html` fallback preserves direct-route handling on the custom domain.

@@ -47,11 +47,12 @@ export default function Nav() {
         <NavLink to="/intelligence" className={navClass}>{t("nav.insights", { defaultValue: "Intelligence" })}</NavLink>
         <NavLink to="/about" className={navClass}>{t("nav.about", { defaultValue: "About" })}</NavLink>
         <NavLink to="/pricing" className={navClass}>{t("nav.pricing", { defaultValue: "Pricing" })}</NavLink>
+        <NavLink to="/contact" className={navClass}>{t("nav.contact", { defaultValue: "Contact" })}</NavLink>
         <span className="language-switcher" aria-label={t("nav.language", { defaultValue: "Language" })}>
           <button style={langBtn("en")} onClick={() => { i18n.changeLanguage("en"); track("language_select", { language: "en" }); }} disabled={current === "en"} aria-pressed={current === "en"}>EN</button>
           <button style={langBtn("es")} onClick={() => { i18n.changeLanguage("es"); track("language_select", { language: "es" }); }} disabled={current === "es"} aria-pressed={current === "es"}>ES</button>
         </span>
-        <Link onClick={() => track("cta_click", { cta: "nav_schedule_review" })} to="/contact" className="btn nav-cta">{t("nav.schedule", { defaultValue: "Schedule Review" })}</Link>
+        <Link onClick={() => track("cta_click", { cta: "nav_start_assessment" })} to="/contact" className="btn nav-cta">{t("nav.schedule", { defaultValue: "Start an Assessment" })}</Link>
       </div>
     </div>
   </nav>;

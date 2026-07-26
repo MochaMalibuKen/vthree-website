@@ -12,7 +12,7 @@ export default function CaseStudyPage() {
   if (!study) return <NotFoundPage />;
   const labels = t("cases.labels", { returnObjects: true });
   return <main>
-    <PageMeta title={study.title} description={study.challenge} path={`/work/${study.slug}`} />
+    <PageMeta title={study.title} description={study.challenge} path={`/work/${study.slug}`} noIndex />
     <PageHero eyebrow={study.category} title={study.title} lead={study.challenge} />
     <section className="section case-detail-page"><div className="container case-content">
       <div><h2>{labels.diagnosis}</h2><p>{study.diagnosis}</p><h2>{labels.solution}</h2><p>{study.solution}</p></div>
