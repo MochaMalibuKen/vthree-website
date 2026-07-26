@@ -56,3 +56,12 @@ These dependencies must not be resolved through implementation assumptions.
 - Kept existing components and CSS architecture in place; no speculative layout framework or dependency was added.
 - Preserved all no-index and sitemap publication controls. Case approval, privacy language, Intelligence publication, Bookings configuration, and page-specific production work remain dependencies.
 - Deferred routed-page copy and page-specific layout changes to their authorized production packages so C-02 does not rewrite content or perform C-03 homepage work.
+
+## C-03A homepage production scaffold
+
+- Decomposed the homepage orchestration into eight production zones under `src/components/homepage/`: `HeroSection`, `TrustSection`, `ProblemSection`, `MethodSection`, `ServicesSection`, `ProofSection`, `FounderSection`, and `AssessmentCTASection`.
+- Kept the existing section components as the markup owners because they are also reused by routed pages. The homepage production-zone components compose those proven sections without adding wrapper DOM, routing, business logic, props, hooks, or speculative abstractions.
+- Reduced `HomePage.jsx` to metadata plus a readable production-zone sequence while preserving the exact section order, content, imagery, translations, links, anchors, analytics, semantics, and behavior.
+- Created the eight homepage scaffold files and modified only `HomePage.jsx` and this baseline document. No CSS adjustment or dependency was required.
+- Intentionally preserved the visible output. C-03B remains responsible for any authorized narrative, asset, visual, SEO, analytics, performance, or conversion production work.
+- Existing dependencies remain approved production content and assets, case and Intelligence publication approval, privacy language, assessment routing, and Microsoft Bookings configuration.
