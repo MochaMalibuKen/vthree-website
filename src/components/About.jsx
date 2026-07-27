@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export default function About({ headingLevel = "h2" }) {
   const { t } = useTranslation();
@@ -14,6 +15,11 @@ export default function About({ headingLevel = "h2" }) {
           <p>{t("about.p1")}</p><p>{t("about.p2")}</p><p>{t("about.p3")}</p>
           <div className="principle-grid">
             <span>{t("about.principles.systems")}</span><span>{t("about.principles.clarity")}</span><span>{t("about.principles.measure")}</span>
+          </div>
+          <div className="cta">
+            <Link className="btn" to="/contact" onClick={() => window.dataLayer?.push({ event: "assessment_start", source: "about" })}>
+              {t("nav.schedule", { defaultValue: "Start an Assessment" })}
+            </Link>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import logo from "../assets/V3logo.png"; // still in src/assets, so keep import
 
 export default function Hero() {
@@ -38,11 +39,11 @@ export default function Hero() {
         </p>
         <p className="capability-line">{t("hero.capabilities", { defaultValue: "Websites. Campaigns. Creative Production. Automation. Intelligence." })}</p>
             <div className="cta">
-              <a className="btn" href="#contact" onClick={() => window.dataLayer?.push({ event: "cta_click", cta: "hero_schedule_review" })}>
+              <Link className="btn" to="/contact" onClick={() => window.dataLayer?.push({ event: "assessment_start", source: "legacy_hero" })}>
                 {t("hero.cta", {
-                  defaultValue: "Schedule Strategic Review"
+                  defaultValue: "Start an Assessment"
                 })}
-              </a>
+              </Link>
               <a className="btn outline" href="#case-studies" onClick={() => window.dataLayer?.push({ event: "cta_click", cta: "hero_explore_work" })}>
                 {t("hero.secondary", { defaultValue: "Explore Our Work" })}
               </a>

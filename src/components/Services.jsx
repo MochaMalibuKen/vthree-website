@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { CapabilityBlueprint } from "./VisualDiagrams.jsx";
 
 const capabilityKeys = ["digital", "creative", "intelligence", "automation", "analytics", "communications"];
@@ -31,6 +32,11 @@ export default function Services({ headingLevel = "h2" }) {
               </article>
             );
           })}
+        </div>
+        <div className="cta">
+          <Link className="btn" to="/contact" onClick={() => window.dataLayer?.push({ event: "assessment_start", source: "services" })}>
+            {t("nav.schedule", { defaultValue: "Start an Assessment" })}
+          </Link>
         </div>
       </div>
     </section>

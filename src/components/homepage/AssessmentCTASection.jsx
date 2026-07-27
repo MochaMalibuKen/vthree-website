@@ -10,7 +10,7 @@ export default function AssessmentCTASection() {
         <p>{t("homepage.assessment.body")}</p>
         <p className="fine-print">{t("homepage.assessment.disclaimer")}</p>
       </div>
-      <Link className="btn" to="/contact" onClick={() => window.dataLayer?.push({ event: "cta_click", cta: "home_final_assessment" })}>{t("homepage.assessment.cta")}</Link>
+      <Link className="btn" to="/contact" onClick={() => window.dataLayer?.push({ event: "assessment_start", source: "home_final_cta" })}>{t("homepage.assessment.cta")}</Link>
     </div>
   </section>;
 }

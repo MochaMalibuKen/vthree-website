@@ -38,7 +38,7 @@ export default function CorporatePricing({ headingLevel = "h2" }) {
               <summary>{content.addonsLabel}<i aria-hidden="true">+</i></summary>
               <ul>{plan.addons.map(item => <li key={item}>{item}</li>)}</ul>
             </details>}
-            <a className="btn package-cta" href="#schedule-review" onClick={() => window.dataLayer?.push({ event: "cta_click", cta: `pricing_${key}` })}>{content.cta}</a>
+            <Link className="btn package-cta" to="/contact" onClick={() => window.dataLayer?.push({ event: "assessment_start", source: `pricing_${key}` })}>{content.cta}</Link>
           </article>;
         })}
       </div>
@@ -75,8 +75,8 @@ export default function CorporatePricing({ headingLevel = "h2" }) {
         <div className="faq-list">{content.faq.items.map(item => <details key={item.q}><summary>{item.q}<i aria-hidden="true">+</i></summary><p>{item.a}</p></details>)}</div>
       </div>
 
-      <div id="schedule-review" className="container scheduling-section">
-        <div className="scheduling-copy"><p className="eyebrow">{content.scheduling.eyebrow}</p><h2>{content.scheduling.title}</h2><p>{content.scheduling.copy}</p><Link className="btn" to="/contact">{content.scheduling.cta}</Link></div>
+      <div id="start-assessment" className="container scheduling-section">
+        <div className="scheduling-copy"><p className="eyebrow">{content.scheduling.eyebrow}</p><h2>{content.scheduling.title}</h2><p>{content.scheduling.copy}</p><Link className="btn" to="/contact" onClick={() => window.dataLayer?.push({ event: "assessment_start", source: "pricing_assessment_section" })}>{content.scheduling.cta}</Link></div>
         <div className="bookings-placeholder" aria-label={content.scheduling.placeholderLabel}>
           {/* Microsoft Bookings embed will be inserted inside this container. */}
           <div className="booking-calendar" aria-hidden="true"><span /><span /><span /><span /><span /><span /><span /><span /><span /></div>
@@ -87,7 +87,7 @@ export default function CorporatePricing({ headingLevel = "h2" }) {
       <div className="container trust-section" aria-labelledby="trust-title">
         <p className="eyebrow">{content.trust.eyebrow}</p><h2 id="trust-title">{content.trust.title}</h2>
         <div className="trust-grid">{content.trust.items.map((item, index) => <div key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</div>)}</div>
-        <div className="pricing-final-cta"><p>{content.finalCta.copy}</p><Link className="btn" to="/contact">{content.finalCta.cta}</Link></div>
+        <div className="pricing-final-cta"><p>{content.finalCta.copy}</p><Link className="btn" to="/contact" onClick={() => window.dataLayer?.push({ event: "assessment_start", source: "pricing_final_cta" })}>{content.finalCta.cta}</Link></div>
       </div>
     </section>
   );

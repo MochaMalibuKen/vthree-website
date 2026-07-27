@@ -60,7 +60,7 @@ export default function Nav() {
           <button type="button" className={current === "en" ? "active" : undefined} onClick={() => { i18n.changeLanguage("en"); track("language_select", { language: "en" }); }} disabled={current === "en"} aria-pressed={current === "en"}>EN</button>
           <button type="button" className={current === "es" ? "active" : undefined} onClick={() => { i18n.changeLanguage("es"); track("language_select", { language: "es" }); }} disabled={current === "es"} aria-pressed={current === "es"}>ES</button>
         </span>
-        <Link onClick={() => track("cta_click", { cta: "nav_start_assessment" })} to="/contact" className="btn nav-cta">{t("nav.schedule", { defaultValue: "Start an Assessment" })}</Link>
+        <Link onClick={() => track("assessment_start", { source: "navigation" })} to="/contact" className="btn nav-cta">{t("nav.schedule", { defaultValue: "Start an Assessment" })}</Link>
       </div>
     </div>
   </nav>;
