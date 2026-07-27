@@ -15,7 +15,7 @@ export default function HeroSection() {
           {Array.isArray(cues) && cues.map(cue => <li key={cue}>{cue}</li>)}
         </ul>
         <div className="cta">
-          <Link className="btn" to="/contact" onClick={() => window.dataLayer?.push({ event: "cta_click", cta: "home_start_assessment" })}>{t("homepage.hero.primaryCta")}</Link>
+          <Link className="btn" to="/contact" onClick={() => window.dataLayer?.push({ event: "assessment_start", source: "home_hero" })}>{t("homepage.hero.primaryCta")}</Link>
           <a className="btn outline" href="#vthree-method" onClick={() => window.dataLayer?.push({ event: "cta_click", cta: "home_explore_method" })}>{t("homepage.hero.secondaryCta")}</a>
         </div>
       </div>

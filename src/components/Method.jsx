@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { MethodIcon } from "./VisualDiagrams.jsx";
 
 const stages = ["observe", "research", "architect", "build", "measure", "evolve"];
@@ -24,6 +25,11 @@ export default function Method() {
         <p className="method-loop" aria-label={stages.map(stage => t(`method.stages.${stage}.title`)).join(", ")}>
           {stages.map(stage => t(`method.stages.${stage}.title`)).join(" → ")}
         </p>
+        <div className="cta">
+          <Link className="btn" to="/contact" onClick={() => window.dataLayer?.push({ event: "assessment_start", source: "method" })}>
+            {t("nav.schedule", { defaultValue: "Start an Assessment" })}
+          </Link>
+        </div>
       </div>
     </section>
   );

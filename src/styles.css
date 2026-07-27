@@ -312,6 +312,12 @@ nav .inner { min-height: 72px; display: flex; align-items: center; justify-conte
 .contact-lead { color: var(--muted); font-size: 1.15rem; }
 .contact-prompt { margin-top: 3rem; padding-left: 1rem; border-left: 2px solid var(--brand); }
 .contact-prompt span { color: var(--signal); font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.assessment-gate { align-self: start; padding: clamp(1.5rem, 4vw, 2.5rem); border: 1px dashed var(--line-strong); border-radius: 14px; background: rgba(255,255,255,.018); }
+.assessment-gate h2 { margin-top: 1.4rem; font-size: clamp(1.7rem, 3.5vw, 2.7rem); }
+.assessment-gate > p:not(.home-status):not(.fine-print) { color: #cbd3db; }
+.assessment-expectations { margin: 2rem 0; padding: 1.25rem; border-left: 2px solid var(--amber); background: rgba(243,185,95,.025); }
+.assessment-expectations h3 { margin-top: 0; color: var(--amber); font-size: 1rem; letter-spacing: -.01em; }
+.assessment-expectations ul { display: grid; gap: .45rem; margin-bottom: 0; color: var(--muted); }
 .contact-form { display: grid; gap: 1rem; }
 .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .contact-form label { display: grid; gap: .35rem; color: #d4dae0; font-size: .78rem; font-weight: 700; letter-spacing: .03em; }

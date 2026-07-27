@@ -79,3 +79,16 @@ These dependencies must not be resolved through implementation assumptions.
 - Added no raster assets. The founder area uses a controlled portrait placeholder; an approved founder portrait remains a production dependency.
 - Existing publication controls remain unchanged: all case-detail pages and `/contact` and `/assessment` remain `noindex, nofollow`; case-detail URLs remain excluded from `public/sitemap.xml`.
 - Remaining dependencies are approved Spanish homepage copy, approved case evidence and permissions, approved Intelligence articles, final founder portrait and identity review, approved privacy language, assessment routing and response commitments, and Microsoft Bookings configuration.
+
+## C-04B assessment conversion path
+
+- Established `/contact` as the canonical Sprint 001 assessment route and converted `/assessment` into a replace-navigation alias to `/contact`.
+- Replaced the active React Formspree form with a controlled assessment-status gate. The page collects and transmits no personal information while privacy language, consent language, Formspree ownership and destination routing, submission handling, response expectations, and final success and error messages remain unapproved.
+- Added the Founder-approved assessment expectations: submission will not guarantee project acceptance, an immediate proposal, immediate scheduling, a response within an unapproved timeframe, or a paid engagement.
+- Removed the legacy Spanish contact namespace so the controlled English assessment status falls back intact rather than displaying the superseded “Strategic Review” terminology before an approved Spanish assessment translation exists.
+- Converted legacy `/intake.html` and `/thanks.html` into no-index redirects to `/contact`, removed their obsolete intake submission script, and eliminated the alternate public Formspree transmission path and unapproved 24-hour proposal promise.
+- Updated pricing conversion links to route directly to `/contact` using “Start an Assessment” terminology. Microsoft Bookings remains visibly inactive and does not offer appointment selection.
+- Added canonical `/contact` assessment CTAs to Services, Method, and About, and standardized assessment-entry analytics across navigation, homepage, pricing, and those routed pages as `assessment_start` with a source value.
+- Reserved `assessment_submit` and `assessment_success` for the approved form activation package; neither event fires while submissions are disabled.
+- Preserved no-index controls for `/contact`, `/privacy`, and the redirected assessment path. No scheduling, external form connection, legal privacy language, success promise, response window, or paid-engagement implication was introduced.
+- Remaining activation dependencies are approved privacy and consent language, confirmed Formspree account ownership and destination routing, assigned submission-handling responsibilities, approved response expectations, and approved success and error messages.

@@ -19,7 +19,7 @@ export default function AudienceFitSection() {
           <ul>{Array.isArray(notFit) && notFit.map(item => <li key={item}>{item}</li>)}</ul>
         </div>
       </div>
-      <Link className="text-link home-section-link" to="/contact">{t("homepage.audience.cta")} <span aria-hidden="true">→</span></Link>
+      <Link className="text-link home-section-link" to="/contact" onClick={() => window.dataLayer?.push({ event: "assessment_start", source: "home_audience_fit" })}>{t("homepage.audience.cta")} <span aria-hidden="true">→</span></Link>
     </div>
   </section>;
 }
