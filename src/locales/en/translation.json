@@ -1,5 +1,132 @@
 {
   "meta": { "title": "VTHREE | Digital Architecture Studio", "description": "VTHREE architects connected websites, campaigns, automation, analytics, and creative systems for measurable growth." },
+  "homepage": {
+    "hero": {
+      "eyebrow": "STRATEGIC DIGITAL INFRASTRUCTURE",
+      "title": "Your website, content, tools, and operations should work as one system.",
+      "body": "VThree helps growth-focused teams connect strategy, digital experiences, content, automation, and measurement into coordinated infrastructure built for clearer communication, stronger operations, and measurable progress.",
+      "cuesLabel": "VThree operating principles",
+      "cues": ["Intelligence-led planning", "Controlled production", "Practical automation", "Measurable improvement"],
+      "primaryCta": "Start an Assessment",
+      "secondaryCta": "Explore the VThree Method",
+      "system": {
+        "strategy": "Strategy",
+        "experience": "Digital experiences",
+        "content": "Content",
+        "automation": "Automation",
+        "measurement": "Measurement"
+      }
+    },
+    "problem": {
+      "eyebrow": "THE PROBLEM BEHIND THE PROBLEM",
+      "title": "Growth becomes harder when the parts of your business stop supporting one another.",
+      "themes": ["Disconnected Experience", "Manual Friction", "Unclear Priorities", "Limited Visibility", "Isolated Deliverables"],
+      "cta": "Explore the VThree Method"
+    },
+    "stakes": {
+      "title": "Disconnected systems cost more than time.",
+      "consequences": ["Missed opportunities", "Repeated work", "Inconsistent prospect experience", "Incomplete reporting", "Content without purpose", "Difficult maintenance", "Growth creating more friction"],
+      "qualification": "The objective is not to automate everything or replace human judgment."
+    },
+    "method": {
+      "eyebrow": "THE VTHREE METHOD",
+      "title": "A disciplined path from uncertainty to measurable improvement.",
+      "stages": ["Intelligence", "Strategy", "Architecture", "Production", "Automation", "Measurement", "Improvement"],
+      "cta": "See How We Work"
+    },
+    "capabilities": {
+      "eyebrow": "COORDINATED CAPABILITIES",
+      "title": "Build what the organization needs—and connect it to the larger system.",
+      "groups": ["Strategy and Positioning", "Websites and Digital Experiences", "Content and Authority Systems", "Automation and Workflow", "Measurement and Improvement"],
+      "cta": "View Services"
+    },
+    "proof": {
+      "eyebrow": "THE WORK BEHIND THE CLAIMS",
+      "title": "See the decisions, systems, and outcomes behind the work.",
+      "contextLabel": "Context",
+      "problemLabel": "Problem",
+      "decisionLabel": "Key decision",
+      "implementationLabel": "Implementation",
+      "evidenceLabel": "Evidence status",
+      "cta": "View Work",
+      "slots": [
+        {
+          "status": "Coming after approval",
+          "title": "Featured case study",
+          "imageMark": "01",
+          "imageStatus": "Approved featured case media pending",
+          "context": "Reserved for a Founder- and Delivery-approved client case.",
+          "problem": "Pending approved case definition.",
+          "decision": "Pending approved decision record.",
+          "implementation": "Pending approved implementation record.",
+          "ctaStatus": "Case link withheld until publication approval.",
+          "evidence": "No client claim or outcome is published here before approval."
+        },
+        {
+          "status": "Internal",
+          "title": "Internal systems validation",
+          "imageMark": "02",
+          "imageStatus": "Approved internal validation media pending",
+          "context": "VThree tests methods and workflows internally before adapting proven approaches for client work.",
+          "problem": "Pending approved internal problem statement.",
+          "decision": "Pending approved internal decision record.",
+          "implementation": "Pending approved internal implementation record.",
+          "ctaStatus": "Detail link withheld until publication approval.",
+          "evidence": "Internal validation is identified clearly and is not presented as external client proof."
+        },
+        {
+          "status": "Prototype",
+          "title": "Prototype documentation",
+          "imageMark": "03",
+          "imageStatus": "Approved prototype media pending",
+          "context": "Reserved for prototype work with a defined problem, decision, implementation, and review status.",
+          "problem": "Pending approved prototype problem statement.",
+          "decision": "Pending approved prototype decision record.",
+          "implementation": "Pending approved prototype implementation record.",
+          "ctaStatus": "Prototype link withheld until publication approval.",
+          "evidence": "Prototype status remains explicit until evidence and publication are approved."
+        }
+      ]
+    },
+    "audience": {
+      "eyebrow": "WHO VTHREE IS FOR",
+      "title": "Built for teams that need clarity, coordination, and practical progress.",
+      "fitLabel": "A strong fit when",
+      "fit": ["Needs are connected across more than one part of the organization.", "Strategy is required before production begins.", "Internal capacity is limited.", "The environment is complex or trust-sensitive.", "Documented decisions are preferred."],
+      "notFitLabel": "Not the right fit when",
+      "notFit": ["Immediate production is expected without discovery.", "Guaranteed results are required.", "The decision is based only on the lowest price.", "Unsupported or deceptive claims are expected."],
+      "cta": "Check Fit"
+    },
+    "pricing": {
+      "eyebrow": "CLEARER EXPECTATIONS",
+      "title": "Understand what affects scope before the proposal.",
+      "factors": ["Complexity", "Existing systems", "Deliverable count", "Integrations", "Content readiness", "Media", "Accessibility", "Timeline", "Support"],
+      "cta": "Review Pricing"
+    },
+    "intelligence": {
+      "eyebrow": "VTHREE INTELLIGENCE",
+      "title": "Useful thinking for organizations building stronger digital systems.",
+      "status": "Editorial review pending",
+      "empty": "Approved Intelligence articles will appear here after editorial review.",
+      "cta": "Visit Intelligence",
+      "plannedTopics": ["Website Readiness", "AI-Search Readiness", "Strategic Digital Infrastructure", "Automation Readiness", "Evidence-Driven Case Studies"]
+    },
+    "founder": {
+      "eyebrow": "FOUNDER-LED. SYSTEM-BUILT.",
+      "title": "The work is guided by judgment, not just tools.",
+      "portraitStatus": "Founder portrait pending approval",
+      "name": "Kennieth Allen",
+      "role": "Founder and Digital Architect",
+      "company": "Vivid Vision Ventures operating as VThree.",
+      "cta": "About VThree"
+    },
+    "assessment": {
+      "title": "Ready to understand what your digital system needs next?",
+      "body": "Start with a structured assessment.",
+      "disclaimer": "Submitting an assessment does not create automatic project acceptance, an immediate proposal, immediate scheduling, or a paid commitment.",
+      "cta": "Start an Assessment"
+    }
+  },
   "nav": { "primary": "Primary navigation", "home": "VTHREE home", "menu": "Toggle menu", "skip": "Skip to main content", "capabilities": "Services", "method": "Method", "work": "Work", "labs": "Labs", "systems": "Technical Systems", "about": "About", "insights": "Intelligence", "pricing": "Pricing", "contact": "Contact", "privacy": "Privacy", "schedule": "Start an Assessment", "language": "Language", "showChat": "Chat", "hideChat": "Hide Chat" },
   "hero": { "eyebrow": "Digital Architecture Studio", "title": "We Architect Digital Growth Systems.", "subtitle": "VTHREE connects research, strategy, storytelling, automation, analytics, and technical execution into coordinated digital systems built to produce measurable business movement.", "capabilities": "Websites. Campaigns. Creative Production. Automation. Intelligence.", "cta": "Schedule a Strategic Review", "secondary": "Explore Our Work" },
   "welcome": { "label": "VTHREE positioning", "title": "Digital Architect", "subtitle": "We architect digital systems that turn attention into measurable growth." },
