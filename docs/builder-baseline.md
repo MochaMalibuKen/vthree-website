@@ -65,3 +65,17 @@ These dependencies must not be resolved through implementation assumptions.
 - Created the eight homepage scaffold files and modified only `HomePage.jsx` and this baseline document. No CSS adjustment or dependency was required.
 - Intentionally preserved the visible output. C-03B remains responsible for any authorized narrative, asset, visual, SEO, analytics, performance, or conversion production work.
 - Existing dependencies remain approved production content and assets, case and Intelligence publication approval, privacy language, assessment routing, and Microsoft Bookings configuration.
+
+## C-03B homepage production implementation
+
+- Replaced the eight-zone scaffold with the approved customer-problem-first sequence: Hero, Problem Recognition, Stakes, VThree Method, Capabilities, Proof, Audience Fit, Pricing Guidance, Intelligence, Founder Authority, and Final Assessment CTA.
+- Revised `HeroSection`, `ProblemSection`, `MethodSection`, `ServicesSection`, `ProofSection`, `FounderSection`, and `AssessmentCTASection`; added `StakesSection`, `AudienceFitSection`, `PricingGuidanceSection`, and `IntelligenceSection`; retired the C-03A-only `TrustSection`.
+- Added the approved English homepage narrative under the `homepage` localization namespace. Spanish homepage copy remains an approval dependency and intentionally falls back to English through the existing i18next configuration rather than using an autonomous translation.
+- Added homepage-scoped responsive styles using the existing design tokens and CSS architecture. The production sequence uses a text-first, code-native system diagram and restrained ruby, cyan, emerald, and amber signals without adding a dependency or external media.
+- Removed the old homepage explainer-video composition from the homepage sequence. The revised homepage contains no fixed-width video placeholder, and the 768-pixel layout is covered by the homepage grid breakpoints to prevent the previously identified overflow condition.
+- Preserved semantic section headings, ordered method stages, list semantics, keyboard-visible links and controls, reduced-motion behavior, and descriptive labels for controlled visual placeholders. Decorative system graphics remain hidden from assistive technology because the same meaning is present in the page copy.
+- Preserved CTA routing to `/contact`, `/method`, `/services`, `/work`, `/pricing`, `/intelligence`, and `/about`, along with the existing homepage assessment analytics events.
+- Kept proof publication controlled: homepage proof cards provide slots for project name, context, problem, key decision, implementation, evidence, image, and CTA status, but display explicit approval placeholders instead of active case links or unapproved claims. Unpublished Intelligence categories remain hidden behind a controlled empty state, and no client, metric, pricing, response-time, privacy, or outcome claim was introduced.
+- Added no raster assets. The founder area uses a controlled portrait placeholder; an approved founder portrait remains a production dependency.
+- Existing publication controls remain unchanged: all case-detail pages and `/contact` and `/assessment` remain `noindex, nofollow`; case-detail URLs remain excluded from `public/sitemap.xml`.
+- Remaining dependencies are approved Spanish homepage copy, approved case evidence and permissions, approved Intelligence articles, final founder portrait and identity review, approved privacy language, assessment routing and response commitments, and Microsoft Bookings configuration.
