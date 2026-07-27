@@ -1,10 +1,109 @@
-export const caseStudies = [
-  { slug: "hospitality-conversion-platform", title: "Hospitality Conversion Platform", category: "Hospitality", challenge: "The business had fragmented digital touchpoints and a booking path with avoidable friction.", diagnosis: "High-intent mobile visitors needed a faster route from interest to action.", solution: "We rebuilt the structure around decision-stage messaging, booking clarity, and sequenced calls to action.", deliverables: ["Information architecture", "Responsive web experience", "Inquiry-path refinement"], outcomes: ["Clearer customer journey", "Improved mobile usability", "Foundation created for future measurement"], capabilities: ["Web strategy", "Conversion architecture", "Performance"], future: "Connect booking and analytics data for clearer funnel reporting.", link: "https://eaglecorpsessentials.com/" },
-  { slug: "service-business-positioning-rebuild", title: "Service Business Positioning Rebuild", category: "Service business", challenge: "The company had solid service delivery but unclear positioning and offer hierarchy.", diagnosis: "Sales conversations were carrying explanatory work the website should handle first.", solution: "We aligned information architecture and service copy to buyer questions and built a clearer lead route.", deliverables: ["Offer architecture", "Conversion copy", "Lead routing"], outcomes: ["Improved conversion clarity", "Better service organization", "Reduced communication friction"], capabilities: ["Strategy", "Messaging", "Web development"], future: "Add structured lead-source and qualification reporting.", link: "https://eaglecorpsessentials.com/mighty-matt-lifesavers-kit/" },
-  { slug: "nonprofit-program-visibility-upgrade", title: "Nonprofit Program Visibility Upgrade", category: "Nonprofit", challenge: "Program information was difficult to scan and trust signals were buried in dense layouts.", diagnosis: "Stakeholders needed audience-specific pathways for participation and outreach.", solution: "We simplified navigation, rebuilt content hierarchy, and improved readability across devices.", deliverables: ["Navigation redesign", "Content hierarchy", "Accessibility review"], outcomes: ["Clearer program information", "Increased content accessibility", "Modernized site structure"], capabilities: ["Content strategy", "Accessibility", "Web development"], future: "Build program-level engagement measurement.", link: "https://brotherssistersofaikencounty.org/" },
-  { slug: "saferide-digital-presence-build", title: "SafeRide Escorts Digital Presence Build", category: "Service business", challenge: "The brand needed a trustworthy presence that communicated its services quickly.", diagnosis: "First-time visitors needed reassurance and direct inquiry paths without excess detail.", solution: "We structured the site around fast comprehension, consistent presentation, and direct action.", deliverables: ["Website architecture", "Service messaging", "Inquiry flow"], outcomes: ["Improved service-page clarity", "Clearer inquiry path", "Stronger trust signaling"], capabilities: ["Web strategy", "Messaging", "Conversion design"], future: "Add source-aware inquiry tracking.", link: "https://www.saferideescorts.com" },
-  { slug: "tx-elite-meal-prep-growth-site", title: "TX Elite Meal Prep Growth Site", category: "E-commerce", challenge: "The business needed a clearer product and offer structure for mobile customers.", diagnosis: "Buying decisions carried unnecessary navigation and comparison friction.", solution: "We streamlined navigation and offer communication to support faster product decisions.", deliverables: ["Product-path architecture", "Mobile UX", "Offer hierarchy"], outcomes: ["Stronger product-path clarity", "Improved mobile decision flow", "Foundation for retention optimization"], capabilities: ["Commerce architecture", "Mobile UX", "Conversion strategy"], future: "Connect repeat-purchase behavior to campaign reporting.", link: "https://txelitemac.com" },
-  { slug: "citizens-park-community-visibility-platform", title: "Citizens Park OCC Community Visibility Platform", category: "Community organization", challenge: "The organization needed a stronger digital front door for communication and events.", diagnosis: "Multiple audiences needed clearer pathways to relevant information.", solution: "We reorganized content, simplified navigation, and prioritized accessibility and operational ease.", deliverables: ["Audience pathways", "Event visibility", "Responsive site structure"], outcomes: ["Clearer communication structure", "Better event discoverability", "Architecture ready for expansion"], capabilities: ["Information architecture", "Accessibility", "Community communications"], future: "Add event engagement and participation reporting.", link: "https://www.citizensparkocc.com" }
-];
+export const PUBLICATION_STATUSES = Object.freeze([
+  "draft",
+  "internal-review",
+  "approved",
+  "published",
+  "archived",
+]);
 
-export const findCaseStudy = (slug) => caseStudies.find(study => study.slug === slug);
+export const CASE_STUDY_TEMPLATE = Object.freeze({
+  id: "",
+  slug: "",
+  title: "",
+  displayName: "",
+  clientName: "",
+  publicationStatus: "draft",
+  permissionToPublish: false,
+  permissionToUseClientName: false,
+  permissionToUseLogo: false,
+  permissionToUseImages: false,
+  permissionToUseMetrics: false,
+  permissionToUseQuote: false,
+  permissionToUseExternalLink: false,
+  permissionToUseNarrative: false,
+  permissionToUseOutcomes: false,
+  permissionToUseCompletionDate: false,
+  industry: "",
+  serviceCategories: [],
+  summary: "",
+  problem: "",
+  approach: "",
+  solution: "",
+  outcomes: [],
+  metrics: [],
+  testimonial: "",
+  quoteAttribution: "",
+  logo: null,
+  images: [],
+  externalLink: "",
+  featured: false,
+  completionDate: "",
+});
+
+// This client-delivered registry must contain publication-cleared records only.
+// Draft narratives and private evidence belong in a non-public governance system,
+// not in the browser bundle. No existing case has documented publication approval.
+export const caseStudies = Object.freeze([]);
+
+export function isPublicCaseStudy(record) {
+  return Boolean(
+    record
+      && record.id
+      && record.slug
+      && record.title
+      && record.publicationStatus === "published"
+      && record.permissionToPublish === true,
+  );
+}
+
+function permittedImages(record) {
+  if (!record.permissionToUseImages || !Array.isArray(record.images)) return [];
+  return record.images
+    .filter(image => image?.src && typeof image.alt === "string")
+    .map(image => ({ src: image.src, alt: image.alt }));
+}
+
+function permittedLogo(record) {
+  if (!record.permissionToUseLogo || !record.logo?.src || typeof record.logo.alt !== "string") return null;
+  return { src: record.logo.src, alt: record.logo.alt };
+}
+
+export function toPublicCaseStudy(record) {
+  if (!isPublicCaseStudy(record)) return null;
+
+  const quoteApproved = record.permissionToUseQuote === true
+    && Boolean(record.testimonial)
+    && Boolean(record.quoteAttribution);
+
+  return {
+    id: record.id,
+    slug: record.slug,
+    title: record.title,
+    displayName: record.displayName || record.title,
+    clientName: record.permissionToUseClientName ? record.clientName : "",
+    publicationStatus: record.publicationStatus,
+    industry: record.industry || "",
+    serviceCategories: Array.isArray(record.serviceCategories) ? record.serviceCategories : [],
+    summary: record.permissionToUseNarrative ? record.summary : "",
+    problem: record.permissionToUseNarrative ? record.problem : "",
+    approach: record.permissionToUseNarrative ? record.approach : "",
+    solution: record.permissionToUseNarrative ? record.solution : "",
+    outcomes: record.permissionToUseOutcomes && Array.isArray(record.outcomes) ? record.outcomes : [],
+    metrics: record.permissionToUseMetrics && Array.isArray(record.metrics) ? record.metrics : [],
+    testimonial: quoteApproved ? record.testimonial : "",
+    quoteAttribution: quoteApproved ? record.quoteAttribution : "",
+    logo: permittedLogo(record),
+    images: permittedImages(record),
+    externalLink: record.permissionToUseExternalLink ? record.externalLink : "",
+    featured: record.featured === true,
+    completionDate: record.permissionToUseCompletionDate ? record.completionDate : "",
+  };
+}
+
+export const publicCaseStudies = Object.freeze(
+  caseStudies.map(toPublicCaseStudy).filter(Boolean),
+);
+
+export const findPublicCaseStudy = slug => (
+  publicCaseStudies.find(study => study.slug === slug)
+);

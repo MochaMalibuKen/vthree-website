@@ -17,30 +17,3 @@ export const services = [
     features: ["Payment and platform integrations", "A/B test-ready flows", "Structured schema markup", "Security hardening"],
   },
 ];
-
-export const projects = [
-  {
-    title: "Mighty Matt Lifesaver’s Kit",
-    blurb: "Landing page for an emergency lifesaver kit with clear CTA and fast load.",
-    tags: ["Vite", "React", "CSS"],
-    link: "https://eaglecorpsessentials.com/mighty-matt-lifesavers-kit/",
-    repo: "", // leave empty if no public repo
-    image: "/portfolio/mighty-matt.png"
-  },
-  {
-    title: "Brothers & Sisters of Aiken County",
-    blurb: "Non‑profit website with simple navigation and optimized readability.",
-    tags: ["WP", "SEO", "Accessibility"],
-    link: "https://brotherssistersofaikencounty.org/",
-    repo: "",
-    image: "/portfolio/aiken.png"
-  },
-  {
-    title: "Eagle Corps Essentials",
-    blurb: "Product site with brand styling and conversion‑focused sections.",
-    tags: ["HTML", "CSS", "JS"],
-    link: "https://eaglecorpsessentials.com/",
-    repo: "",
-    image: "/portfolio/eagle-corps.png"
-  }
-];

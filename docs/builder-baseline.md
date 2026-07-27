@@ -16,8 +16,8 @@
 | `/` | Existing homepage composition | Preserved pending C-03 |
 | `/services` | Existing Services, Industries, and Technical Projects | Routed |
 | `/method` | Existing Philosophy, comparison, and Method | Routed |
-| `/work` | Existing approved public case material | Routed |
-| `/work/:slug` | Structured case data extracted from existing public copy | Routed |
+| `/work` | Controlled public-case registry and intentional empty state | No-index while zero cases are published and permissioned |
+| `/work/:slug` | Permission-filtered public case lookup | Unpublished routes return a generic no-index unavailable state |
 | `/intelligence` | Existing Insights and Labs structures | Routed; no articles published |
 | `/intelligence/:slug` | Empty controlled content model | Returns controlled 404 until approval |
 | `/about` | Existing About and Founder content | Routed |
@@ -29,8 +29,8 @@
 ## Decisions that prevent rework
 
 - Existing customer-facing copy was reused; no case evidence or Intelligence articles were invented.
-- Case data now has stable slugs and one content source for index and detail routes.
-- Case architecture and all six detail routes are ready, but case claims, outcomes, permissions, and publication remain dependent on Founder and Delivery approval; detail pages are no-index and excluded from the public sitemap until approved.
+- Public case data has one permission-aware content source for index and detail routes; unapproved case narratives are not delivered in the browser bundle.
+- Case architecture is ready, but claims, outcomes, permissions, and publication remain dependent on Founder and Delivery approval. Unpublished detail routes return a generic unavailable state and remain excluded from the public sitemap.
 - Intelligence content has an intentionally empty data model until approved articles exist.
 - Privacy and assessment routes remain no-index until approved disclosure and routing decisions are supplied.
 - BrowserRouter is retained because the existing GitHub Pages `404.html` fallback preserves direct-route handling on the custom domain.
@@ -92,3 +92,17 @@ These dependencies must not be resolved through implementation assumptions.
 - Reserved `assessment_submit` and `assessment_success` for the approved form activation package; neither event fires while submissions are disabled.
 - Preserved no-index controls for `/contact`, `/privacy`, and the redirected assessment path. No scheduling, external form connection, legal privacy language, success promise, response window, or paid-engagement implication was introduced.
 - Remaining activation dependencies are approved privacy and consent language, confirmed Formspree account ownership and destination routing, assigned submission-handling responsibilities, approved response expectations, and approved success and error messages.
+
+## C-08 Work and proof readiness
+
+- Replaced the browser-delivered legacy case narratives with an empty public registry because no existing case contains documented publication approval and client permission.
+- Added explicit `draft`, `internal-review`, `approved`, `published`, and `archived` statuses. A record becomes publicly eligible only when its status is `published` and `permissionToPublish` is `true`; `approved` alone is not public.
+- Added field-level controls for client names, logos, images, narrative content, outcomes, metrics, testimonials and attribution, completion dates, and external links. Public components consume only the permission-filtered projection.
+- Established a source-level rule that draft narratives and private evidence must remain outside the client-delivered registry. This prevents unpublished metadata from being discoverable in the compiled page source.
+- Removed the unused alternate project collection and its directly addressable public portfolio images; the legacy `Projects` component now delegates to the controlled Work renderer.
+- Replaced `/work` case cards and links with an intentional proof-standard empty state and one `Start an Assessment` CTA to `/contact`. The navigation and approved homepage proof placeholder continue to link to this complete controlled experience.
+- Changed all unpublished case-detail requests to a generic unavailable state with `noindex, nofollow` metadata and a canonical URL of `/work`; no hidden title, client, claim, outcome, or external URL is rendered.
+- Removed `/work` from `public/sitemap.xml` for the zero-public-case condition. Case-detail URLs remain excluded.
+- Standardized public Work analytics as `work_view`, `work_case_open`, `work_external_link`, and `assessment_start`; suppressed case-open and external-link events cannot fire while the public registry is empty.
+- Spanish Work copy remains an approval dependency and intentionally falls back to the controlled English content.
+- A separate selected technical-project claim remains visible on `/services`. C-08 did not alter that out-of-scope production section; Founder and Delivery must either document its publication approval or authorize a separate suppression correction.
