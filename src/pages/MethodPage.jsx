@@ -1,10 +1,13 @@
 import { useTranslation } from "react-i18next";
 import PageMeta from "../components/PageMeta.jsx";
-import Philosophy from "../components/Philosophy.jsx";
-import WhyDigitalArchitecture from "../components/WhyDigitalArchitecture.jsx";
 import Method from "../components/Method.jsx";
 
 export default function MethodPage() {
   const { t } = useTranslation();
-  return <main><PageMeta title={t("method.eyebrow")} description={t("method.subtitle")} path="/method" /><Philosophy headingLevel="h1" /><WhyDigitalArchitecture /><Method /></main>;
+  return (
+    <main>
+      <PageMeta title={t("methodMeta.title")} description={t("methodMeta.description")} path="/method" />
+      <Method headingLevel="h1" />
+    </main>
+  );
 }
