@@ -2,18 +2,28 @@
 
 export const services = [
   {
-    title: "Conversion Foundation",
-    desc: "Single-focus website system engineered for speed, clarity, and lead capture.",
-    features: ["Brand-aligned design system", "Conversion-first copy architecture", "Structured inquiry flow", "Analytics baseline"],
+    title: "Strategy & Intelligence",
+    desc: "Clarify the market, audience, customer questions, and decision context before production begins.",
+    features: ["Market and competitor research", "Positioning", "Audience insight", "Digital opportunity assessment"],
   },
   {
-    title: "Growth Infrastructure",
-    desc: "Multi-page operating framework for demand capture, SEO structure, and conversion depth.",
-    features: ["Page speed tuning", "Search visibility architecture", "Scalable CMS structure", "Lifecycle email capture"],
+    title: "Brand & Experience",
+    desc: "Shape how people understand the organization, move through its information, and decide whether to trust it.",
+    features: ["Brand positioning", "Messaging", "Information architecture", "User journeys"],
   },
   {
-    title: "Commerce Systems",
-    desc: "Revenue-focused commerce build with operational integrations and decision-stage UX.",
-    features: ["Payment and platform integrations", "A/B test-ready flows", "Structured schema markup", "Security hardening"],
+    title: "Websites & Digital Platforms",
+    desc: "Build the digital home base around useful content, clear paths, accessible interaction, and controlled conversion.",
+    features: ["Websites", "Landing pages", "Responsive design", "Analytics integration"],
+  },
+  {
+    title: "Content & Campaigns",
+    desc: "Plan and produce communication assets that support the strategy instead of filling channels without direction.",
+    features: ["Content strategy", "Campaign planning", "Social content", "Educational assets"],
+  },
+  {
+    title: "Systems & Automation",
+    desc: "Connect forms, tools, workflows, reporting, and lightweight automation so operations support the customer path.",
+    features: ["Workflow assessment", "Forms and intake workflows", "Dashboards", "Connected digital tools"],
   },
 ];

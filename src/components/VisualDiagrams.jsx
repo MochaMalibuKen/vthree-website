@@ -25,14 +25,14 @@ export function CapabilityBlueprint() {
     <g fill="none" stroke="#52d8e7" strokeOpacity=".28" strokeWidth="1.5">
       <path d="M450 215C360 110 265 86 150 64" /><path d="M450 215C540 110 635 86 750 64" />
       <path d="M450 215C330 215 235 215 110 215" /><path d="M450 215C570 215 665 215 790 215" />
-      <path d="M450 215C360 320 295 350 200 370" /><path d="M450 215C540 320 605 350 700 370" />
+      <path d="M450 215C450 315 450 345 450 370" />
     </g>
     <g fill="#0d1722" stroke="#52d8e7" strokeWidth="1.5">
       <circle cx="150" cy="64" r="5" /><circle cx="750" cy="64" r="5" /><circle cx="110" cy="215" r="5" />
-      <circle cx="790" cy="215" r="5" /><circle cx="200" cy="370" r="5" /><circle cx="700" cy="370" r="5" />
+      <circle cx="790" cy="215" r="5" /><circle cx="450" cy="370" r="5" />
     </g>
     <g fill="none" stroke="#ff496d" strokeOpacity=".35"><circle cx="450" cy="215" r="92" /><circle cx="450" cy="215" r="112" strokeDasharray="3 9" /></g>
-    <path className="blueprint-signal" d="M150 64C360 86 360 150 450 215S600 340 700 370" fill="none" stroke="#52d8e7" strokeWidth="2" strokeDasharray="7 12" />
+    <path className="blueprint-signal" d="M150 64C360 86 360 150 450 215S450 335 450 370" fill="none" stroke="#52d8e7" strokeWidth="2" strokeDasharray="7 12" />
   </svg>;
 }
 
