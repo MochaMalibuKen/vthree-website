@@ -190,16 +190,16 @@ nav .inner { min-height: 72px; display: flex; align-items: center; justify-conte
 .pricing-principle { grid-column: 2; grid-row: 2 / span 2; padding: 1.4rem; border-left: 2px solid var(--brand); background: rgba(255,73,109,.035); }
 .pricing-principle span { color: var(--brand-soft); font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 .pricing-principle p { margin: .55rem 0 0; color: #d1d8df; font-size: .92rem; }
-.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
 .price-card { position: relative; display: flex; flex-direction: column; border: 0; overflow: hidden; }
 .price-card::before { content: ""; position: absolute; inset: 0 0 auto; height: 3px; background: var(--brand); }
-.price-card-2::before { background: var(--signal); }.price-card-3::before { background: var(--emerald); }
+.price-card-2::before, .price-card-5::before { background: var(--signal); }.price-card-3::before { background: var(--emerald); }.price-card-4::before { background: var(--amber); }
 .package-heading { display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); font: 700 .67rem monospace; letter-spacing: .06em; text-transform: uppercase; }
 .package-heading span { color: var(--brand); }.package-heading p { margin: 0; text-align: right; }
 .price-card h3 { margin: 2rem 0 0; }
 .price { display: flex; flex-direction: column; margin: 1.8rem 0; color: var(--brand-soft); font: 800 2.2rem Poppins, sans-serif; }
 .price small { color: var(--muted); font: 700 .7rem Inter, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
-.package-purpose { min-height: 112px; color: #cbd3db; }
+.package-purpose { min-height: 140px; color: #cbd3db; }
 .audience-tags { display: flex; flex-wrap: wrap; gap: .35rem; min-height: 76px; margin-bottom: 1rem; }
 .audience-tags span { padding: .3rem .45rem; border: 1px solid var(--line); border-radius: 100px; color: var(--muted); font-size: .67rem; }
 .package-details { border-top: 1px solid var(--line); }
@@ -215,7 +215,7 @@ nav .inner { min-height: 72px; display: flex; align-items: center; justify-conte
 
 .pricing-band { margin-top: clamp(5rem, 9vw, 9rem); padding: clamp(4rem, 7vw, 7rem) 0; border-block: 1px solid var(--line); }
 .strategic-services { background: #0d151f; }
-.strategic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 3rem; background: var(--line); border: 1px solid var(--line); }
+.strategic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1px; margin-top: 3rem; background: var(--line); border: 1px solid var(--line); }
 .strategic-card { display: flex; flex-direction: column; min-height: 430px; padding: 1.6rem; background: #101a25; }
 .strategic-card h3 { margin: 1.5rem 0 .5rem; }
 .strategic-card > p { min-height: 62px; color: var(--signal); font-size: .9rem; }

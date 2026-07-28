@@ -411,49 +411,42 @@
     }
   },
   "pricing": {
-    "eyebrow": "Engagement entry points",
-    "title": "Start with the architecture you need now.",
-    "subtitle": "Transparent starting points for focused digital foundations. Broader systems are scoped through an assessment.",
-    "starting": "Starting at",
-    "cta": "Discuss this architecture",
-    "customTitle": "Systems beyond the website",
-    "customLabel": "Available after assessment",
-    "note": "Final pricing depends on scope, content readiness, integrations, automation requirements, campaign support, and reporting needs.",
+    "eyebrow": "Engagement model",
+    "title": "Custom digital consulting engagements shaped by assessment.",
+    "subtitle": "Pricing for strategic planning, digital growth, business systems, and implementation depends on goals, scope, complexity, assets, and operational needs.",
+    "cta": "Start an Assessment",
+    "customTitle": "Future engagement options",
+    "customLabel": "Governance dependency",
+    "note": "Final recommendations may include custom proposals, phased implementation, project-based pricing, or ongoing support where appropriate.",
     "plans": {
       "launch": {
-        "title": "Launch Architecture",
-        "price": "$1,500",
-        "blurb": "A professional digital foundation that establishes credibility and creates a clear inquiry path.",
+        "title": "Strategy & Intelligence",
+        "blurb": "Research, assessment, planning, and measurement guidance before implementation.",
         "features": [
-          "Discovery and website strategy",
-          "Brand-aligned responsive design",
-          "SEO and analytics foundations",
-          "Contact and inquiry flow",
-          "Accessibility, performance, training, and launch support"
+          "Objectives and scope review",
+          "Audience and market research",
+          "Digital growth planning",
+          "Measurement recommendations"
         ]
       },
       "growth": {
-        "title": "Growth Architecture",
-        "price": "$3,000",
-        "blurb": "A scalable marketing foundation connecting conversion paths, content, customer information, and performance evidence.",
+        "title": "Websites & Digital Platforms",
+        "blurb": "Digital platform planning and implementation scoped to the client’s operational needs.",
         "features": [
-          "Launch Architecture foundation",
-          "Conversion and landing-page systems",
-          "CRM and email capture",
-          "Campaign and content architecture",
-          "Analytics dashboard and performance reporting"
+          "Information architecture",
+          "Responsive implementation",
+          "Analytics foundations",
+          "Technical quality review"
         ]
       },
       "commerce": {
-        "title": "Commerce Architecture",
-        "price": "$5,000",
-        "blurb": "A connected commerce experience built around products, transactions, customer decisions, and future growth.",
+        "title": "Systems & Automation",
+        "blurb": "Workflow, intake, reporting, and automation recommendations shaped by assessment.",
         "features": [
-          "Growth Architecture foundation",
-          "Commerce and payment implementation",
-          "Product and customer architecture",
-          "Checkout and account optimization",
-          "Advanced analytics, integrations, security, and reporting"
+          "Workflow assessment",
+          "Forms and intake planning",
+          "Dashboard recommendations",
+          "Automation planning"
         ]
       }
     },

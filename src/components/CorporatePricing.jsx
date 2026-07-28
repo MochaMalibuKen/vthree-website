@@ -1,9 +1,9 @@
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { pricingContent } from "../pricingContent.js";
 
-const planKeys = ["launch", "growth", "commerce"];
-const serviceKeys = ["digital", "creative", "marketing", "business", "automation", "ai"];
+const engagementKeys = ["strategy", "brand", "platforms", "content", "systems"];
 const partnershipKeys = ["essential", "growth", "strategic"];
 
 export default function CorporatePricing({ headingLevel = "h2" }) {
@@ -11,6 +11,14 @@ export default function CorporatePricing({ headingLevel = "h2" }) {
   const language = i18n.language?.startsWith("es") ? "es" : "en";
   const content = pricingContent[language];
   const Heading = headingLevel;
+  const trackAssessment = source => {
+    window.dataLayer?.push({ event: "pricing_engagement_select", source });
+    window.dataLayer?.push({ event: "assessment_start", source });
+  };
+
+  useEffect(() => {
+    window.dataLayer?.push({ event: "pricing_view" });
+  }, []);
 
   return (
     <section id="corporate-pricing" className="section pricing-section" aria-labelledby="pricing-title">
@@ -22,12 +30,11 @@ export default function CorporatePricing({ headingLevel = "h2" }) {
       </div>
 
       <div className="container pricing-grid">
-        {planKeys.map((key, index) => {
-          const plan = content.plans[key];
+        {engagementKeys.map((key, index) => {
+          const plan = content.engagements[key];
           return <article key={key} className={`card price-card price-card-${index + 1}`}>
-            <div className="package-heading"><span>0{index + 1}</span><p>{plan.bestForLabel}</p></div>
+            <div className="package-heading"><span>{String(index + 1).padStart(2, "0")}</span><p>{plan.bestForLabel}</p></div>
             <h3>{plan.title}</h3>
-            <p className="price"><small>{content.starting}</small>{plan.price}</p>
             <p className="package-purpose">{plan.purpose}</p>
             <div className="audience-tags">{plan.audiences.map(item => <span key={item}>{item}</span>)}</div>
             <details className="package-details">
@@ -38,7 +45,7 @@ export default function CorporatePricing({ headingLevel = "h2" }) {
               <summary>{content.addonsLabel}<i aria-hidden="true">+</i></summary>
               <ul>{plan.addons.map(item => <li key={item}>{item}</li>)}</ul>
             </details>}
-            <Link className="btn package-cta" to="/contact" onClick={() => window.dataLayer?.push({ event: "assessment_start", source: `pricing_${key}` })}>{content.cta}</Link>
+            <Link className="btn package-cta" to="/contact" onClick={() => trackAssessment(`pricing_${key}`)}>{content.cta}</Link>
           </article>;
         })}
       </div>
@@ -47,7 +54,7 @@ export default function CorporatePricing({ headingLevel = "h2" }) {
       <div className="pricing-band strategic-services">
         <div className="container">
           <p className="eyebrow">{content.services.eyebrow}</p><h2>{content.services.title}</h2><p className="sub section-intro">{content.services.subtitle}</p>
-          <div className="strategic-grid">{serviceKeys.map((key, index) => {
+          <div className="strategic-grid">{engagementKeys.map((key, index) => {
             const service = content.services.items[key];
             return <article key={key} className="strategic-card"><span className="card-index">0{index + 1}</span><h3>{service.title}</h3><p>{service.outcome}</p><ul>{service.items.map(item => <li key={item}>{item}</li>)}</ul><strong>{content.services.scope}</strong></article>;
           })}</div>
@@ -76,9 +83,8 @@ export default function CorporatePricing({ headingLevel = "h2" }) {
       </div>
 
       <div id="start-assessment" className="container scheduling-section">
-        <div className="scheduling-copy"><p className="eyebrow">{content.scheduling.eyebrow}</p><h2>{content.scheduling.title}</h2><p>{content.scheduling.copy}</p><Link className="btn" to="/contact" onClick={() => window.dataLayer?.push({ event: "assessment_start", source: "pricing_assessment_section" })}>{content.scheduling.cta}</Link></div>
+        <div className="scheduling-copy"><p className="eyebrow">{content.scheduling.eyebrow}</p><h2>{content.scheduling.title}</h2><p>{content.scheduling.copy}</p><Link className="btn" to="/contact" onClick={() => trackAssessment("pricing_assessment_section")}>{content.scheduling.cta}</Link></div>
         <div className="bookings-placeholder" aria-label={content.scheduling.placeholderLabel}>
-          {/* Microsoft Bookings embed will be inserted inside this container. */}
           <div className="booking-calendar" aria-hidden="true"><span /><span /><span /><span /><span /><span /><span /><span /><span /></div>
           <strong>{content.scheduling.placeholderTitle}</strong><p>{content.scheduling.placeholderNote}</p>
         </div>
@@ -87,7 +93,7 @@ export default function CorporatePricing({ headingLevel = "h2" }) {
       <div className="container trust-section" aria-labelledby="trust-title">
         <p className="eyebrow">{content.trust.eyebrow}</p><h2 id="trust-title">{content.trust.title}</h2>
         <div className="trust-grid">{content.trust.items.map((item, index) => <div key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</div>)}</div>
-        <div className="pricing-final-cta"><p>{content.finalCta.copy}</p><Link className="btn" to="/contact" onClick={() => window.dataLayer?.push({ event: "assessment_start", source: "pricing_final_cta" })}>{content.finalCta.cta}</Link></div>
+        <div className="pricing-final-cta"><p>{content.finalCta.copy}</p><Link className="btn" to="/contact" onClick={() => trackAssessment("pricing_final_cta")}>{content.finalCta.cta}</Link></div>
       </div>
     </section>
   );
