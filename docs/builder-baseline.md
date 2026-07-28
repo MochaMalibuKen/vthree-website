@@ -118,3 +118,47 @@ These dependencies must not be resolved through implementation assumptions.
 - Removed the Spanish Services capability namespace so `/services` falls back to the approved English Services content until a final Spanish Services translation is approved. Spanish Services translation remains a dependency.
 - Homepage capability labels were aligned to the five approved capability groups without redesigning the homepage.
 - Deferred pricing package-to-service mapping, standalone service-detail routes, future Bookings integration, proposal automation, detailed scope boundaries, and final service-specific SEO strategy to later governance decisions.
+
+## C-10 Intelligence Publication Readiness
+
+- Expanded the Intelligence content model with a documented publication schema supporting slug, title, summary, category, author, publishedDate, updatedDate, readingTime, status, featured, seoTitle, seoDescription, sections, and sources.
+- Established six publication states: `draft`, `internal-review`, `executive-review`, `approved`, `published`, and `archived`.
+- Created public selectors that expose ONLY published articles:
+  - `getPublishedIntelligenceArticles()` — returns published articles in reverse chronological order
+  - `getFeaturedIntelligenceArticles(limit)` — returns featured published articles
+  - `findPublishedIntelligenceArticle(slug)` — returns a published article or undefined
+  - `findIntelligenceArticleBySlug(slug)` — internal only; finds articles regardless of status
+- Ensured `intelligenceArticles = []` remains empty at baseline; no demonstration, placeholder, or fake articles were added.
+- Updated `IntelligencePage` to be a complete production page with:
+  - Intelligence hero with purpose statement
+  - Research domains section (via reused Insights component)
+  - Publications section showing published articles or controlled empty state
+  - Editorial standards section documenting publication requirements
+  - Research areas section (via reused Labs component)
+  - Assessment CTA routing to `/contact`
+- Updated `IntelligenceArticlePage` to support future published articles:
+  - Article header with category, title, summary, author, publication date, update date, reading time
+  - Structured article sections (title + body)
+  - Sources list with optional external links
+  - Return to Intelligence link
+  - Assessment CTA
+  - Publication-state guards: only renders if `status === 'published'`; unknown or unpublished slugs return controlled 404
+- Added English translations under `intelligence` namespace for all page content, empty state, editorial standards, and article labels.
+- Added responsive CSS for Intelligence page sections, article list, article preview cards, metadata display, article body, sources, and responsive breakpoints.
+- Preserved sitemap controls: `/intelligence` remains in `public/sitemap.xml`; article URLs remain excluded to prevent exposure of unpublished content.
+- Preserved semantic headings, accessibility labels, reduced-motion support, and keyboard-visible controls.
+
+### Publication protections
+
+- `findIntelligenceArticle(slug)` filters to published articles only; unpublished, approved-but-unpublished, and archived articles return undefined
+- IntelligenceArticlePage renders only when the public selector finds a published article; all other cases return a generic not-found page with `noindex, nofollow`
+- The public registry `intelligenceArticles` is the single source of truth; editorial drafts and review-state content must remain outside the published collection
+- Spanish Intelligence copy remains an approval dependency and intentionally falls back to English through i18next configuration
+
+### Remaining approval dependencies
+
+- Approved Intelligence articles (first publication)
+- Approved article sources and citations
+- Final approved portrait and founder-authority confirmation
+- Confirmed Spanish Intelligence copy (if different from English fallback)
+- Assessment routing confirmation for Intelligence page CTAs
