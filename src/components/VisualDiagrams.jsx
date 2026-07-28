@@ -13,7 +13,8 @@ export function MethodIcon({ type }) {
     3: <><path d="m15 39 17-22 17 22" /><path d="M20 39h24M25 32h14M30 25h4" /><circle cx="32" cy="43" r="3" /></>,
     4: <><rect x="15" y="17" width="15" height="15" rx="3" /><rect x="34" y="17" width="15" height="15" rx="3" /><rect x="24" y="36" width="16" height="12" rx="3" /><path d="M30 25h4M22 32v5m20-5v5" /></>,
     5: <><path d="M15 43V19M15 43h34" /><path d="m20 37 8-9 7 5 11-13" /><path d="m41 20h5v5" /><circle cx="28" cy="28" r="2" /></>,
-    6: <><path d="M45 29a14 14 0 1 1-5-10" /><path d="M40 14v9h9" /><path d="m25 31 5 5 10-12" /></>
+    6: <><path d="M45 29a14 14 0 1 1-5-10" /><path d="M40 14v9h9" /><path d="m25 31 5 5 10-12" /></>,
+    7: <><path d="M18 42V20h28v22" /><path d="M24 27h16M24 34h11" /><path d="M18 42h28" /><path d="m34 48 7-6 7 6" /><path d="M41 42v8" /></>
   };
   return <svg viewBox="0 0 64 64" aria-hidden="true" {...common}>{drawings[type]}</svg>;
 }

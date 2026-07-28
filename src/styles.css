@@ -133,16 +133,26 @@ nav .inner { min-height: 72px; display: flex; align-items: center; justify-conte
 
 .method-section { background: var(--bg-soft); }
 .method-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin: 3rem 0 0; padding: 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); list-style: none; }
-.method-grid li { position: relative; min-height: 300px; padding: 1.5rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: background .25s, transform .25s, border-color .25s; overflow: hidden; }
+.method-grid li { position: relative; min-height: 340px; padding: 1.5rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: background .25s, transform .25s, border-color .25s; overflow: hidden; }
 .method-grid li:hover, .method-grid li:focus-visible { z-index: 2; background: rgba(82,216,231,.045); border-color: rgba(82,216,231,.35); transform: translateY(-3px); }
 .method-grid li > span, .card-index { color: var(--brand); font-family: monospace; }
 .method-grid h3 { margin-top: 1rem; }
 .method-grid p { color: var(--muted); }
+.method-context, .method-assessment { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(2rem, 7vw, 7rem); margin-top: clamp(2rem, 5vw, 4rem); padding: clamp(1.5rem, 4vw, 3rem); border: 1px solid rgba(82,216,231,.22); background: rgba(82,216,231,.025); }
+.method-context h2, .method-assessment h2 { margin-top: 0; }
+.method-context p, .method-context li, .method-assessment p, .method-assessment li { color: var(--muted); }
+.method-context ul, .method-assessment ul { margin: 0; }
 .method-symbol { position: relative; display: grid; place-items: center; width: 62px; height: 62px; margin-top: 1.5rem; border: 1px solid rgba(82,216,231,.32); border-radius: 18px; background: rgba(82,216,231,.04); }
 .method-symbol svg { width: 44px; height: 44px; color: var(--signal); }
 .method-symbol-2 { border-color: rgba(243,185,95,.35); }.method-symbol-2 svg { color: var(--amber); }
 .method-symbol-4 { border-color: rgba(255,73,109,.38); }.method-symbol-4 svg { color: var(--brand); }
-.method-symbol-5, .method-symbol-6 { border-color: rgba(67,214,156,.35); }.method-symbol-5 svg, .method-symbol-6 svg { color: var(--emerald); }
+.method-symbol-5, .method-symbol-6, .method-symbol-7 { border-color: rgba(67,214,156,.35); }.method-symbol-5 svg, .method-symbol-6 svg, .method-symbol-7 svg { color: var(--emerald); }
+.method-details { margin-top: 1.2rem; border-top: 1px solid var(--line); }
+.method-details summary { padding: .85rem 0; color: var(--signal); font-size: .74rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; }
+.method-details dl { display: grid; gap: .8rem; margin: 0; }
+.method-details div { display: grid; gap: .3rem; }
+.method-details dt { color: var(--brand-soft); font-size: .68rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.method-details dd { margin: 0; color: var(--muted); font-size: .86rem; }
 .method-loop { margin: 1.2rem 0 0; color: var(--signal); font-family: monospace; font-size: clamp(.7rem, 1.4vw, .95rem); text-align: center; text-transform: uppercase; }
 
 .services { position: relative; isolation: isolate; }
@@ -500,6 +510,7 @@ summary:focus-visible { border-radius: 4px; }
   .comparison-side { min-height: 540px; }
   .home-hero { min-height: auto; }
   .home-hero-layout, .home-stakes-layout, .home-pricing-layout, .home-intelligence-layout, .home-founder-layout, .home-final-cta-layout { grid-template-columns: 1fr; }
+  .method-context, .method-assessment { grid-template-columns: 1fr; }
   .services-engagement { grid-template-columns: 1fr; }
   .home-hero-layout { gap: 3rem; }
   .home-system-visual { width: min(100%, 520px); min-height: 410px; margin-inline: auto; }

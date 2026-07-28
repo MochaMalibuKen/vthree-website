@@ -15,7 +15,7 @@
 | --- | --- | --- |
 | `/` | Existing homepage composition | Preserved pending C-03 |
 | `/services` | Five-capability Services production model | Routed |
-| `/method` | Existing Philosophy, comparison, and Method | Routed |
+| `/method` | Seven-stage VTHREE Method production model | Routed |
 | `/work` | Controlled public-case registry and intentional empty state | No-index while zero cases are published and permissioned |
 | `/work/:slug` | Permission-filtered public case lookup | Unpublished routes return a generic no-index unavailable state |
 | `/intelligence` | Existing Insights and Labs structures | Routed; no articles published |
@@ -118,6 +118,16 @@ These dependencies must not be resolved through implementation assumptions.
 - Removed the Spanish Services capability namespace so `/services` falls back to the approved English Services content until a final Spanish Services translation is approved. Spanish Services translation remains a dependency.
 - Homepage capability labels were aligned to the five approved capability groups without redesigning the homepage.
 - Deferred pricing package-to-service mapping, standalone service-detail routes, future Bookings integration, proposal automation, detailed scope boundaries, and final service-specific SEO strategy to later governance decisions.
+
+## C-06 Method production
+
+- Replaced the legacy six-stage Method route composition with the approved seven-stage model in order: Discover, Assess, Design, Build, Launch, Optimize, and Grow.
+- Repositioned `/method` around an intelligence-led, assessment-shaped client journey rather than a rigid delivery promise. The stages are documented as a flexible operating model, not a fixed contract or guaranteed path.
+- Added practical detail for each stage: concise explanation, purpose, and expected client involvement.
+- Preserved the controlled Assessment conversion route with one `Start an Assessment` CTA to `/contact`; no scheduling promise or Microsoft Bookings activation was introduced.
+- Updated Method metadata and analytics using `method_view`, `method_stage_expand`, and `assessment_start`.
+- Removed the Spanish Method namespace so `/method` falls back to approved English copy until final Spanish Method translation is approved.
+- Remaining Method dependencies include approved Spanish Method copy, future visual enhancements, motion design, downloadable process diagrams, interactive timelines, and any future client portal integration.
 
 ## C-10 Intelligence Publication Readiness
 

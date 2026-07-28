@@ -234,35 +234,83 @@
     "p2": "We study the audience, design the structure, build the assets, connect the technology, measure performance, and improve the system over time.",
     "close": "That is Digital Architecture."
   },
+  "methodMeta": {
+    "title": "Method",
+    "description": "The VTHREE Method is an intelligence-led digital growth process for discovery, assessment, design, build, launch, optimization, and growth."
+  },
   "method": {
     "eyebrow": "The VTHREE Method",
-    "title": "A system for moving from signal to outcome.",
-    "subtitle": "Every engagement follows a disciplined loop. Each result informs what comes next.",
+    "title": "A practical path from uncertainty to coordinated action.",
+    "subtitle": "The Method is a flexible operating model for understanding the situation, shaping recommendations, implementing the right work, and improving after launch.",
+    "stageDetailsLabel": "Purpose and client involvement",
+    "labels": {
+      "purpose": "Purpose",
+      "involvement": "Client involvement"
+    },
+    "principles": {
+      "title": "How the process works",
+      "body": "Every engagement begins with understanding the client’s situation. Recommendations are tailored to the goals, current state, available resources, and operational priorities uncovered through assessment.",
+      "items": [
+        "The stages provide structure, not a rigid contract.",
+        "Not every project requires every stage at the same depth.",
+        "Recommendations are shaped by readiness, constraints, and evidence.",
+        "The process is designed to support better decisions before production expands."
+      ]
+    },
     "stages": {
-      "observe": {
-        "title": "Observe",
-        "desc": "Understand the organization, audience, market, customer questions, and current digital environment."
+      "discover": {
+        "title": "Discover",
+        "desc": "Understand the organization, audience, current digital environment, and business context before recommending work.",
+        "purpose": "Create a shared view of the situation and identify what needs to be understood first.",
+        "involvement": "Share goals, constraints, existing assets, current friction, and relevant operational context."
       },
-      "research": {
-        "title": "Research",
-        "desc": "Study public data, behavior, competitors, search activity, existing assets, and market opportunities."
+      "assess": {
+        "title": "Assess",
+        "desc": "Evaluate readiness, risks, priorities, and opportunities so recommendations are based on the current state.",
+        "purpose": "Determine whether the next step should be strategy, production, repair, simplification, or a later phase.",
+        "involvement": "Answer assessment questions, clarify priorities, and confirm what resources are available."
       },
-      "architect": {
-        "title": "Architect",
-        "desc": "Design the website, campaign, content, automation, reporting, and customer journey as one system."
+      "design": {
+        "title": "Design",
+        "desc": "Shape the structure, message, journey, content, platform, workflow, or measurement approach before build work begins.",
+        "purpose": "Provide a framework for implementation and reduce avoidable ambiguity.",
+        "involvement": "Review direction, provide feedback, approve priorities, and identify missing information."
       },
       "build": {
         "title": "Build",
-        "desc": "Produce the technical, creative, written, visual, and operational components."
+        "desc": "Produce the approved components, such as page structures, content, campaign assets, systems, workflows, or reporting foundations.",
+        "purpose": "Turn the approved direction into practical assets and systems that can be reviewed and refined.",
+        "involvement": "Provide source materials, review drafts, answer implementation questions, and validate business details."
       },
-      "measure": {
-        "title": "Measure",
-        "desc": "Track traffic, engagement, inquiries, conversions, campaign performance, and business outcomes."
+      "launch": {
+        "title": "Launch",
+        "desc": "Move the approved work into use with checks for content, routing, accessibility-aware behavior, and operational readiness.",
+        "purpose": "Support a controlled transition from production to live use.",
+        "involvement": "Confirm approvals, complete launch checks, and prepare the team for the updated path."
       },
-      "evolve": {
-        "title": "Evolve",
-        "desc": "Use results and lessons learned to improve the next campaign, workflow, or digital asset."
+      "optimize": {
+        "title": "Optimize",
+        "desc": "Review activity, feedback, friction, and early evidence to improve the system where appropriate.",
+        "purpose": "Help guide useful adjustments instead of treating launch as the final decision.",
+        "involvement": "Share feedback, review evidence, and help prioritize what should be adjusted."
+      },
+      "grow": {
+        "title": "Grow",
+        "desc": "Use what has been learned to plan the next useful improvement, campaign, workflow, or digital asset.",
+        "purpose": "Provide a framework for continued progress when the evidence supports another step.",
+        "involvement": "Decide whether to continue, pause, expand, or focus on a different priority."
       }
+    },
+    "assessment": {
+      "eyebrow": "Assessment-led recommendations",
+      "title": "The right path depends on the situation.",
+      "body": "The Assessment determines which parts of the Method are relevant. A submission starts evaluation; it does not create automatic project acceptance, immediate scheduling, or a proposal.",
+      "factors": [
+        "Goals",
+        "Current state",
+        "Available resources",
+        "Operational priorities"
+      ]
     }
   },
   "capabilities": {
