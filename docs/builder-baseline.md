@@ -21,7 +21,7 @@
 | `/intelligence` | Existing Insights and Labs structures | Routed; no articles published |
 | `/intelligence/:slug` | Empty controlled content model | Returns controlled 404 until approval |
 | `/about` | About production positioning and concise Founder trust section | Routed |
-| `/pricing` | Existing Founder-approved pricing content | Routed |
+| `/pricing` | Pricing production engagement model | Routed |
 | `/contact`, `/assessment` | Existing Formspree assessment form | No-index until privacy approval |
 | `/privacy` | Visible dependency placeholder | No-index; launch blocker |
 | `*` | Controlled not-found page | No-index |
@@ -138,6 +138,16 @@ These dependencies must not be resolved through implementation assumptions.
 - Updated About metadata and analytics using `about_view`, `founder_section_view`, and `assessment_start`.
 - Removed the Spanish About and Founder namespaces so `/about` falls back to approved English copy until final Spanish About translation is approved.
 - Remaining About dependencies include approved Spanish About copy, future Founder media, professional photography, executive timeline, company milestones, awards section, team expansion, and video introduction.
+
+## C-09 Pricing production
+
+- Reworked `/pricing` from rate-card-style starting points into an engagement-based model organized around the approved service categories: Strategy & Intelligence, Brand & Experience, Websites & Digital Platforms, Content & Campaigns, and Systems & Automation.
+- Clarified that every engagement begins with an Assessment and that recommendations depend on objectives, scope, technical complexity, existing assets, and operational priorities.
+- Replaced fixed amount, checkout, payment, and scheduling placeholder language with qualitative pricing guidance: custom proposals, phased implementation, project-based pricing, scalable engagements, and ongoing support where appropriate.
+- Preserved one controlled conversion path with `Start an Assessment` CTAs to `/contact`; Microsoft Bookings, Stripe, online checkout, subscriptions, retainers, proposal automation, and payment portals were not activated.
+- Updated Pricing metadata and public Pricing analytics using `pricing_view`, `pricing_engagement_select`, and `assessment_start`.
+- Removed the stale Spanish Pricing metadata namespace so `/pricing` metadata falls back to approved English copy while the page content uses the controlled Pricing content model. Final Spanish Pricing copy remains an approval dependency.
+- Remaining Pricing dependencies include proposal automation, Microsoft Bookings integration, Stripe integration, subscription management, recurring billing, maintenance plans, client portal, CRM synchronization, and final Spanish Pricing copy.
 
 ## C-10 Intelligence Publication Readiness
 

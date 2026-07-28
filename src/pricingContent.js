@@ -1,74 +1,220 @@
 export const pricingContent = {
   en: {
-    eyebrow: "Architecture engagements", title: "Invest in a system—not an isolated deliverable.", subtitle: "Clear starting points help organizations plan confidently. Discovery determines the right scope, sequence, and long-term path.", principleLabel: "What pricing represents", principle: "Strategy, communication, design, technology, measurement, and launch support organized around a useful business outcome.", starting: "Starting at", cta: "Start an Assessment", deliverablesLabel: "Typical deliverables", addonsLabel: "Optional additions", note: "Starting prices establish a planning baseline. Final proposals reflect scope, content readiness, integrations, automation, research, creative production, and reporting needs.",
-    plans: {
-      launch: { title: "Launch Architecture", price: "$1,500", bestForLabel: "Best for emerging organizations", purpose: "A professionally designed digital foundation that establishes credibility and creates a clear path for inquiries.", audiences: ["Nonprofits", "Small businesses", "Community organizations", "Churches", "New businesses", "Professional practices"], deliverables: ["Discovery consultation", "Website strategy", "Up to 5 professionally designed pages", "Mobile optimization", "Brand-aligned design", "Basic SEO foundations", "Contact forms", "Analytics setup", "Google indexing guidance", "Accessibility review", "Performance optimization", "Basic CMS training", "Launch support"], addons: ["Photography enhancement", "Additional pages", "Copywriting", "Blog", "Translation", "Booking integration"] },
-      growth: { title: "Growth Architecture", price: "$3,000", bestForLabel: "Best for scaling organizations", purpose: "A scalable marketing foundation that connects conversion paths, content, customer information, and performance evidence.", audiences: ["Growing businesses", "Hospitality", "Professional services", "Healthcare", "Preparedness", "Community organizations"], deliverables: ["Everything in Launch Architecture", "Expanded website", "Conversion optimization", "Landing pages", "CRM integration", "Email capture", "Analytics dashboard", "Campaign planning", "SEO improvements", "Content architecture", "Blog framework", "Service funnels", "Performance reporting", "Technical optimization"] },
-      commerce: { title: "Commerce Architecture", price: "$5,000", bestForLabel: "Best for transactional organizations", purpose: "A connected commerce experience for products, memberships, registrations, or online services—built around confident customer decisions.", audiences: ["Product businesses", "Memberships", "Events", "Registrations", "Online services"], deliverables: ["Everything in Growth Architecture", "E-commerce implementation", "Payment integration", "Inventory support", "Product architecture", "Customer journey optimization", "Checkout optimization", "Customer account setup", "Advanced analytics", "Technical integrations", "Security review", "Commerce reporting"] }
+    eyebrow: "Engagement model",
+    title: "Pricing follows the work that actually needs to be done.",
+    subtitle: "VTHREE scopes engagements after an Assessment so recommendations match the client’s goals, complexity, existing assets, and operational priorities.",
+    principleLabel: "Pricing principle",
+    principle: "VTHREE prefers building the correct solution instead of forcing every client into predefined packages.",
+    cta: "Start an Assessment",
+    deliverablesLabel: "Typical work",
+    addonsLabel: "Scope factors",
+    note: "Pricing is proposal-based. Final recommendations may include project-based work, phased implementation, or ongoing support where appropriate.",
+    engagements: {
+      strategy: {
+        title: "Strategy & Intelligence",
+        bestForLabel: "Research and direction",
+        purpose: "Clarify what should be built, improved, simplified, or deferred before production begins.",
+        audiences: ["Planning", "Research", "Positioning", "Measurement"],
+        deliverables: ["Business and audience assessment", "Market and competitor review", "Digital growth planning", "Campaign and content direction", "Measurement recommendations"],
+        addons: ["Objectives", "Research depth", "Stakeholder input", "Decision timeline", "Reporting needs"]
+      },
+      brand: {
+        title: "Brand & Experience",
+        bestForLabel: "Clarity and trust",
+        purpose: "Improve how an organization explains itself, presents its value, and guides people toward action.",
+        audiences: ["Messaging", "Identity", "UX", "Credibility"],
+        deliverables: ["Positioning refinement", "Messaging systems", "Visual and experience direction", "Audience journey review", "Conversion path recommendations"],
+        addons: ["Existing brand assets", "Content readiness", "Design complexity", "Approval process", "Accessibility needs"]
+      },
+      platforms: {
+        title: "Websites & Digital Platforms",
+        bestForLabel: "Digital infrastructure",
+        purpose: "Build or improve the web systems, landing pages, integrations, and technical foundations that support growth.",
+        audiences: ["Websites", "Landing pages", "Integrations", "Performance"],
+        deliverables: ["Website planning and implementation", "Information architecture", "Responsive page systems", "Analytics foundations", "Technical quality review"],
+        addons: ["Platform complexity", "Number of templates", "Integration requirements", "Migration needs", "Security requirements"]
+      },
+      content: {
+        title: "Content & Campaigns",
+        bestForLabel: "Communication and demand",
+        purpose: "Create practical content, campaign assets, and communication systems that support visibility and decision-making.",
+        audiences: ["Campaigns", "Copy", "Creative", "Publishing"],
+        deliverables: ["Content architecture", "Campaign planning", "Copy and creative direction", "Publishing support", "Performance review"],
+        addons: ["Production volume", "Channel mix", "Creative assets", "Localization", "Review cadence"]
+      },
+      systems: {
+        title: "Systems & Automation",
+        bestForLabel: "Operations and scale",
+        purpose: "Connect intake, reporting, workflows, and internal tools so digital growth is easier to manage.",
+        audiences: ["Automation", "Dashboards", "CRM", "Workflows"],
+        deliverables: ["Workflow assessment", "Forms and intake planning", "Dashboard recommendations", "CRM and routing review", "Automation planning"],
+        addons: ["Current tools", "Data readiness", "Workflow complexity", "Governance needs", "Training requirements"]
+      }
     },
-    services: { eyebrow: "Custom-scope capabilities", title: "Strategic Services", subtitle: "Focused services can stand alone or connect to a larger architecture engagement. Each is quoted according to the problem, evidence, and execution required.", scope: "Quoted by scope", items: {
-      digital: { title: "Digital Architecture", outcome: "Create a clearer path from discovery to action.", items: ["Websites", "Information architecture", "User experience", "Landing pages", "Conversion systems"] },
-      creative: { title: "Creative Production", outcome: "Turn complex ideas into useful, credible media.", items: ["Commercials and video", "Photography enhancement", "Social and motion graphics", "Presentations and infographics", "Brand storytelling", "Mission and capability statements", "Proposal and campaign assets"] },
-      marketing: { title: "Marketing Intelligence", outcome: "Know what to create, for whom, and why.", items: ["Market and competitor research", "Audience research", "Campaign strategy", "Content planning", "SEO research", "Trend monitoring", "Advertising strategy"] },
-      business: { title: "Business Intelligence", outcome: "Turn operating activity into decision-ready evidence.", items: ["Power BI", "Executive dashboards", "Reporting and analytics", "Marketing performance", "Data visualization", "Python automation", "Decision support"] },
-      automation: { title: "Automation", outcome: "Reduce repetitive work without losing control.", items: ["Microsoft automation", "Scheduling", "CRM workflows", "Appointment systems", "Virtual receptionist", "Lead routing", "Knowledge systems", "Workflow optimization"] },
-      ai: { title: "AI Enablement", outcome: "Use AI where it improves quality, speed, or clarity.", items: ["Human-guided implementation", "Content assistance", "Knowledge systems", "Translation workflows", "Content repurposing", "Research assistance", "Internal AI workflows"] }
-    } },
-    partnerships: { eyebrow: "After launch", title: "Ongoing Growth Partnerships", subtitle: "Digital systems improve through attention, evidence, and iteration. Partnership scopes are shaped around the support an organization actually needs.", note: "Custom proposals are developed based on organizational goals and scope.", items: {
-      essential: { title: "Essential Partnership", purpose: "Keep the digital foundation healthy, current, and visible.", items: ["Website maintenance", "Security updates", "Monthly reporting", "Content updates", "Minor improvements"] },
-      growth: { title: "Growth Partnership", purpose: "Improve visibility and campaign readiness over time.", items: ["Everything in Essential", "Content support", "SEO improvements", "Campaign planning", "Monthly strategy meeting", "Performance review"] },
-      strategic: { title: "Strategic Partnership", purpose: "Connect intelligence, production, automation, and executive decisions.", items: ["Everything in Growth", "Marketing intelligence", "Creative production", "Analytics", "Automation", "Priority support", "Quarterly planning", "Executive reporting"] }
-    } },
-    discovery: { eyebrow: "A disciplined beginning", title: "Every Project Begins With Discovery", subtitle: "No two organizations share the same mission, audience, constraints, or opportunities. We understand those realities before recommending the system.", steps: ["Discovery", "Research", "Architecture", "Proposal", "Build", "Launch", "Measure", "Improve"] },
-    faq: { eyebrow: "Pricing FAQ", title: "Useful answers before the first conversation.", items: [
-      { q: "Why are prices listed as starting at?", a: "The starting price reflects a defined baseline. Content readiness, integrations, research, automation, and reporting requirements determine the final scope." },
-      { q: "Do nonprofits receive customized proposals?", a: "Yes. Proposals can reflect mission priorities, operational realities, phased work, and appropriate project scope." },
-      { q: "Can projects be completed in phases?", a: "Yes. A phased roadmap can protect the most important outcome while spreading implementation across practical stages." },
-      { q: "Can an existing website be improved instead of rebuilt?", a: "Yes. Discovery may show that focused improvements to structure, messaging, performance, or integrations are more useful than replacement." },
-      { q: "Can VTHREE work with internal marketing teams?", a: "Yes. VTHREE can provide architecture, technical execution, research, creative support, or reporting alongside an internal team." },
-      { q: "Do you offer ongoing support?", a: "Yes. Ongoing partnerships can cover maintenance, campaigns, content, analytics, automation, planning, and iterative improvement." },
-      { q: "Can you improve photography or existing content?", a: "Yes. Existing visual and written assets can often be enhanced, reorganized, localized, or repurposed before new production is recommended." },
-      { q: "Can VTHREE create presentations, campaigns, and training materials?", a: "Yes. Strategic communications and creative production can support presentations, campaigns, proposals, capability statements, and training resources." },
-      { q: "Do you provide analytics after launch?", a: "Yes. Analytics foundations, dashboards, reporting, and decision recommendations can be included in the initial scope or an ongoing partnership." }
-    ] },
-    scheduling: { eyebrow: "Start with context", title: "Begin with an assessment.", copy: "Every engagement begins with understanding your organization, audience, and objectives. Assessment submissions remain unavailable until privacy, consent, routing, handling, and response controls are approved.", cta: "Start an Assessment", placeholderLabel: "Microsoft Bookings integration placeholder", placeholderTitle: "Microsoft Bookings", placeholderNote: "Scheduling is not active. This reserved area does not provide appointment selection." },
-    trust: { eyebrow: "How VTHREE works", title: "Built for confidence before, during, and after launch.", items: ["Research-driven process", "Transparent communication", "Accessibility-conscious development", "Performance-focused implementation", "Long-term partnerships", "Scalable solutions", "Human-guided AI", "Evidence-based recommendations", "Measured outcomes"] },
-    finalCta: { copy: "The right engagement begins with a clear understanding of the outcome.", cta: "Start an Assessment" }
+    services: {
+      eyebrow: "How scope is shaped",
+      title: "Engagement categories align with the services clients actually need.",
+      subtitle: "These categories are starting points for assessment and proposal development, not fixed packages.",
+      scope: "Proposal-based",
+      items: {
+        strategy: { title: "Strategy & Intelligence", outcome: "Define the right direction before committing resources.", items: ["Assessment", "Research", "Planning", "Measurement", "Decision support"] },
+        brand: { title: "Brand & Experience", outcome: "Make the organization easier to understand and trust.", items: ["Messaging", "Experience review", "Visual direction", "Conversion paths", "Accessibility considerations"] },
+        platforms: { title: "Websites & Digital Platforms", outcome: "Create digital systems that are usable, durable, and measurable.", items: ["Websites", "Landing pages", "Information architecture", "Technical implementation", "Analytics"] },
+        content: { title: "Content & Campaigns", outcome: "Support audience action through clear communication.", items: ["Campaign planning", "Copy", "Creative assets", "Publishing systems", "Performance review"] },
+        systems: { title: "Systems & Automation", outcome: "Reduce friction across intake, reporting, and operations.", items: ["Workflow review", "Forms", "Dashboards", "CRM routing", "Automation planning"] }
+      }
+    },
+    partnerships: {
+      eyebrow: "Engagement shapes",
+      title: "Recommendations can be scaled to the situation.",
+      subtitle: "The Assessment determines whether the work should be focused, phased, or supported over time.",
+      note: "Future subscriptions, retainers, maintenance plans, consulting hours, and proposal automation remain roadmap items and are not active commerce products.",
+      items: {
+        essential: { title: "Project-based work", purpose: "Focused implementation for a defined business need.", items: ["Clear scope", "Defined deliverables", "Practical acceptance criteria", "Completion review"] },
+        growth: { title: "Phased implementation", purpose: "A staged roadmap when the correct solution should be built in sequence.", items: ["Priority sequencing", "Foundation first", "Expandable scope", "Decision points between phases"] },
+        strategic: { title: "Ongoing support", purpose: "Continued improvement when systems, campaigns, and reporting need active management.", items: ["Maintenance where appropriate", "Campaign support", "Measurement review", "Iterative improvement"] }
+      }
+    },
+    discovery: {
+      eyebrow: "Discovery first",
+      title: "Every engagement begins with an Assessment.",
+      subtitle: "Recommendations are shaped by objectives, scope, technical complexity, existing assets, and operational priorities.",
+      steps: ["Assessment", "Objectives", "Scope", "Complexity", "Assets", "Priorities", "Proposal", "Implementation"]
+    },
+    faq: {
+      eyebrow: "Pricing FAQ",
+      title: "Useful answers before starting an assessment.",
+      items: [
+        { q: "Why does VTHREE not publish fixed packages?", a: "Different organizations have different goals, constraints, content, tools, and decision requirements. Pricing follows the scope that is actually recommended." },
+        { q: "Does an Assessment guarantee a proposal?", a: "No. Assessment submission begins an evaluation process. It does not guarantee project acceptance, a proposal, immediate scheduling, a response within a specific timeframe, or a paid engagement." },
+        { q: "Can work be phased?", a: "Yes. If a phased approach is appropriate, recommendations can separate immediate priorities from later implementation." },
+        { q: "Can VTHREE improve existing systems instead of rebuilding them?", a: "Yes. The Assessment may show that targeted improvements are more useful than replacing an existing website, workflow, or platform." },
+        { q: "Is ongoing support available?", a: "Ongoing support may be recommended where maintenance, campaigns, reporting, or iterative improvement are appropriate for the client’s needs." }
+      ]
+    },
+    scheduling: {
+      eyebrow: "Assessment path",
+      title: "Start with context before scope.",
+      copy: "The Assessment gives VTHREE the information needed to evaluate fit and determine whether a recommendation should be prepared. It is not a scheduling shortcut or automatic acceptance into a paid engagement.",
+      cta: "Start an Assessment",
+      placeholderLabel: "Controlled assessment process note",
+      placeholderTitle: "Controlled submission pathway",
+      placeholderNote: "Assessment handling remains governed by approved privacy, consent, routing, and response controls. Online purchasing and appointment selection are not active."
+    },
+    trust: {
+      eyebrow: "Pricing controls",
+      title: "Built to reduce uncertainty without overpromising.",
+      items: ["Assessment-first scoping", "Custom proposals", "Phased implementation where appropriate", "Scalable engagements", "Project-based pricing", "Ongoing support where appropriate", "No automatic acceptance", "No guaranteed results", "No online purchase flow"]
+    },
+    finalCta: { copy: "The right engagement starts with understanding the situation clearly.", cta: "Start an Assessment" }
   },
   es: {
-    eyebrow: "Servicios de arquitectura", title: "Invierta en un sistema, no en un entregable aislado.", subtitle: "Los puntos de partida claros ayudan a planificar con confianza. El descubrimiento determina el alcance, la secuencia y la ruta a largo plazo.", principleLabel: "Qué representa el precio", principle: "Estrategia, comunicación, diseño, tecnología, medición y apoyo de lanzamiento organizados alrededor de un resultado útil.", starting: "Desde", cta: "Iniciar una Evaluación", deliverablesLabel: "Entregables típicos", addonsLabel: "Opciones adicionales", note: "Los precios iniciales establecen una base de planificación. La propuesta final refleja alcance, contenido, integraciones, automatización, investigación, producción creativa e informes.",
-    plans: {
-      launch: { title: "Arquitectura de Lanzamiento", price: "$1,500", bestForLabel: "Para organizaciones emergentes", purpose: "Una base digital profesional que establece credibilidad y crea una ruta clara para consultas.", audiences: ["Organizaciones sin fines de lucro", "Pequeñas empresas", "Organizaciones comunitarias", "Iglesias", "Empresas nuevas", "Prácticas profesionales"], deliverables: ["Consulta de descubrimiento", "Estrategia web", "Hasta 5 páginas diseñadas profesionalmente", "Optimización móvil", "Diseño alineado con la marca", "Fundamentos de SEO", "Formularios de contacto", "Configuración de analítica", "Orientación para indexación en Google", "Revisión de accesibilidad", "Optimización de rendimiento", "Capacitación básica de CMS", "Apoyo de lanzamiento"], addons: ["Mejora de fotografía", "Páginas adicionales", "Redacción", "Blog", "Traducción", "Integración de reservas"] },
-      growth: { title: "Arquitectura de Crecimiento", price: "$3,000", bestForLabel: "Para organizaciones en crecimiento", purpose: "Una base de marketing escalable que conecta conversiones, contenido, información del cliente y evidencia de rendimiento.", audiences: ["Empresas en crecimiento", "Hospitalidad", "Servicios profesionales", "Salud", "Preparación", "Organizaciones comunitarias"], deliverables: ["Todo en Arquitectura de Lanzamiento", "Sitio web ampliado", "Optimización de conversión", "Landing pages", "Integración CRM", "Captura de correo", "Panel de analítica", "Planificación de campañas", "Mejoras de SEO", "Arquitectura de contenido", "Estructura de blog", "Embudos de servicios", "Informes de rendimiento", "Optimización técnica"] },
-      commerce: { title: "Arquitectura de Comercio", price: "$5,000", bestForLabel: "Para organizaciones transaccionales", purpose: "Una experiencia comercial conectada para productos, membresías, registros o servicios en línea.", audiences: ["Productos", "Membresías", "Eventos", "Registros", "Servicios en línea"], deliverables: ["Todo en Arquitectura de Crecimiento", "Implementación de comercio electrónico", "Integración de pagos", "Apoyo de inventario", "Arquitectura de productos", "Optimización del recorrido", "Optimización del pago", "Cuentas de clientes", "Analítica avanzada", "Integraciones técnicas", "Revisión de seguridad", "Informes comerciales"] }
+    eyebrow: "Modelo de trabajo",
+    title: "El precio sigue el trabajo que realmente se necesita.",
+    subtitle: "VTHREE define el alcance después de una Evaluación para que las recomendaciones reflejen metas, complejidad, recursos existentes y prioridades operativas.",
+    principleLabel: "Principio de precios",
+    principle: "VTHREE prefiere construir la solución correcta en lugar de forzar a cada cliente a paquetes predefinidos.",
+    cta: "Iniciar una Evaluación",
+    deliverablesLabel: "Trabajo típico",
+    addonsLabel: "Factores de alcance",
+    note: "El precio se define por propuesta. Las recomendaciones finales pueden incluir trabajo por proyecto, implementación por fases o apoyo continuo cuando sea apropiado.",
+    engagements: {
+      strategy: {
+        title: "Estrategia e Inteligencia",
+        bestForLabel: "Investigación y dirección",
+        purpose: "Aclarar qué debe construirse, mejorarse, simplificarse o aplazarse antes de producir.",
+        audiences: ["Planificación", "Investigación", "Posicionamiento", "Medición"],
+        deliverables: ["Evaluación del negocio y audiencia", "Revisión de mercado y competencia", "Plan de crecimiento digital", "Dirección de campañas y contenido", "Recomendaciones de medición"],
+        addons: ["Objetivos", "Profundidad de investigación", "Participación interna", "Tiempo de decisión", "Necesidades de informes"]
+      },
+      brand: {
+        title: "Marca y Experiencia",
+        bestForLabel: "Claridad y confianza",
+        purpose: "Mejorar cómo una organización explica su valor y guía a las personas hacia la acción.",
+        audiences: ["Mensajes", "Identidad", "UX", "Credibilidad"],
+        deliverables: ["Refinamiento de posicionamiento", "Sistema de mensajes", "Dirección visual y de experiencia", "Revisión del recorrido", "Recomendaciones de conversión"],
+        addons: ["Recursos de marca", "Contenido disponible", "Complejidad de diseño", "Proceso de aprobación", "Necesidades de accesibilidad"]
+      },
+      platforms: {
+        title: "Sitios Web y Plataformas Digitales",
+        bestForLabel: "Infraestructura digital",
+        purpose: "Construir o mejorar sistemas web, páginas, integraciones y bases técnicas que apoyen el crecimiento.",
+        audiences: ["Sitios web", "Landing pages", "Integraciones", "Rendimiento"],
+        deliverables: ["Planificación e implementación web", "Arquitectura de información", "Sistemas responsive", "Bases de analítica", "Revisión técnica"],
+        addons: ["Complejidad de plataforma", "Cantidad de plantillas", "Integraciones", "Migración", "Seguridad"]
+      },
+      content: {
+        title: "Contenido y Campañas",
+        bestForLabel: "Comunicación y demanda",
+        purpose: "Crear contenido práctico, recursos de campaña y sistemas de comunicación que apoyen decisiones.",
+        audiences: ["Campañas", "Copy", "Creatividad", "Publicación"],
+        deliverables: ["Arquitectura de contenido", "Planificación de campañas", "Dirección creativa y de copy", "Apoyo de publicación", "Revisión de rendimiento"],
+        addons: ["Volumen de producción", "Canales", "Recursos creativos", "Localización", "Ritmo de revisión"]
+      },
+      systems: {
+        title: "Sistemas y Automatización",
+        bestForLabel: "Operación y escala",
+        purpose: "Conectar solicitudes, informes, flujos de trabajo y herramientas internas para administrar mejor el crecimiento.",
+        audiences: ["Automatización", "Dashboards", "CRM", "Flujos"],
+        deliverables: ["Evaluación de flujos", "Planificación de formularios e intake", "Recomendaciones de dashboards", "Revisión de CRM y rutas", "Planificación de automatización"],
+        addons: ["Herramientas actuales", "Datos disponibles", "Complejidad operativa", "Gobernanza", "Capacitación"]
+      }
     },
-    services: { eyebrow: "Capacidades con alcance personalizado", title: "Servicios Estratégicos", subtitle: "Los servicios pueden funcionar solos o conectarse a una arquitectura mayor. Se cotizan según el problema, la evidencia y la ejecución requerida.", scope: "Cotizado por alcance", items: {
-      digital: { title: "Arquitectura Digital", outcome: "Crear una ruta más clara desde el descubrimiento hasta la acción.", items: ["Sitios web", "Arquitectura de información", "Experiencia del usuario", "Landing pages", "Sistemas de conversión"] },
-      creative: { title: "Producción Creativa", outcome: "Convertir ideas complejas en medios útiles y creíbles.", items: ["Comerciales y video", "Mejora de fotografía", "Redes y motion graphics", "Presentaciones e infografías", "Narrativa de marca", "Misión y capacidad", "Recursos para propuestas y campañas"] },
-      marketing: { title: "Inteligencia de Marketing", outcome: "Saber qué crear, para quién y por qué.", items: ["Investigación de mercado y competencia", "Investigación de audiencia", "Estrategia de campaña", "Planificación de contenido", "Investigación SEO", "Monitoreo de tendencias", "Estrategia publicitaria"] },
-      business: { title: "Inteligencia Empresarial", outcome: "Convertir actividad operativa en evidencia para decisiones.", items: ["Power BI", "Paneles ejecutivos", "Informes y analítica", "Rendimiento de marketing", "Visualización de datos", "Automatización con Python", "Apoyo a decisiones"] },
-      automation: { title: "Automatización", outcome: "Reducir el trabajo repetitivo sin perder el control.", items: ["Automatización de Microsoft", "Programación", "Flujos CRM", "Sistemas de citas", "Recepcionista virtual", "Rutas de prospectos", "Sistemas de conocimiento", "Optimización de flujos"] },
-      ai: { title: "Habilitación de IA", outcome: "Usar IA donde mejora calidad, velocidad o claridad.", items: ["Implementación guiada por personas", "Asistencia de contenido", "Sistemas de conocimiento", "Flujos de traducción", "Reutilización de contenido", "Asistencia de investigación", "Flujos internos de IA"] }
-    } },
-    partnerships: { eyebrow: "Después del lanzamiento", title: "Alianzas de Crecimiento Continuo", subtitle: "Los sistemas digitales mejoran con atención, evidencia e iteración. El alcance se adapta al apoyo que la organización realmente necesita.", note: "Las propuestas personalizadas se desarrollan según los objetivos y el alcance de la organización.", items: {
-      essential: { title: "Alianza Esencial", purpose: "Mantener la base digital saludable, actualizada y visible.", items: ["Mantenimiento web", "Actualizaciones de seguridad", "Informes mensuales", "Actualizaciones de contenido", "Mejoras menores"] },
-      growth: { title: "Alianza de Crecimiento", purpose: "Mejorar la visibilidad y preparación de campañas con el tiempo.", items: ["Todo en Esencial", "Apoyo de contenido", "Mejoras de SEO", "Planificación de campañas", "Reunión estratégica mensual", "Revisión de rendimiento"] },
-      strategic: { title: "Alianza Estratégica", purpose: "Conectar inteligencia, producción, automatización y decisiones ejecutivas.", items: ["Todo en Crecimiento", "Inteligencia de marketing", "Producción creativa", "Analítica", "Automatización", "Apoyo prioritario", "Planificación trimestral", "Informes ejecutivos"] }
-    } },
-    discovery: { eyebrow: "Un comienzo disciplinado", title: "Cada Proyecto Comienza Con Descubrimiento", subtitle: "Ninguna organización comparte la misma misión, audiencia, límites u oportunidades. Comprendemos esas realidades antes de recomendar el sistema.", steps: ["Descubrimiento", "Investigación", "Arquitectura", "Propuesta", "Construcción", "Lanzamiento", "Medición", "Mejora"] },
-    faq: { eyebrow: "Preguntas de precios", title: "Respuestas útiles antes de la primera conversación.", items: [
-      { q: "¿Por qué los precios dicen ‘desde’?", a: "El precio inicial refleja una base definida. El contenido, las integraciones, la investigación, la automatización y los informes determinan el alcance final." },
-      { q: "¿Las organizaciones sin fines de lucro reciben propuestas personalizadas?", a: "Sí. Las propuestas pueden reflejar prioridades de misión, realidades operativas, trabajo por fases y un alcance apropiado." },
-      { q: "¿Los proyectos pueden completarse por fases?", a: "Sí. Una ruta por fases puede proteger el resultado principal y distribuir la implementación en etapas prácticas." },
-      { q: "¿Se puede mejorar un sitio existente en vez de reemplazarlo?", a: "Sí. El descubrimiento puede mostrar que mejoras específicas de estructura, mensajes, rendimiento o integraciones son más útiles." },
-      { q: "¿VTHREE puede trabajar con equipos internos de marketing?", a: "Sí. VTHREE puede aportar arquitectura, ejecución técnica, investigación, creatividad o informes junto a un equipo interno." },
-      { q: "¿Ofrecen apoyo continuo?", a: "Sí. Las alianzas pueden cubrir mantenimiento, campañas, contenido, analítica, automatización, planificación y mejora iterativa." },
-      { q: "¿Pueden mejorar fotografías o contenido existente?", a: "Sí. Los recursos visuales y escritos pueden mejorarse, reorganizarse, localizarse o reutilizarse antes de recomendar nueva producción." },
-      { q: "¿VTHREE crea presentaciones, campañas y materiales de capacitación?", a: "Sí. La comunicación estratégica y producción creativa pueden apoyar presentaciones, campañas, propuestas y materiales de capacitación." },
-      { q: "¿Proporcionan analítica después del lanzamiento?", a: "Sí. Las bases analíticas, paneles, informes y recomendaciones pueden incluirse en el alcance inicial o una alianza continua." }
-    ] },
-    scheduling: { eyebrow: "Comenzar con contexto", title: "Comience con una evaluación.", copy: "Cada proyecto comienza comprendiendo su organización, audiencia y objetivos. Las evaluaciones no están disponibles hasta que se aprueben los controles de privacidad, consentimiento, destino, manejo y respuesta.", cta: "Iniciar una Evaluación", placeholderLabel: "Marcador para integración de Microsoft Bookings", placeholderTitle: "Microsoft Bookings", placeholderNote: "La programación no está activa. Esta área reservada no permite seleccionar citas." },
-    trust: { eyebrow: "Cómo trabaja VTHREE", title: "Diseñado para generar confianza antes, durante y después del lanzamiento.", items: ["Proceso basado en investigación", "Comunicación transparente", "Desarrollo consciente de accesibilidad", "Implementación enfocada en rendimiento", "Alianzas a largo plazo", "Soluciones escalables", "IA guiada por personas", "Recomendaciones basadas en evidencia", "Resultados medidos"] },
-    finalCta: { copy: "El proyecto correcto comienza comprendiendo claramente el resultado.", cta: "Iniciar una Evaluación" }
+    services: {
+      eyebrow: "Cómo se define el alcance",
+      title: "Las categorías se alinean con los servicios que el cliente necesita.",
+      subtitle: "Estas categorías son puntos de partida para evaluación y propuesta, no paquetes fijos.",
+      scope: "Basado en propuesta",
+      items: {
+        strategy: { title: "Estrategia e Inteligencia", outcome: "Definir la dirección correcta antes de comprometer recursos.", items: ["Evaluación", "Investigación", "Planificación", "Medición", "Apoyo a decisiones"] },
+        brand: { title: "Marca y Experiencia", outcome: "Hacer la organización más clara y confiable.", items: ["Mensajes", "Revisión de experiencia", "Dirección visual", "Rutas de conversión", "Accesibilidad"] },
+        platforms: { title: "Sitios Web y Plataformas Digitales", outcome: "Crear sistemas digitales usables, duraderos y medibles.", items: ["Sitios web", "Landing pages", "Arquitectura de información", "Implementación técnica", "Analítica"] },
+        content: { title: "Contenido y Campañas", outcome: "Apoyar la acción de la audiencia con comunicación clara.", items: ["Plan de campaña", "Copy", "Recursos creativos", "Sistemas de publicación", "Revisión de rendimiento"] },
+        systems: { title: "Sistemas y Automatización", outcome: "Reducir fricción en solicitudes, informes y operaciones.", items: ["Revisión de flujos", "Formularios", "Dashboards", "Rutas CRM", "Plan de automatización"] }
+      }
+    },
+    partnerships: {
+      eyebrow: "Formas de trabajo",
+      title: "Las recomendaciones pueden escalar según la situación.",
+      subtitle: "La Evaluación determina si el trabajo debe ser enfocado, por fases o apoyado en el tiempo.",
+      note: "Suscripciones, retainers, planes de mantenimiento, horas de consultoría y automatización de propuestas siguen como elementos futuros y no están activos.",
+      items: {
+        essential: { title: "Trabajo por proyecto", purpose: "Implementación enfocada para una necesidad definida.", items: ["Alcance claro", "Entregables definidos", "Criterios prácticos", "Revisión de cierre"] },
+        growth: { title: "Implementación por fases", purpose: "Una ruta por etapas cuando la solución correcta debe construirse en secuencia.", items: ["Prioridades", "Base primero", "Alcance expandible", "Decisiones entre fases"] },
+        strategic: { title: "Apoyo continuo", purpose: "Mejora continua cuando sistemas, campañas e informes requieren administración activa.", items: ["Mantenimiento cuando aplique", "Apoyo de campañas", "Revisión de medición", "Mejora iterativa"] }
+      }
+    },
+    discovery: {
+      eyebrow: "Descubrimiento primero",
+      title: "Cada engagement comienza con una Evaluación.",
+      subtitle: "Las recomendaciones se definen por objetivos, alcance, complejidad técnica, recursos existentes y prioridades operativas.",
+      steps: ["Evaluación", "Objetivos", "Alcance", "Complejidad", "Recursos", "Prioridades", "Propuesta", "Implementación"]
+    },
+    faq: {
+      eyebrow: "Preguntas de precios",
+      title: "Respuestas útiles antes de iniciar una evaluación.",
+      items: [
+        { q: "¿Por qué VTHREE no publica paquetes fijos?", a: "Cada organización tiene metas, límites, contenido, herramientas y decisiones diferentes. El precio sigue el alcance recomendado." },
+        { q: "¿Una Evaluación garantiza una propuesta?", a: "No. La solicitud inicia un proceso de evaluación. No garantiza aceptación, propuesta, programación inmediata, respuesta en un plazo específico ni trabajo pagado." },
+        { q: "¿El trabajo puede hacerse por fases?", a: "Sí. Si es apropiado, las recomendaciones pueden separar prioridades inmediatas de implementación futura." },
+        { q: "¿VTHREE puede mejorar sistemas existentes?", a: "Sí. La Evaluación puede mostrar que mejoras específicas son más útiles que reemplazar un sitio, flujo o plataforma." },
+        { q: "¿Existe apoyo continuo?", a: "El apoyo continuo puede recomendarse cuando mantenimiento, campañas, informes o mejora iterativa son apropiados." }
+      ]
+    },
+    scheduling: {
+      eyebrow: "Ruta de Evaluación",
+      title: "Comience con contexto antes del alcance.",
+      copy: "La Evaluación ofrece la información necesaria para evaluar encaje y determinar si debe prepararse una recomendación. No es un atajo de programación ni aceptación automática a un engagement pagado.",
+      cta: "Iniciar una Evaluación",
+      placeholderLabel: "Nota del proceso de evaluación controlado",
+      placeholderTitle: "Ruta de envío controlada",
+      placeholderNote: "El manejo de evaluaciones sigue sujeto a controles aprobados de privacidad, consentimiento, ruta y respuesta. La compra en línea y la selección de citas no están activas."
+    },
+    trust: {
+      eyebrow: "Controles de precio",
+      title: "Diseñado para reducir incertidumbre sin prometer de más.",
+      items: ["Alcance después de evaluación", "Propuestas personalizadas", "Implementación por fases cuando aplique", "Engagements escalables", "Precio por proyecto", "Apoyo continuo cuando aplique", "Sin aceptación automática", "Sin resultados garantizados", "Sin flujo de compra en línea"]
+    },
+    finalCta: { copy: "El engagement correcto comienza entendiendo claramente la situación.", cta: "Iniciar una Evaluación" }
   }
 };
