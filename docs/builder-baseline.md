@@ -20,7 +20,7 @@
 | `/work/:slug` | Permission-filtered public case lookup | Unpublished routes return a generic no-index unavailable state |
 | `/intelligence` | Existing Insights and Labs structures | Routed; no articles published |
 | `/intelligence/:slug` | Empty controlled content model | Returns controlled 404 until approval |
-| `/about` | Existing About and Founder content | Routed |
+| `/about` | About production positioning and concise Founder trust section | Routed |
 | `/pricing` | Existing Founder-approved pricing content | Routed |
 | `/contact`, `/assessment` | Existing Formspree assessment form | No-index until privacy approval |
 | `/privacy` | Visible dependency placeholder | No-index; launch blocker |
@@ -128,6 +128,16 @@ These dependencies must not be resolved through implementation assumptions.
 - Updated Method metadata and analytics using `method_view`, `method_stage_expand`, and `assessment_start`.
 - Removed the Spanish Method namespace so `/method` falls back to approved English copy until final Spanish Method translation is approved.
 - Remaining Method dependencies include approved Spanish Method copy, future visual enhancements, motion design, downloadable process diagrams, interactive timelines, and any future client portal integration.
+
+## C-07 About production
+
+- Reworked `/about` around VTHREE as an intelligence-led digital growth partner, strategic advisor, implementation partner, and long-term business improvement partner.
+- Added client-focused About sections covering who VTHREE serves, the operating philosophy, how intelligence supports execution, and why engagements begin with assessment.
+- Kept the Founder section concise and relevant to client trust: practical leadership, systems thinking, operational discipline, evidence-based decisions, clear communication, and human-reviewed technology use.
+- Preserved the controlled Assessment conversion path with one `Start an Assessment` CTA to `/contact`; no scheduling promise, Microsoft Bookings activation, testimonials, awards, certifications, or case claims were introduced.
+- Updated About metadata and analytics using `about_view`, `founder_section_view`, and `assessment_start`.
+- Removed the Spanish About and Founder namespaces so `/about` falls back to approved English copy until final Spanish About translation is approved.
+- Remaining About dependencies include approved Spanish About copy, future Founder media, professional photography, executive timeline, company milestones, awards section, team expansion, and video introduction.
 
 ## C-10 Intelligence Publication Readiness
 

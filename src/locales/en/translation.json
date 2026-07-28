@@ -590,29 +590,72 @@
       }
     ]
   },
+  "aboutMeta": {
+    "title": "About",
+    "description": "Learn how VTHREE supports digital growth through intelligence-led strategy, implementation, systems thinking, and assessment-shaped recommendations."
+  },
   "about": {
     "eyebrow": "About VTHREE",
-    "title": "Strategy and technology, organized around outcomes.",
-    "p1": "VTHREE is a Digital Architecture Studio led by strategic and technical direction.",
-    "p2": "We help organizations connect websites, campaigns, content, automation, analytics, and AI-assisted workflows into systems designed around clear business outcomes.",
-    "p3": "VTHREE is led by Digital Architect Kennieth D. Allen and supported by coordinated technical, creative, and specialist resources based on project needs. We are especially effective when an organization has useful assets or valuable expertise—but needs a clearer system for presenting, managing, and growing them.",
+    "title": "Intelligence-led digital growth, built around practical execution.",
+    "p1": "VTHREE is an intelligence-led digital growth partner for organizations that need clearer strategy, stronger digital systems, and practical implementation support.",
+    "p2": "The company works as a strategic advisor, implementation partner, and long-term business improvement partner. The focus is not isolated deliverables; it is helping clients connect decisions, communication, platforms, content, workflows, and measurement.",
+    "p3": "VTHREE begins by understanding the client’s situation before recommending work. Research, assessment, and operating context help determine what should be built, improved, simplified, or deferred.",
+    "audiences": {
+      "eyebrow": "Who VTHREE serves",
+      "title": "Built for organizations with connected problems.",
+      "body": "VTHREE is a fit when digital growth depends on more than one isolated task and the organization needs a clear path from assessment to execution.",
+      "items": [
+        "Teams with websites, content, tools, or workflows that no longer support the way the organization operates.",
+        "Organizations that need strategy before production begins.",
+        "Leaders who want practical recommendations tied to goals, constraints, and readiness.",
+        "Businesses that need implementation support without losing human judgment or operational control."
+      ]
+    },
     "principles": {
-      "systems": "Systems thinking",
-      "clarity": "Clear communication",
-      "measure": "Evidence-led improvement"
+      "eyebrow": "Operating philosophy",
+      "title": "Principles that guide the work.",
+      "items": [
+        "Understand before recommending",
+        "Strategy before execution",
+        "Evidence before assumptions",
+        "Scalable systems over temporary fixes",
+        "Continuous improvement"
+      ]
+    },
+    "intelligence": {
+      "eyebrow": "Intelligence supports execution",
+      "title": "Research helps shape the right recommendation.",
+      "body": "VTHREE uses research, assessment, and structured review to understand the environment before production decisions are made. Intelligence supports judgment; it does not replace expertise or guarantee a specific result.",
+      "items": [
+        "Audience and market signals help clarify direction.",
+        "Existing assets and workflows show what can be improved or reused.",
+        "Operational constraints help keep recommendations realistic.",
+        "Evidence helps prioritize what should happen next."
+      ]
+    },
+    "assessment": {
+      "eyebrow": "Assessment first",
+      "title": "Every engagement starts with context.",
+      "body": "The Assessment process helps determine whether VTHREE is the right fit and which next step is appropriate. It does not create automatic project acceptance, immediate scheduling, or a paid engagement.",
+      "items": [
+        "Goals",
+        "Current environment",
+        "Opportunities",
+        "Constraints"
+      ]
     }
   },
   "founder": {
     "eyebrow": "Founder",
     "role": "Founder and Digital Architect",
-    "bio": "Kennieth D. Allen works across communication, technology, research, creative execution, and process improvement—translating complicated ideas into understandable systems. Internal campaigns and founder projects serve as working laboratories before proven approaches are adapted for client use.",
+    "bio": "Kennieth D. Allen leads VTHREE with a practical focus on systems thinking, operational discipline, and evidence-based decisions. His role is to connect strategy, communication, technology, and implementation so client work stays grounded in the problem being solved.",
     "strengths": [
-      "Marketing and CRM",
-      "Web development",
-      "Analytics and data",
-      "Process design",
-      "Strategic communications",
-      "Human-reviewed AI workflows"
+      "Practical leadership",
+      "Systems thinking",
+      "Operational discipline",
+      "Evidence-based decisions",
+      "Clear communication",
+      "Human-reviewed technology use"
     ]
   },
   "contact": {
