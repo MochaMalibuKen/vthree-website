@@ -68,11 +68,11 @@
       "eyebrow": "COORDINATED CAPABILITIES",
       "title": "Build what the organization needs—and connect it to the larger system.",
       "groups": [
-        "Strategy and Positioning",
-        "Websites and Digital Experiences",
-        "Content and Authority Systems",
-        "Automation and Workflow",
-        "Measurement and Improvement"
+        "Strategy & Intelligence",
+        "Brand & Experience",
+        "Websites & Digital Platforms",
+        "Content & Campaigns",
+        "Systems & Automation"
       ],
       "cta": "View Services"
     },
@@ -190,6 +190,10 @@
       "cta": "Start an Assessment"
     }
   },
+  "servicesMeta": {
+    "title": "Services",
+    "description": "VTHREE is an intelligence-led digital growth partner connecting strategy, brand, websites, content, campaigns, systems, and automation into one coordinated service model."
+  },
   "nav": {
     "primary": "Primary navigation",
     "home": "VTHREE home",
@@ -262,82 +266,98 @@
     }
   },
   "capabilities": {
-    "eyebrow": "Connected capabilities",
-    "title": "One architecture. Six connected disciplines.",
-    "subtitle": "VTHREE brings strategic, creative, technical, and analytical work into one operating plan—so each investment makes the others more useful.",
-    "automationNote": "These systems reduce repetitive work while keeping business owners in control.",
-    "analyticsNote": "We do not stop at publishing. We measure what happened, determine what it means, and use the results to improve the next decision.",
+    "eyebrow": "Intelligence-led digital growth partner",
+    "title": "Five connected capabilities shaped around the situation.",
+    "subtitle": "VTHREE combines research, strategy, creative production, digital platforms, and connected operating systems to help organizations make better decisions and execute more effectively.",
+    "model": "Services are selected and combined based on the organization's goals, constraints, readiness, and available resources. Not every client needs every capability, and the Assessment process determines the appropriate next step.",
+    "engagement": {
+      "eyebrow": "How engagements are shaped",
+      "title": "The work begins by understanding the situation.",
+      "body": "An Assessment Request starts an evaluation process. It helps determine which capabilities are relevant, what should wait, and whether a scoped engagement makes sense.",
+      "items": [
+        "Submission does not guarantee project acceptance.",
+        "Submission does not guarantee a proposal or immediate scheduling.",
+        "Recommendations depend on goals, constraints, readiness, and available resources.",
+        "A paid engagement is only considered after the assessment path supports a clear next step."
+      ]
+    },
     "groups": {
-      "digital": {
-        "title": "Digital Architecture",
-        "desc": "Build the digital foundation around how people find, understand, trust, and choose an organization.",
+      "strategy": {
+        "title": "Strategy & Intelligence",
+        "desc": "Clarify the market, audience, customer questions, and decision context before production begins.",
+        "problem": "Addresses unclear priorities, unsupported assumptions, weak positioning, and disconnected decision-making.",
         "items": [
-          "Website strategy and development",
-          "Conversion-focused information architecture",
-          "Landing pages and inquiry funnels",
-          "Booking, CRM, and form integrations",
-          "Search, analytics, accessibility, and performance",
-          "E-commerce and multilingual experiences"
+          "Market and competitor research",
+          "Positioning",
+          "Audience and customer insight",
+          "Digital opportunity assessment",
+          "Content and channel strategy",
+          "SEO and AI-search planning",
+          "Operational intelligence",
+          "Decision-support briefs"
         ]
       },
-      "creative": {
-        "title": "Creative Production",
-        "desc": "Create useful campaign assets that maintain a clear story across formats and channels.",
+      "brand": {
+        "title": "Brand & Experience",
+        "desc": "Shape how people understand the organization, move through its information, and decide whether to trust it.",
+        "problem": "Addresses unclear messaging, fragmented presentation, confusing user journeys, and weak experience structure.",
         "items": [
-          "Social graphics and campaigns",
-          "Video editing and short-form content",
-          "Advertisements and promotional videos",
-          "Photo and product-image enhancement",
-          "Capability statements, flyers, and presentations",
-          "Marketing copy, narration, and content repurposing"
+          "Brand positioning",
+          "Messaging",
+          "Visual identity refinement",
+          "Customer experience planning",
+          "Information architecture",
+          "User journeys",
+          "Presentation and proposal design",
+          "Creative direction"
         ]
       },
-      "intelligence": {
-        "title": "Marketing Intelligence",
-        "desc": "Research determines what should be created, for whom, and why—not simply what fills a calendar.",
+      "platforms": {
+        "title": "Websites & Digital Platforms",
+        "desc": "Build the digital home base around useful content, clear paths, accessible interaction, and controlled conversion.",
+        "problem": "Addresses outdated websites, unclear inquiry paths, scattered content, platform friction, and weak measurement foundations.",
         "items": [
-          "Audience and competitor research",
-          "Market and trend monitoring",
-          "Search-intent and customer-question analysis",
-          "Campaign and content strategy",
-          "Seasonal and local-market intelligence",
-          "Performance recommendations"
+          "Websites",
+          "Landing pages",
+          "Responsive design",
+          "Content architecture",
+          "Accessibility-aware implementation",
+          "Conversion pathways",
+          "Analytics integration",
+          "Platform modernization",
+          "Digital home-base development"
         ]
       },
-      "automation": {
-        "title": "Automation & AI Enablement",
-        "desc": "Connect routine intake, scheduling, follow-up, and knowledge workflows with human-reviewed implementation.",
+      "content": {
+        "title": "Content & Campaigns",
+        "desc": "Plan and produce communication assets that support the strategy instead of filling channels without direction.",
+        "problem": "Addresses inconsistent publishing, unclear campaign priorities, underused expertise, and content that does not support a larger system.",
         "items": [
-          "Virtual receptionist and call screening",
-          "Appointment and Microsoft calendar integration",
-          "CRM, email, and form routing",
-          "Client intake and internal knowledge systems",
-          "AI-assisted content workflows",
-          "Administrative and reporting automation"
+          "Content strategy",
+          "Campaign planning",
+          "Social content",
+          "Short-form and long-form content",
+          "Video and multimedia planning",
+          "Educational assets",
+          "Campaign creative",
+          "Content repurposing",
+          "Editorial planning"
         ]
       },
-      "analytics": {
-        "title": "Analytics & Decision Support",
-        "desc": "Turn activity into useful evidence for the people making the next decision.",
+      "systems": {
+        "title": "Systems & Automation",
+        "desc": "Connect forms, tools, workflows, reporting, and lightweight automation so operations support the customer path.",
+        "problem": "Addresses manual friction, scattered requests, inconsistent routing, reporting gaps, and tools that do not work together.",
         "items": [
-          "Website, campaign, and social analytics",
-          "Lead and conversion tracking",
-          "Power BI and Tableau reporting",
-          "Python-assisted analysis and modeling",
-          "Client portals and executive summaries",
-          "Content-performance recommendations"
-        ]
-      },
-      "communications": {
-        "title": "Strategic Communications",
-        "desc": "Help organizations explain complicated work clearly, consistently, and credibly.",
-        "items": [
-          "Mission and capability statements",
-          "Corporate messaging and service descriptions",
-          "Proposal and memorandum support",
-          "Technical content simplification",
-          "Bilingual English-Spanish communication",
-          "Translation, training, and client materials"
+          "Workflow assessment",
+          "Microsoft 365 and SharePoint organization",
+          "Forms and intake workflows",
+          "Scheduling and request routing",
+          "Dashboards",
+          "Lightweight automation",
+          "Client operations systems",
+          "Reporting workflows",
+          "Connected digital tools"
         ]
       }
     }
@@ -490,17 +510,16 @@
       "Operational tooling"
     ],
     "project": {
-      "label": "Selected technical project",
-      "title": "Enterprise Insurance Workflow Optimization",
-      "body": "A regional enterprise insurance team used a high-volume manual workflow that created delays and inconsistent record quality. Internal logic tooling was designed to standardize processing decisions and improve reliability.",
+      "label": "Proof status",
+      "title": "Technical proof pending approval",
+      "body": "Public technical project claims are withheld until the supporting claim, permission, outcome, and publication review are approved.",
       "items": [
-        "Diagnosed inefficiency across key workflow stages",
-        "Built logic tools for more consistent case handling",
-        "Reduced repetitive handling across recurring tasks",
-        "Improved data reliability and reporting confidence",
-        "Established a scripting structure for future iteration"
+        "No client identity is published.",
+        "No project outcome is published.",
+        "No performance claim is published.",
+        "No confidential workflow detail is published."
       ],
-      "note": "Project details are intentionally limited to protect confidential operating information."
+      "note": "Relevant technical experience may be discussed during an assessment where appropriate."
     }
   },
   "insights": {
@@ -571,9 +590,9 @@
     "privacyCta": "View privacy status"
   },
   "visual": {
-    "capabilitiesLabel": "Six capabilities connected through one coordinated system",
+    "capabilitiesLabel": "Five capabilities connected through one coordinated system",
     "capabilitiesCore": "Coordinated system",
-    "exploreCapability": "Explore capability",
+    "exploreCapability": "Representative services",
     "flowLabel": "Activity becomes evidence, and evidence informs the next decision",
     "activity": "Activity",
     "evidence": "Evidence",

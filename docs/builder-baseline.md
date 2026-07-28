@@ -14,7 +14,7 @@
 | Route | Current source | Publication posture |
 | --- | --- | --- |
 | `/` | Existing homepage composition | Preserved pending C-03 |
-| `/services` | Existing Services, Industries, and Technical Projects | Routed |
+| `/services` | Five-capability Services production model | Routed |
 | `/method` | Existing Philosophy, comparison, and Method | Routed |
 | `/work` | Controlled public-case registry and intentional empty state | No-index while zero cases are published and permissioned |
 | `/work/:slug` | Permission-filtered public case lookup | Unpublished routes return a generic no-index unavailable state |
@@ -105,7 +105,19 @@ These dependencies must not be resolved through implementation assumptions.
 - Removed `/work` from `public/sitemap.xml` for the zero-public-case condition. Case-detail URLs remain excluded.
 - Standardized public Work analytics as `work_view`, `work_case_open`, `work_external_link`, and `assessment_start`; suppressed case-open and external-link events cannot fire while the public registry is empty.
 - Spanish Work copy remains an approval dependency and intentionally falls back to the controlled English content.
-- A separate selected technical-project claim remains visible on `/services`. C-08 did not alter that out-of-scope production section; Founder and Delivery must either document its publication approval or authorize a separate suppression correction.
+- The previously visible selected technical-project claim on `/services` is superseded by C-05 suppression requirements.
+
+## C-05 Services page production
+
+- Replaced the legacy six-group Services model with the five approved capability groups in order: Strategy & Intelligence, Brand & Experience, Websites & Digital Platforms, Content & Campaigns, and Systems & Automation.
+- Reworked `/services` around the approved intelligence-led digital growth partner positioning: what VTHREE helps organizations accomplish, how the five capabilities work together, the five capability groups, how engagements are shaped, and one final `Start an Assessment` CTA to `/contact`.
+- Removed the Services-page rendering of the Industries and Technical Projects sections so `/services` no longer publishes the unapproved selected technical-project proof claim or a disconnected catalogue outside the approved C-05 model.
+- Converted the dormant technical-project translation record into a controlled proof-status placeholder so the old selected technical-project claim, project title, implied client context, and workflow outcome language are not retained in the public content source.
+- Preserved the canonical Services route as indexable and kept `/services` in `public/sitemap.xml`; no service-detail routes were created or added to the sitemap.
+- Updated Services metadata and public Services analytics to use `services_view`, `service_capability_engage`, and `assessment_start` with Services-specific source values.
+- Removed the Spanish Services capability namespace so `/services` falls back to the approved English Services content until a final Spanish Services translation is approved. Spanish Services translation remains a dependency.
+- Homepage capability labels were aligned to the five approved capability groups without redesigning the homepage.
+- Deferred pricing package-to-service mapping, standalone service-detail routes, future Bookings integration, proposal automation, detailed scope boundaries, and final service-specific SEO strategy to later governance decisions.
 
 ## C-10 Intelligence Publication Readiness
 
