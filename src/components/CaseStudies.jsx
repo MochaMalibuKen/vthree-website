@@ -1,25 +1,65 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { caseStudies } from "../content/cases.js";
+import { publicCaseStudies } from "../content/cases.js";
+
+function PublicCaseCard({ study, labels, t }) {
+  const displayTitle = study.displayName || study.title;
+  const image = study.images[0];
+
+  return <article className="case-study">
+    {image
+      ? <img className="case-media" src={image.src} alt={image.alt} loading="lazy" decoding="async" />
+      : <div className="case-media-placeholder" role="img" aria-label={t("cases.imagePlaceholder")}><span aria-hidden="true">V3</span></div>}
+    <div className="case-public-heading">
+      <div>
+        {study.industry && <p className="tag">{study.industry}</p>}
+        <h2>{displayTitle}</h2>
+        {study.clientName && <p className="case-client">{study.clientName}</p>}
+      </div>
+    </div>
+    {study.summary && <p className="case-summary">{study.summary}</p>}
+    <div className="case-content">
+      {(study.problem || study.approach || study.solution) && <div>
+        {study.problem && <><h3>{labels.problem}</h3><p>{study.problem}</p></>}
+        {study.approach && <><h3>{labels.approach}</h3><p>{study.approach}</p></>}
+        {study.solution && <><h3>{labels.solution}</h3><p>{study.solution}</p></>}
+      </div>}
+      {(study.outcomes.length > 0 || study.metrics.length > 0) && <div>
+        {study.outcomes.length > 0 && <><h3>{labels.outcomes}</h3><ul>{study.outcomes.map(item => <li key={item}>{item}</li>)}</ul></>}
+        {study.metrics.length > 0 && <><h3>{labels.metrics}</h3><ul>{study.metrics.map(item => <li key={item.label || item}>{item.label ? `${item.label}: ${item.value}` : item}</li>)}</ul></>}
+      </div>}
+      <div>
+        {study.serviceCategories.length > 0 && <><h3>{labels.services}</h3><div>{study.serviceCategories.map(item => <span className="tag" key={item}>{item}</span>)}</div></>}
+        <p><Link className="text-link" to={`/work/${study.slug}`} onClick={() => window.dataLayer?.push({ event: "work_case_open", case_id: study.id })}>{t("cases.detailCta")} <span aria-hidden="true">→</span></Link></p>
+        {study.externalLink && <a href={study.externalLink} target="_blank" rel="noreferrer" className="text-link" onClick={() => window.dataLayer?.push({ event: "work_external_link", case_id: study.id })}>{t("cases.externalCta")} <span aria-hidden="true">↗</span></a>}
+      </div>
+    </div>
+    {study.testimonial && <blockquote><p>{study.testimonial}</p><cite>{study.quoteAttribution}</cite></blockquote>}
+  </article>;
+}
 
 export default function CaseStudies({ headingLevel = "h2" }) {
   const { t } = useTranslation();
   const labels = t("cases.labels", { returnObjects: true });
   const Heading = headingLevel;
+  const hasPublicCases = publicCaseStudies.length > 0;
+
   return <section id="case-studies" className="section work-section" aria-labelledby="work-title"><div className="container">
-    <p className="eyebrow">{t("cases.eyebrow")}</p><Heading className="section-title" id="work-title">{t("cases.title")}</Heading><p className="sub section-intro">{t("cases.subtitle")}</p>
-    <div className="case-list">{caseStudies.map((study, index) => <article className="case-study" key={study.title}>
-      <div className="case-heading"><span className="case-number">0{index + 1}</span><div><p className="tag">{study.category}</p><h3>{study.title}</h3></div></div>
-      <details className="case-details">
-        <summary><span>{t("visual.reviewEvidence", { defaultValue: "Review evidence" })}</span><i aria-hidden="true">+</i></summary>
-      <div className="case-content">
-        <div><h4>{labels.challenge}</h4><p>{study.challenge}</p><h4>{labels.diagnosis}</h4><p>{study.diagnosis}</p><h4>{labels.solution}</h4><p>{study.solution}</p></div>
-        <div><h4>{labels.deliverables}</h4><ul>{study.deliverables.map(x => <li key={x}>{x}</li>)}</ul><h4>{labels.outcomes}</h4><ul>{study.outcomes.map(x => <li key={x}>{x}</li>)}</ul></div>
-        <div><h4>{labels.capabilities}</h4><div>{study.capabilities.map(x => <span className="tag" key={x}>{x}</span>)}</div><h4>{labels.future}</h4><p>{study.future}</p><p><Link className="text-link" to={`/work/${study.slug}`}>{t("visual.reviewEvidence", { defaultValue: "Review evidence" })} <span aria-hidden="true">→</span></Link></p><a href={study.link} target="_blank" rel="noreferrer" className="text-link" aria-label={`${t("cases.cta")}: ${study.title}`} onClick={() => window.dataLayer?.push({ event: "case_study_click", case_study: study.title })}>{t("cases.cta")} <span aria-hidden="true">↗</span></a></div>
-      </div>
-      </details>
-      <span className="metric-field" data-status="awaiting-verification" hidden>Verified metrics field reserved</span>
-    </article>)}</div>
-    <aside className="future-case" aria-label={t("cases.futureTemplate.label")}><p className="eyebrow">{t("cases.futureTemplate.eyebrow")}</p><h3>{t("cases.futureTemplate.title")}</h3><p>{t("cases.futureTemplate.body")}</p><span>{t("cases.futureTemplate.status")}</span></aside>
+    <p className="eyebrow">{t("cases.eyebrow")}</p>
+    <Heading className="section-title" id="work-title">{t("cases.title")}</Heading>
+    <p className="sub section-intro work-proof-standard">{t("cases.standard")}</p>
+
+    {hasPublicCases
+      ? <div className="case-list">{publicCaseStudies.map(study => <PublicCaseCard key={study.id} study={study} labels={labels} t={t} />)}</div>
+      : <div className="work-empty-state">
+        <h2>{t("cases.empty.title")}</h2>
+        <p>{t("cases.empty.body")}</p>
+      </div>}
+
+    <div className="work-assessment-cta">
+      <Link className="btn" to="/contact" onClick={() => window.dataLayer?.push({ event: "assessment_start", source: "work" })}>
+        {t("cases.assessmentCta")}
+      </Link>
+    </div>
   </div></section>;
 }
