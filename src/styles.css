@@ -329,8 +329,13 @@ nav .inner { min-height: 72px; display: flex; align-items: center; justify-conte
 .insight-card { padding: 1.5rem; border: 1px solid var(--line); }
 .insight-card > span { color: var(--brand); font-family: monospace; }
 .insight-card p:last-child { color: var(--muted); }
-.principle-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 2rem; }
-.principle-grid span { padding: 1rem; border: 1px solid var(--line); color: var(--signal); font-size: .78rem; text-align: center; }
+.about-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin-top: clamp(3rem, 6vw, 5rem); background: var(--line); border: 1px solid var(--line); }
+.about-panel { padding: clamp(1.5rem, 3vw, 2.4rem); background: var(--panel); }
+.about-panel > p:not(.eyebrow), .about-panel li { color: var(--muted); }
+.about-panel ul { margin-bottom: 0; }
+.about-panel .cta { margin-top: 1.5rem; }
+.principle-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: .6rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }
+.principle-grid li { padding: 1rem; border: 1px solid var(--line); color: var(--signal); font-size: .78rem; text-align: center; }
 .founder-section { padding-top: 0; }
 .founder-card { display: grid; grid-template-columns: .7fr 1.3fr; gap: 4rem; padding: 3rem; border: 1px solid var(--line); background: var(--panel); }
 .founder-role { color: var(--brand-soft); }
@@ -532,7 +537,7 @@ summary:focus-visible { border-radius: 4px; }
   .method-grid, .pricing-grid, .insight-grid { grid-template-columns: 1fr; }
   .pricing-intro, .scheduling-section { grid-template-columns: 1fr; }
   .pricing-intro .eyebrow, .pricing-intro h2, .pricing-intro .section-intro, .pricing-principle { grid-column: 1; grid-row: auto; }
-  .strategic-grid, .partnership-grid { grid-template-columns: 1fr; }
+  .strategic-grid, .partnership-grid, .about-grid { grid-template-columns: 1fr; }
   .strategic-card { min-height: auto; }
   .discovery-timeline { grid-template-columns: repeat(2, 1fr); }
   .trust-grid { grid-template-columns: repeat(2, 1fr); }
