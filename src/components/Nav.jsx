@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import logo from "../assets/V3logo.png";
 
 export default function Nav() {
   const { t, i18n } = useTranslation();
@@ -43,7 +42,7 @@ export default function Nav() {
   return <nav aria-label={t("nav.primary", { defaultValue: "Primary navigation" })}>
     <div className="container inner">
       <Link to="/" className="brand" aria-label={t("nav.home", { defaultValue: "VTHREE home" })}>
-        <img src={logo} alt="" /><span><strong>VTHREE</strong><small>Digital Architecture</small></span>
+        <img src="/images/branding/vthree512microcoremarkv1.webp" alt="" /><span><strong>VTHREE</strong><small>Digital Architecture</small></span>
       </Link>
       <button ref={menuToggleRef} type="button" className="menu-toggle" onClick={() => setMenuOpen(value => !value)} aria-expanded={menuOpen} aria-controls="site-links">
         <span className="sr-only">{t("nav.menu", { defaultValue: "Toggle menu" })}</span><span aria-hidden="true">{menuOpen ? "×" : "☰"}</span>

@@ -5,10 +5,12 @@ export default function FounderSection() {
   const { t } = useTranslation();
   return <section id="founder-authority" className="section home-founder" aria-labelledby="home-founder-title">
     <div className="container home-founder-layout">
-      <div className="home-founder-placeholder" role="img" aria-label={t("homepage.founder.portraitStatus")}>
-        <span aria-hidden="true">KA</span>
-        <small>{t("homepage.founder.portraitStatus")}</small>
-      </div>
+      <figure className="home-founder-portrait">
+        <picture>
+          <source srcSet="/images/founder/v3founder_photo.webp" type="image/webp" />
+          <img src="/images/founder/v3founder_photo.png" alt="Portrait of Kennieth Allen, Founder and Digital Architect of VThree" loading="lazy" decoding="async" />
+        </picture>
+      </figure>
       <div>
         <p className="eyebrow">{t("homepage.founder.eyebrow")}</p>
         <h2 id="home-founder-title">{t("homepage.founder.title")}</h2>

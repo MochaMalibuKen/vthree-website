@@ -2,10 +2,10 @@ import { useEffect } from "react";
 
 const SITE_NAME = "VThree";
 const SITE_URL = "https://vthreeagency.com";
-const DEFAULT_IMAGE = `${SITE_URL}/hero/bigcity.jpg`;
-const DEFAULT_IMAGE_ALT = "VThree digital strategy visual";
-const DEFAULT_IMAGE_WIDTH = "2048";
-const DEFAULT_IMAGE_HEIGHT = "2048";
+const DEFAULT_IMAGE = `${SITE_URL}/images/hero/vthreefbbanner.png`;
+const DEFAULT_IMAGE_ALT = "VThree strategic intelligence partner brand visual";
+const DEFAULT_IMAGE_WIDTH = "1942";
+const DEFAULT_IMAGE_HEIGHT = "809";
 
 function normalizePath(path) {
   if (!path || path === "/") return "/";

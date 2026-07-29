@@ -20,7 +20,12 @@ export default function HeroSection() {
         </div>
       </div>
       <div className="home-system-visual" aria-hidden="true">
-        <span className="home-system-core">VTHREE</span>
+        <span className="ruby-environment ruby-bloom" />
+        <span className="ruby-environment ruby-spill" />
+        <span className="ruby-environment ruby-haze" />
+        <span className="ruby-environment ruby-reflection ruby-reflection-1" />
+        <span className="ruby-environment ruby-reflection ruby-reflection-2" />
+        <span className="home-system-core"><img src="/images/branding/vthree512microcoremarkv1.webp" alt="" /></span>
         <span className="home-system-node home-system-node-1">{t("homepage.hero.system.strategy")}</span>
         <span className="home-system-node home-system-node-2">{t("homepage.hero.system.experience")}</span>
         <span className="home-system-node home-system-node-3">{t("homepage.hero.system.content")}</span>
