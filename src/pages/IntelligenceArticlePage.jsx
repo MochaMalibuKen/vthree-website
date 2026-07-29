@@ -19,6 +19,7 @@ export default function IntelligenceArticlePage() {
         title={article.seoTitle || article.title} 
         description={article.seoDescription || article.summary} 
         path={`/intelligence/${article.slug}`}
+        type="article"
       />
 
       {/* Article Header */}
