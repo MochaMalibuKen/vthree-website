@@ -43,6 +43,18 @@ export default function HeroSection() {
             <animateMotion dur="21s" begin="11s" repeatCount="indefinite" path="M260 414 C260 350 260 306 260 250" />
           </circle>
         </svg>
+        <div className="hero-data-layer" aria-hidden="true">
+          <span className="hero-data-element data-1" />
+          <span className="hero-data-element data-2" />
+          <span className="hero-data-element data-3" />
+          <span className="hero-data-element data-4" />
+          <span className="hero-data-element data-5" />
+          <span className="hero-data-element data-6" />
+          <span className="hero-data-element data-7" />
+          <span className="hero-data-element data-8" />
+          <span className="hero-data-element data-9" />
+          <span className="hero-data-element data-10" />
+        </div>
         <span className="ruby-environment ruby-reflection ruby-reflection-1" />
         <span className="ruby-environment ruby-reflection ruby-reflection-2" />
         <span className="home-system-core"><img src="/images/branding/vthree512microcoremarkv1.webp" alt="" /></span>
