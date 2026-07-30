@@ -6,6 +6,29 @@ export default function HeroSection() {
   const cues = t("homepage.hero.cues", { returnObjects: true });
   return <header className="section home-hero" aria-labelledby="home-hero-title">
     <div className="home-hero-grid" aria-hidden="true" />
+    <svg className="home-hero-connections" viewBox="0 0 1440 760" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path className="hero-field-route field-route-1" d="M1040 360 C920 286 760 240 590 245 C420 250 286 314 150 410" />
+      <path className="hero-field-route field-route-2" d="M1040 360 C890 398 760 450 610 520 C438 600 294 618 104 574" />
+      <path className="hero-field-route field-route-3" d="M1040 360 C1135 288 1238 236 1388 222" />
+      <path className="hero-field-route field-route-4 field-route-muted" d="M1040 360 C906 176 664 122 386 150" />
+      <path className="hero-field-route field-route-5 field-route-muted" d="M1040 360 C1152 454 1268 520 1408 582" />
+      <circle className="hero-field-node" cx="590" cy="245" r="4" />
+      <circle className="hero-field-node" cx="610" cy="520" r="4" />
+      <circle className="hero-field-node" cx="386" cy="150" r="3.5" />
+      <circle className="hero-field-node" cx="1388" cy="222" r="3.5" />
+      <circle className="hero-field-packet field-packet-1" r="5">
+        <animateMotion dur="12s" repeatCount="indefinite" path="M1040 360 C920 286 760 240 590 245 C420 250 286 314 150 410" />
+      </circle>
+      <circle className="hero-field-packet field-packet-2" r="4.6">
+        <animateMotion dur="15s" begin="3s" repeatCount="indefinite" path="M1040 360 C890 398 760 450 610 520 C438 600 294 618 104 574" />
+      </circle>
+      <circle className="hero-field-packet field-packet-3" r="4.2">
+        <animateMotion dur="17s" begin="6s" repeatCount="indefinite" path="M1040 360 C1135 288 1238 236 1388 222" />
+      </circle>
+      <circle className="hero-field-packet field-packet-4" r="4.4">
+        <animateMotion dur="19s" begin="9s" repeatCount="indefinite" path="M1040 360 C906 176 664 122 386 150" />
+      </circle>
+    </svg>
     <div className="container home-hero-layout">
       <div className="home-hero-copy">
         <p className="eyebrow">{t("homepage.hero.eyebrow")}</p>
@@ -30,16 +53,16 @@ export default function HeroSection() {
           <path className="hero-signal-route route-3" d="M88 258 C154 244 200 242 260 250" />
           <path className="hero-signal-route route-4" d="M430 270 C360 262 314 256 260 250" />
           <path className="hero-signal-route route-5" d="M260 414 C260 350 260 306 260 250" />
-          <circle className="hero-signal-packet packet-1" r="3.6">
+          <circle className="hero-signal-packet packet-1" r="4.8">
             <animateMotion dur="13s" repeatCount="indefinite" path="M110 95 C180 140 218 176 260 250" />
           </circle>
-          <circle className="hero-signal-packet packet-2" r="3.2">
+          <circle className="hero-signal-packet packet-2" r="4.4">
             <animateMotion dur="16s" begin="4s" repeatCount="indefinite" path="M410 116 C348 154 304 194 260 250" />
           </circle>
-          <circle className="hero-signal-packet packet-3" r="3">
+          <circle className="hero-signal-packet packet-3" r="4.2">
             <animateMotion dur="18s" begin="7s" repeatCount="indefinite" path="M88 258 C154 244 200 242 260 250" />
           </circle>
-          <circle className="hero-signal-packet packet-4" r="3.3">
+          <circle className="hero-signal-packet packet-4" r="4.5">
             <animateMotion dur="21s" begin="11s" repeatCount="indefinite" path="M260 414 C260 350 260 306 260 250" />
           </circle>
         </svg>

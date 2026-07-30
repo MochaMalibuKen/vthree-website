@@ -1,11 +1,13 @@
 .pib-section {
+  width: min(1440px, 96vw);
   margin-block: clamp(4rem, 8vw, 7rem);
+  margin-inline: calc(50% - min(1440px, 96vw) / 2);
 }
 
 .pib-shell {
   position: relative;
   overflow: hidden;
-  min-height: 920px;
+  min-height: 1220px;
   padding: clamp(1.5rem, 3vw, 2.5rem);
   border: 1px solid rgba(140, 29, 64, .34);
   border-radius: 24px;
@@ -35,11 +37,9 @@
 }
 
 .pib-intro {
-  position: absolute;
+  position: relative;
   z-index: 2;
-  top: clamp(1.5rem, 3vw, 2.5rem);
-  left: clamp(1.5rem, 3vw, 2.5rem);
-  max-width: 360px;
+  max-width: 760px;
 }
 
 .pib-system-label,
@@ -73,8 +73,8 @@
 
 .pib-diagram {
   position: relative;
-  min-height: 820px;
-  margin-top: 0;
+  min-height: 1040px;
+  margin-top: 2.5rem;
 }
 
 .pib-inputs,
@@ -129,8 +129,8 @@
   display: grid;
   grid-template-columns: 48px 1fr;
   gap: .9rem;
-  width: min(260px, 22%);
-  min-height: 104px;
+  width: min(310px, 22%);
+  min-height: 118px;
   padding: 1rem;
   border-radius: 14px;
   box-shadow: 0 18px 40px rgba(0, 0, 0, .34);
@@ -155,17 +155,17 @@
   font: 800 1.5rem Poppins, sans-serif;
 }
 
-.input-research { top: 3%; left: 43%; }
-.input-seo { top: 11%; left: 20%; }
-.input-competitive { top: 11%; right: 18%; }
-.input-brand { top: 29%; left: 16%; }
-.input-ux { top: 29%; right: 15%; }
-.input-message { top: 45%; left: 15%; }
-.input-architecture { top: 45%; right: 14%; }
-.input-content { top: 61%; left: 16%; }
-.input-automation { top: 61%; right: 15%; }
-.input-strategy { top: 76%; left: 32%; }
-.input-design { top: 76%; right: 27%; }
+.input-research { top: 0; left: 39%; }
+.input-seo { top: 13%; left: 11%; }
+.input-competitive { top: 13%; right: 11%; }
+.input-brand { top: 30%; left: 3%; }
+.input-ux { top: 30%; right: 3%; }
+.input-message { top: 47%; left: 3%; }
+.input-architecture { top: 47%; right: 3%; }
+.input-content { top: 64%; left: 5%; }
+.input-automation { top: 64%; right: 5%; }
+.input-strategy { top: 79%; left: 28%; }
+.input-design { top: 79%; right: 28%; }
 
 .pib-input-node h3,
 .pib-output-node h3 {
@@ -184,10 +184,10 @@
 .pib-artifact {
   position: absolute;
   z-index: 3;
-  top: 24%;
+  top: 27%;
   left: 50%;
-  width: min(270px, 24%);
-  min-height: 390px;
+  width: min(360px, 26%);
+  min-height: 430px;
   padding: clamp(1.5rem, 4vw, 2.4rem);
   border-color: rgba(140, 29, 64, .88);
   border-radius: 20px;
@@ -242,7 +242,7 @@
   z-index: 2;
   top: 0;
   right: 0;
-  width: min(190px, 17%);
+  width: min(230px, 18%);
   display: grid;
   gap: 1rem;
   padding: 1rem;
@@ -284,19 +284,35 @@
 .pib-output-node {
   grid-template-columns: 1fr;
   width: calc((100% - 6rem) / 7);
-  min-height: 154px;
+  min-height: 178px;
   text-align: center;
   border-color: rgba(255, 73, 109, .48);
 }
 
-.pib-output-node::before {
-  content: "";
-  width: 42px;
-  height: 42px;
-  margin: 0 auto .5rem;
-  border: 2px solid var(--brand);
-  border-radius: 12px;
-  box-shadow: 0 0 18px rgba(255, 73, 109, .22);
+.pib-output-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto .65rem;
+  color: var(--brand);
+  filter: drop-shadow(0 0 12px rgba(255, 73, 109, .22));
+}
+
+.pib-output-icon * {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.pib-output-node {
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255, 73, 109, .08), transparent 46%),
+    linear-gradient(180deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .025));
+}
+
+.pib-output-node:hover .pib-output-icon {
+  filter: drop-shadow(0 0 18px rgba(255, 73, 109, .52));
 }
 
 .pib-output-node:nth-of-type(1) { left: 0; bottom: 0; }
@@ -308,8 +324,13 @@
 .pib-output-node:nth-of-type(7) { left: calc(((100% - 6rem) / 7 + 1rem) * 6); bottom: 0; }
 
 @media (max-width: 1180px) {
+  .pib-section {
+    width: auto;
+    margin-inline: 0;
+  }
+
   .pib-shell {
-    min-height: 1080px;
+    min-height: 0;
   }
 
   .pib-intro {
@@ -320,34 +341,78 @@
   }
 
   .pib-diagram {
-    min-height: 940px;
+    display: grid;
+    gap: 1rem;
+    min-height: 0;
     margin-top: 2rem;
   }
 
-  .pib-metadata {
-    top: 0;
-    width: 210px;
+  .pib-connectors {
+    display: none;
   }
 
-  .pib-input-node {
-    width: min(245px, 26%);
+  .pib-inputs,
+  .pib-outputs {
+    display: grid;
+    gap: .8rem;
   }
 
-  .input-research { top: 0; left: 39%; }
-  .input-seo { top: 11%; left: 4%; }
-  .input-competitive { top: 11%; right: 4%; }
-  .input-brand { top: 27%; left: 2%; }
-  .input-ux { top: 27%; right: 2%; }
-  .input-message { top: 43%; left: 2%; }
-  .input-architecture { top: 43%; right: 2%; }
-  .input-content { top: 59%; left: 4%; }
-  .input-automation { top: 59%; right: 4%; }
-  .input-strategy { top: 73%; left: 23%; }
-  .input-design { top: 73%; right: 23%; }
+  .pib-inputs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pib-inputs .pib-group-label,
+  .pib-outputs .pib-group-label {
+    grid-column: 1 / -1;
+    position: static;
+  }
+
+  .pib-input-node,
+  .pib-output-node,
+  .pib-artifact,
+  .pib-metadata,
+  .pib-closing {
+    position: relative;
+    inset: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    top: auto;
+    width: auto;
+    transform: none;
+  }
 
   .pib-artifact {
-    top: 27%;
-    width: min(300px, 30%);
+    order: -1;
+    min-height: 0;
+    margin: .5rem 0 1rem;
+  }
+
+  .pib-inputs {
+    order: 1;
+  }
+
+  .pib-outputs {
+    order: 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pib-metadata {
+    order: 3;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: .5rem;
+  }
+
+  .pib-output-node {
+    text-align: left;
+  }
+
+  .pib-output-icon {
+    margin-inline: 0;
+  }
+
+  .pib-closing {
+    margin-top: 1rem;
   }
 }
 
