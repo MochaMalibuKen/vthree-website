@@ -406,13 +406,13 @@ textarea { resize: vertical; }
 .home-system-visual::before, .home-system-visual::after { content: ""; position: absolute; inset: 11% 16%; z-index: 1; border: 1px solid rgba(206,221,234,.12); border-radius: 50%; }
 .home-system-visual::after { inset: 24% 29%; border-color: rgba(140,29,64,.28); }
 .ruby-environment { position: absolute; pointer-events: none; }
-.ruby-bloom { inset: 8% 4% 0; z-index: 0; opacity: .3; background: radial-gradient(circle at 50% 54%, rgba(140,29,64,.34), rgba(140,29,64,.13) 26%, transparent 62%); filter: blur(28px); transform: translate3d(0,0,0); }
-.ruby-spill { inset: 24% 6% 12%; z-index: 1; opacity: .3; background: linear-gradient(110deg, transparent 8%, rgba(140,29,64,.2) 42%, rgba(140,29,64,.08) 61%, transparent 86%); filter: blur(18px); transform: rotate(-8deg) translate3d(0,0,0); }
-.ruby-haze { inset: -16% -18%; z-index: 1; opacity: .2; background: radial-gradient(ellipse at 52% 48%, rgba(140,29,64,.18), transparent 42%), radial-gradient(ellipse at 36% 72%, rgba(140,29,64,.08), transparent 32%); filter: blur(36px); transform: translate3d(0,0,0); }
-.ruby-pulse { inset: 20% 18%; z-index: 1; border: 1px solid rgba(140,29,64,.22); border-radius: 50%; opacity: 0; transform: scale(.76); }
-.ruby-reflection { z-index: 2; height: 1px; opacity: .44; background: linear-gradient(90deg, transparent, rgba(140,29,64,.72), rgba(244,246,248,.16), transparent); transform-origin: center; }
-.ruby-reflection-1 { width: 64%; top: 34%; left: 18%; transform: rotate(-17deg); }
-.ruby-reflection-2 { width: 52%; bottom: 22%; left: 24%; opacity: .28; transform: rotate(10deg); }
+.ruby-bloom { inset: 6% 1% -2%; z-index: 0; opacity: .42; background: radial-gradient(circle at 50% 54%, rgba(140,29,64,.48), rgba(140,29,64,.2) 28%, transparent 64%); filter: blur(34px); transform: translate3d(0,0,0); }
+.ruby-spill { inset: 22% 3% 10%; z-index: 1; opacity: .42; background: linear-gradient(110deg, transparent 8%, rgba(140,29,64,.3) 42%, rgba(140,29,64,.13) 61%, transparent 86%); filter: blur(20px); transform: rotate(-8deg) translate3d(0,0,0); }
+.ruby-haze { inset: -18% -20%; z-index: 1; opacity: .28; background: radial-gradient(ellipse at 52% 48%, rgba(140,29,64,.26), transparent 44%), radial-gradient(ellipse at 36% 72%, rgba(140,29,64,.13), transparent 34%); filter: blur(38px); transform: translate3d(0,0,0); }
+.ruby-pulse { inset: 18% 16%; z-index: 1; border: 1px solid rgba(140,29,64,.36); border-radius: 50%; opacity: 0; transform: scale(.76); }
+.ruby-reflection { z-index: 2; height: 1px; opacity: .54; background: linear-gradient(90deg, transparent, rgba(140,29,64,.86), rgba(244,246,248,.22), transparent); transform-origin: center; }
+.ruby-reflection-1 { width: 66%; top: 34%; left: 17%; transform: rotate(-17deg); }
+.ruby-reflection-2 { width: 54%; bottom: 22%; left: 23%; opacity: .36; transform: rotate(10deg); }
 .hero-signal-network { position: absolute; inset: 4%; z-index: 2; width: 92%; height: 92%; pointer-events: none; overflow: visible; }
 .hero-signal-route { fill: none; stroke: rgba(140,29,64,.32); stroke-width: 1; stroke-linecap: round; stroke-dasharray: 6 18; opacity: .58; vector-effect: non-scaling-stroke; }
 .hero-signal-route.route-2, .hero-signal-route.route-4 { stroke: rgba(206,221,234,.18); }
@@ -434,10 +434,10 @@ textarea { resize: vertical; }
 .hero-verification-layer { position: absolute; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; }
 .hero-grid-field { position: absolute; inset: 9% 10%; opacity: .16; background-image: linear-gradient(rgba(140,29,64,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(206,221,234,.09) 1px, transparent 1px); background-size: 34px 34px; mask-image: radial-gradient(ellipse at 50% 50%, #000 0 36%, transparent 72%); }
 .hero-verification-sweep { position: absolute; inset: -22% 12%; opacity: 0; background: linear-gradient(100deg, transparent 16%, rgba(140,29,64,.14) 46%, rgba(244,246,248,.05) 52%, transparent 78%); filter: blur(10px); transform: translate3d(-42%, 0, 0) skewX(-12deg); }
-.home-system-core { position: absolute; z-index: 3; inset: 50% auto auto 50%; width: 148px; height: 148px; display: grid; place-items: center; border: 1px solid rgba(140,29,64,.54); border-radius: 50%; background: radial-gradient(circle at 50% 45%, rgba(140,29,64,.28), transparent 48%), #070b11; transform: translate(-50%, -50%); overflow: hidden; }
-.home-system-core::before { content: ""; position: absolute; inset: 18%; z-index: 0; border-radius: 50%; background: radial-gradient(circle, rgba(140,29,64,.5), rgba(140,29,64,.18) 38%, transparent 72%); filter: blur(12px); opacity: .62; }
-.home-system-core::after { content: ""; position: absolute; inset: 0; z-index: 2; background: linear-gradient(135deg, transparent 20%, rgba(244,246,248,.1) 44%, transparent 54%); opacity: .42; mix-blend-mode: screen; }
-.home-system-core img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: cover; filter: saturate(.88) contrast(1.03); }
+.home-system-core { position: absolute; z-index: 3; inset: 50% auto auto 50%; width: 148px; height: 148px; display: grid; place-items: center; border: 1px solid rgba(140,29,64,.72); border-radius: 50%; background: radial-gradient(circle at 50% 45%, rgba(140,29,64,.4), transparent 50%), #070b11; box-shadow: 0 0 46px rgba(140,29,64,.26), inset 0 0 30px rgba(140,29,64,.2); transform: translate(-50%, -50%); overflow: hidden; }
+.home-system-core::before { content: ""; position: absolute; inset: 15%; z-index: 0; border-radius: 50%; background: radial-gradient(circle, rgba(140,29,64,.66), rgba(140,29,64,.26) 40%, transparent 74%); filter: blur(14px); opacity: .78; }
+.home-system-core::after { content: ""; position: absolute; inset: 0; z-index: 2; background: linear-gradient(135deg, transparent 20%, rgba(244,246,248,.14) 44%, transparent 54%); opacity: .5; mix-blend-mode: screen; }
+.home-system-core img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: cover; filter: saturate(.98) contrast(1.08); }
 .home-system-node { position: absolute; z-index: 3; width: min(160px, 40%); padding: .65rem .75rem; border: 1px solid var(--line-strong); border-radius: 8px; background: #101a25; color: #d8e0e7; font-size: .72rem; font-weight: 700; text-align: center; box-shadow: 0 12px 30px rgba(0,0,0,.25); }
 .home-system-node::before { content: ""; position: absolute; width: 7px; height: 7px; border-radius: 50%; background: var(--signal); box-shadow: 0 0 12px rgba(82,216,231,.65); }
 .home-system-node-1 { top: 8%; left: 8%; }
@@ -568,11 +568,11 @@ summary:focus-visible { border-radius: 4px; }
   @keyframes drift { to { transform: scale(1.05) translateX(-1%); } }
   @keyframes signalTravel { 0% { transform: translateX(0); opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { transform: translateX(34vw); opacity: 0; } }
   @keyframes blueprintSignal { to { stroke-dashoffset: -76; } }
-  @keyframes rubyBloom { from { opacity: .24; transform: scale(.985) translate3d(-1%, 1%, 0); } to { opacity: .36; transform: scale(1.035) translate3d(1%, -1%, 0); } }
-  @keyframes rubySpill { from { opacity: .24; transform: rotate(-8deg) translate3d(-1.2%, 1%, 0); } to { opacity: .34; transform: rotate(-7deg) translate3d(1.2%, -1%, 0); } }
-  @keyframes rubyHaze { from { opacity: .14; transform: translate3d(-1%, 0, 0) scale(1); } to { opacity: .23; transform: translate3d(1%, -1%, 0) scale(1.025); } }
-  @keyframes rubyReflection { from { opacity: .2; filter: blur(.2px); } to { opacity: .46; filter: blur(.8px); } }
-  @keyframes rubyPulse { 0%, 70%, 100% { opacity: 0; transform: scale(.76); } 78% { opacity: .24; } 92% { opacity: 0; transform: scale(1.18); } }
+  @keyframes rubyBloom { from { opacity: .34; transform: scale(.985) translate3d(-1%, 1%, 0); } to { opacity: .48; transform: scale(1.035) translate3d(1%, -1%, 0); } }
+  @keyframes rubySpill { from { opacity: .34; transform: rotate(-8deg) translate3d(-1.2%, 1%, 0); } to { opacity: .46; transform: rotate(-7deg) translate3d(1.2%, -1%, 0); } }
+  @keyframes rubyHaze { from { opacity: .2; transform: translate3d(-1%, 0, 0) scale(1); } to { opacity: .32; transform: translate3d(1%, -1%, 0) scale(1.025); } }
+  @keyframes rubyReflection { from { opacity: .32; filter: blur(.2px); } to { opacity: .58; filter: blur(.8px); } }
+  @keyframes rubyPulse { 0%, 70%, 100% { opacity: 0; transform: scale(.76); } 78% { opacity: .36; } 92% { opacity: 0; transform: scale(1.18); } }
   @keyframes routeActivation { 0%, 62%, 100% { opacity: .34; stroke-dashoffset: 0; } 72%, 82% { opacity: .72; } 96% { stroke-dashoffset: -24; } }
   @keyframes packetVisibility { 0%, 12%, 88%, 100% { opacity: 0; } 28%, 70% { opacity: .78; } }
   @keyframes dataTelemetry { 0%, 58%, 100% { opacity: .12; transform: translate3d(0,0,0) rotate(var(--data-rotation, 0deg)); } 66%, 76% { opacity: .42; } 88% { opacity: .18; transform: translate3d(10px,-4px,0) rotate(var(--data-rotation, 0deg)); } }
@@ -583,7 +583,7 @@ summary:focus-visible { border-radius: 4px; }
   @keyframes signalNetworkIn { from { opacity: 0; transform: scale(.985); } to { opacity: 1; transform: scale(1); } }
   @keyframes systemLayerIn { from { opacity: 0; } to { opacity: 1; } }
   @keyframes heroCopyResolve { from { opacity: .001; transform: translate3d(0, 10px, 0); } to { opacity: 1; transform: none; } }
-  @keyframes rubyCore { from { opacity: .46; transform: scale(.975); } to { opacity: .66; transform: scale(1.025); } }
+  @keyframes rubyCore { from { opacity: .58; transform: scale(.975); } to { opacity: .82; transform: scale(1.025); } }
   @keyframes revealStep { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 }
 @media (prefers-reduced-motion: reduce) {
