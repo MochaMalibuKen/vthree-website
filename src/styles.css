@@ -554,6 +554,15 @@ summary:focus-visible { border-radius: 4px; }
   .hero-data-element.data-5, .hero-data-element.data-10 { animation-duration: 25s; animation-delay: 11s; }
   .hero-grid-field { animation: gridBreath 24s ease-in-out infinite; }
   .hero-verification-sweep { animation: verificationSweep 28s ease-in-out infinite; }
+  .home-system-visual { animation: heroEnvironmentIn 1.35s ease-out both; }
+  .home-system-core { animation: coreActivate 1.25s .28s ease-out both; }
+  .hero-signal-network { animation: signalNetworkIn 1.35s .48s ease-out both; }
+  .hero-data-layer, .hero-verification-layer, .home-system-node { animation: systemLayerIn 1.2s .58s ease-out both; }
+  .home-hero-copy .eyebrow { animation: heroCopyResolve .8s .72s ease-out both; }
+  .home-hero h1 { animation: heroCopyResolve .9s .86s ease-out both; }
+  .home-hero-lead { animation: heroCopyResolve .9s 1s ease-out both; }
+  .home-proof-cues { animation: heroCopyResolve .8s 1.12s ease-out both; }
+  .home-hero .cta { animation: heroCopyResolve .8s 1.24s ease-out both; }
   .home-system-core::before { animation: rubyCore 11s ease-in-out infinite alternate; }
   .method-grid li { animation: revealStep .55s ease both; animation-timeline: view(); animation-range: entry 12% cover 28%; }
   @keyframes drift { to { transform: scale(1.05) translateX(-1%); } }
@@ -569,6 +578,11 @@ summary:focus-visible { border-radius: 4px; }
   @keyframes dataTelemetry { 0%, 58%, 100% { opacity: .12; transform: translate3d(0,0,0) rotate(var(--data-rotation, 0deg)); } 66%, 76% { opacity: .42; } 88% { opacity: .18; transform: translate3d(10px,-4px,0) rotate(var(--data-rotation, 0deg)); } }
   @keyframes gridBreath { 0%, 100% { opacity: .1; } 44%, 56% { opacity: .2; } }
   @keyframes verificationSweep { 0%, 68%, 100% { opacity: 0; transform: translate3d(-42%, 0, 0) skewX(-12deg); } 74%, 82% { opacity: .54; } 94% { opacity: 0; transform: translate3d(42%, 0, 0) skewX(-12deg); } }
+  @keyframes heroEnvironmentIn { from { opacity: .72; transform: translate3d(0, 8px, 0); } to { opacity: 1; transform: none; } }
+  @keyframes coreActivate { from { opacity: .78; transform: translate(-50%, -50%) scale(.96); } to { opacity: 1; transform: translate(-50%, -50%) scale(1); } }
+  @keyframes signalNetworkIn { from { opacity: 0; transform: scale(.985); } to { opacity: 1; transform: scale(1); } }
+  @keyframes systemLayerIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes heroCopyResolve { from { opacity: .001; transform: translate3d(0, 10px, 0); } to { opacity: 1; transform: none; } }
   @keyframes rubyCore { from { opacity: .46; transform: scale(.975); } to { opacity: .66; transform: scale(1.025); } }
   @keyframes revealStep { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 }
