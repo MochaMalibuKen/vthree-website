@@ -1,0 +1,355 @@
+.home-operating-model {
+  overflow: clip;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(140, 29, 64, .16), transparent 38%),
+    linear-gradient(145deg, #0d151f, #080d14);
+}
+
+.operating-model-heading {
+  max-width: 860px;
+}
+
+.operating-model-caption {
+  max-width: 760px;
+  margin: 2rem 0 1.5rem;
+  color: #c8d0d8;
+}
+
+.operating-model-canvas {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(118px, .72fr) minmax(145px, .86fr) minmax(320px, 2.5fr) minmax(132px, .8fr) minmax(132px, .8fr);
+  grid-template-areas:
+    "client discovery pib strategy design"
+    "client discovery pib build launch"
+    ". . loop loop loop";
+  gap: clamp(.9rem, 1.8vw, 1.4rem);
+  align-items: center;
+  min-height: 560px;
+  padding: clamp(1rem, 2.4vw, 2rem);
+  border: 1px solid rgba(140, 29, 64, .34);
+  border-radius: 24px;
+  background:
+    linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px),
+    linear-gradient(145deg, rgba(17, 19, 23, .96), rgba(26, 29, 34, .92));
+  background-size: 40px 40px, 40px 40px, auto;
+  box-shadow: inset 0 0 90px rgba(140, 29, 64, .08), 0 28px 80px rgba(0, 0, 0, .34);
+  overflow: hidden;
+}
+
+.operating-model-canvas::before {
+  content: "";
+  position: absolute;
+  inset: 8% 18%;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 50%, rgba(140, 29, 64, .34), transparent 70%);
+  filter: blur(24px);
+}
+
+.operating-model-connectors {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.operating-rail,
+.operating-loop-path,
+.operating-loop-arrow {
+  fill: none;
+  vector-effect: non-scaling-stroke;
+}
+
+.operating-rail-base {
+  stroke: rgba(216, 222, 232, .26);
+  stroke-width: 2;
+}
+
+.operating-rail-ruby,
+.operating-loop-path,
+.operating-loop-arrow {
+  stroke: rgba(140, 29, 64, .78);
+  stroke-width: 3;
+}
+
+.operating-loop-path {
+  stroke-dasharray: 8 11;
+}
+
+.operating-rail-node {
+  fill: #8C1D40;
+  filter: drop-shadow(0 0 12px rgba(140, 29, 64, .8));
+}
+
+.operating-node,
+.operating-pib,
+.operating-loop {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  border: 1px solid rgba(255, 255, 255, .16);
+  background: linear-gradient(180deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .035));
+  box-shadow: 0 18px 44px rgba(0, 0, 0, .28);
+}
+
+.operating-node {
+  min-height: 126px;
+  padding: 1rem;
+  border-radius: 16px;
+}
+
+.operating-client {
+  grid-area: client;
+  min-height: 220px;
+  align-self: center;
+}
+
+.operating-discovery {
+  grid-area: discovery;
+  min-height: 180px;
+}
+
+.operating-stage-03 { grid-area: strategy; }
+.operating-stage-04 { grid-area: design; }
+.operating-stage-05 { grid-area: build; }
+.operating-stage-06 { grid-area: launch; }
+
+.operating-pib {
+  grid-area: pib;
+  min-height: 360px;
+  padding: clamp(1.5rem, 3vw, 2.3rem);
+  border-color: rgba(140, 29, 64, .9);
+  border-width: 2px;
+  border-radius: 26px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .09), rgba(255, 255, 255, .035)),
+    #13161b;
+  box-shadow: 0 0 70px rgba(140, 29, 64, .2), 0 26px 70px rgba(0, 0, 0, .36);
+}
+
+.operating-pib-rail {
+  position: absolute;
+  top: 2rem;
+  bottom: 2rem;
+  left: 1.4rem;
+  width: 10px;
+  border-radius: 100px;
+  background: #8C1D40;
+  box-shadow: 0 0 22px rgba(140, 29, 64, .46);
+}
+
+.operating-pib > :not(.operating-pib-rail) {
+  margin-left: clamp(1.5rem, 3vw, 2.6rem);
+}
+
+.operating-meta,
+.operating-step,
+.operating-verified {
+  color: #d9dee7;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.operating-meta {
+  margin-bottom: 1.6rem;
+  color: #8c96a5;
+}
+
+.operating-node h3,
+.operating-pib h3,
+.operating-loop h3 {
+  margin: .65rem 0 .45rem;
+  color: var(--ink);
+}
+
+.operating-pib h3 {
+  max-width: 430px;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.operating-node p,
+.operating-pib p,
+.operating-loop p {
+  margin-bottom: 0;
+  color: #aeb6c2;
+}
+
+.operating-pib p:not(.operating-meta) {
+  max-width: 470px;
+  font-size: 1rem;
+}
+
+.operating-verified {
+  display: inline-flex;
+  margin-top: 1.4rem;
+  padding: .45rem .85rem;
+  border: 1px solid rgba(140, 29, 64, .85);
+  border-radius: 999px;
+  background: rgba(140, 29, 64, .16);
+  color: #fff;
+}
+
+.operating-client-symbol,
+.operating-discovery-symbol {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 1.3rem;
+}
+
+.operating-client-symbol {
+  border: 2px solid rgba(255, 255, 255, .72);
+  border-radius: 50%;
+}
+
+.operating-client-symbol span {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: -18px;
+  height: 28px;
+  border-top: 2px solid rgba(255, 255, 255, .72);
+  border-radius: 50% 50% 0 0;
+}
+
+.operating-discovery-symbol {
+  border: 2px solid rgba(140, 29, 64, .86);
+  border-radius: 50%;
+}
+
+.operating-discovery-symbol::before,
+.operating-discovery-symbol::after {
+  content: "";
+  position: absolute;
+  background: rgba(140, 29, 64, .72);
+}
+
+.operating-discovery-symbol::before {
+  inset: 50% 12px auto;
+  height: 1px;
+}
+
+.operating-discovery-symbol::after {
+  top: 12px;
+  bottom: 12px;
+  left: 50%;
+  width: 1px;
+}
+
+.operating-loop {
+  grid-area: loop;
+  align-self: start;
+  min-height: 74px;
+  padding: 1rem 1.2rem;
+  border-color: rgba(140, 29, 64, .65);
+  border-radius: 18px;
+  background: rgba(140, 29, 64, .1);
+}
+
+.operating-loop h3 {
+  margin-top: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .operating-rail-ruby,
+  .operating-loop-path {
+    animation: operatingRail 12s ease-in-out infinite;
+  }
+
+  .operating-pib {
+    animation: operatingPibGlow 9s ease-in-out infinite alternate;
+  }
+
+  @keyframes operatingRail {
+    0%, 100% { opacity: .58; }
+    46%, 58% { opacity: 1; }
+  }
+
+  @keyframes operatingPibGlow {
+    from { box-shadow: 0 0 54px rgba(140, 29, 64, .16), 0 26px 70px rgba(0, 0, 0, .36); }
+    to { box-shadow: 0 0 80px rgba(140, 29, 64, .24), 0 26px 70px rgba(0, 0, 0, .36); }
+  }
+}
+
+@media (max-width: 1050px) {
+  .operating-model-canvas {
+    grid-template-columns: minmax(110px, .74fr) minmax(130px, .86fr) minmax(270px, 2fr) minmax(118px, .8fr) minmax(118px, .8fr);
+    gap: .75rem;
+  }
+
+  .operating-node {
+    padding: .85rem;
+  }
+
+  .operating-pib {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .operating-model-canvas {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "client"
+      "discovery"
+      "pib"
+      "strategy"
+      "design"
+      "build"
+      "launch"
+      "loop";
+    min-height: 0;
+    padding: 1rem;
+  }
+
+  .operating-model-connectors {
+    display: none;
+  }
+
+  .operating-node,
+  .operating-pib,
+  .operating-loop {
+    min-height: 0;
+  }
+
+  .operating-client,
+  .operating-discovery {
+    min-height: 0;
+  }
+
+  .operating-node {
+    border-left-color: rgba(140, 29, 64, .68);
+    border-left-width: 3px;
+  }
+
+  .operating-pib {
+    margin-block: .5rem;
+  }
+
+  .operating-loop {
+    border-left: 3px solid rgba(140, 29, 64, .8);
+  }
+}
+
+@media (max-width: 480px) {
+  .operating-model-caption {
+    margin-top: 1.4rem;
+  }
+
+  .operating-model-canvas {
+    border-radius: 16px;
+  }
+
+  .operating-pib > :not(.operating-pib-rail) {
+    margin-left: 1.35rem;
+  }
+
+  .operating-pib h3 {
+    font-size: clamp(1.85rem, 10vw, 2.55rem);
+  }
+}
