@@ -177,7 +177,7 @@
     "founder": {
       "eyebrow": "FOUNDER-LED. SYSTEM-BUILT.",
       "title": "The work is guided by judgment, not just tools.",
-      "portraitStatus": "Founder portrait pending approval",
+      "portraitStatus": "Portrait of Kennieth Allen, Founder and Digital Architect of VThree",
       "name": "Kennieth Allen",
       "role": "Founder and Digital Architect",
       "company": "Vivid Vision Ventures operating as VThree.",
@@ -654,12 +654,12 @@
   "contact": {
     "eyebrow": "Start an Assessment",
     "title": "Let’s map the system you actually need.",
-    "subtitle": "Share the goal, the friction, and what is already in place when assessment submissions become available.",
+    "subtitle": "Share the goal, the friction, and what is already in place so VThree can evaluate the right next step.",
     "promptLabel": "Good starting context",
     "prompt": "What should become easier for your customer or your team when this project is complete?",
-    "statusLabel": "Controlled assessment status",
-    "statusTitle": "Assessment submissions are not currently active.",
-    "statusBody": "When activated, submitting an Assessment Request will begin an evaluation process. Privacy, consent, destination routing, submission handling, response expectations, and final success and error messages must be approved before the form can accept information.",
+    "statusLabel": "Assessment request",
+    "statusTitle": "Start with the assessment.",
+    "statusBody": "Submitting an Assessment Request begins an evaluation process. The form is hosted through Microsoft Forms so your request can be routed and reviewed without exposing the raw form link on the site.",
     "expectations": {
       "title": "What an assessment submission will not guarantee",
       "items": [
@@ -670,7 +670,12 @@
         "A paid engagement"
       ]
     },
-    "dataNotice": "No personal information is collected or transmitted from this page while assessment submissions are inactive.",
+    "formTitle": "VThree Assessment Request",
+    "formFallbackCta": "Open assessment in a new tab",
+    "bookingTitle": "Prefer to reserve time?",
+    "bookingBody": "You may also request a conversation through the scheduling page. Scheduling does not guarantee project acceptance, a proposal, or a paid engagement.",
+    "bookingCta": "Reserve a conversation",
+    "dataNotice": "The assessment form is hosted by Microsoft Forms. Do not include sensitive regulated information unless VThree has specifically requested it through an approved process.",
     "privacyCta": "View privacy status"
   },
   "visual": {
@@ -779,11 +784,6 @@
         "Transparent sourcing and citations",
         "Regular review and updates as our understanding improves"
       ]
-    },
-    "cta": {
-      "title": "Start Your Assessment",
-      "body": "Need guidance before approved articles are published? Let's talk about what would make your digital system stronger.",
-      "buttonText": "Start an Assessment"
     },
     "article": {
       "backToList": "Back to Intelligence",
