@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import PageMeta from "../components/PageMeta.jsx";
 import HeroSection from "../components/homepage/HeroSection.jsx";
 import ProblemSection from "../components/homepage/ProblemSection.jsx";
+import OperatingModelSection from "../components/homepage/OperatingModelSection.jsx";
 import StakesSection from "../components/homepage/StakesSection.jsx";
 import MethodSection from "../components/homepage/MethodSection.jsx";
 import ServicesSection from "../components/homepage/ServicesSection.jsx";
@@ -18,6 +19,7 @@ export default function HomePage() {
     <PageMeta title={t("meta.title")} description={t("meta.description")} path="/" />
     <HeroSection />
     <ProblemSection />
+    <OperatingModelSection />
     <StakesSection />
     <MethodSection />
     <ServicesSection />
