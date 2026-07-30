@@ -12,7 +12,6 @@ export default function CorporatePricing({ headingLevel = "h2" }) {
   const content = pricingContent[language];
   const Heading = headingLevel;
   const trackAssessment = source => {
-    window.dataLayer?.push({ event: "pricing_engagement_select", source });
     window.dataLayer?.push({ event: "assessment_start", source });
   };
 
@@ -45,7 +44,6 @@ export default function CorporatePricing({ headingLevel = "h2" }) {
               <summary>{content.addonsLabel}<i aria-hidden="true">+</i></summary>
               <ul>{plan.addons.map(item => <li key={item}>{item}</li>)}</ul>
             </details>}
-            <Link className="btn package-cta" to="/contact" onClick={() => trackAssessment(`pricing_${key}`)}>{content.cta}</Link>
           </article>;
         })}
       </div>
@@ -93,7 +91,7 @@ export default function CorporatePricing({ headingLevel = "h2" }) {
       <div className="container trust-section" aria-labelledby="trust-title">
         <p className="eyebrow">{content.trust.eyebrow}</p><h2 id="trust-title">{content.trust.title}</h2>
         <div className="trust-grid">{content.trust.items.map((item, index) => <div key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</div>)}</div>
-        <div className="pricing-final-cta"><p>{content.finalCta.copy}</p><Link className="btn" to="/contact" onClick={() => trackAssessment("pricing_final_cta")}>{content.finalCta.cta}</Link></div>
+        <div className="pricing-final-cta"><p>{content.finalCta.copy}</p></div>
       </div>
     </section>
   );

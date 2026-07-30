@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import PageMeta from "../components/PageMeta.jsx";
 import Insights from "../components/Insights.jsx";
 import Labs from "../components/Labs.jsx";
@@ -81,19 +80,6 @@ export default function IntelligencePage() {
                 <li key={i}>{item}</li>
               ))}
           </ul>
-        </div>
-      </section>
-
-      {/* Assessment CTA */}
-      <section className="section intelligence-cta" aria-labelledby="intelligence-cta-title">
-        <div className="container intelligence-cta-content">
-          <div>
-            <h2 id="intelligence-cta-title">{t("intelligence.cta.title")}</h2>
-            <p>{t("intelligence.cta.body")}</p>
-          </div>
-          <Link to="/contact" className="btn">
-            {t("intelligence.cta.buttonText")}
-          </Link>
         </div>
       </section>
 

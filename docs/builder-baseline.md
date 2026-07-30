@@ -22,7 +22,7 @@
 | `/intelligence/:slug` | Empty controlled content model | Returns controlled 404 until approval |
 | `/about` | About production positioning and concise Founder trust section | Routed |
 | `/pricing` | Pricing production engagement model | Routed |
-| `/contact`, `/assessment` | Existing Formspree assessment form | No-index until privacy approval |
+| `/contact`, `/assessment` | Microsoft Forms assessment request path | No-index until privacy approval |
 | `/privacy` | Visible dependency placeholder | No-index; launch blocker |
 | `*` | Controlled not-found page | No-index |
 
@@ -42,7 +42,7 @@
 - Assessment routing and response commitment
 - Approved Intelligence articles
 - Confirmed case permissions and evidence
-- Final founder biography and portrait
+- Final founder biography governance
 - Approved social links and preview assets
 - Scheduling rules and Microsoft Bookings configuration
 
@@ -76,22 +76,22 @@ These dependencies must not be resolved through implementation assumptions.
 - Preserved semantic section headings, ordered method stages, list semantics, keyboard-visible links and controls, reduced-motion behavior, and descriptive labels for controlled visual placeholders. Decorative system graphics remain hidden from assistive technology because the same meaning is present in the page copy.
 - Preserved CTA routing to `/contact`, `/method`, `/services`, `/work`, `/pricing`, `/intelligence`, and `/about`, along with the existing homepage assessment analytics events.
 - Kept proof publication controlled: homepage proof cards provide slots for project name, context, problem, key decision, implementation, evidence, image, and CTA status, but display explicit approval placeholders instead of active case links or unapproved claims. Unpublished Intelligence categories remain hidden behind a controlled empty state, and no client, metric, pricing, response-time, privacy, or outcome claim was introduced.
-- Added no raster assets. The founder area uses a controlled portrait placeholder; an approved founder portrait remains a production dependency.
+- Added the approved Founder portrait to the homepage Founder area and About bio section using `public/images/founder/v3founder_photo.png` with an optimized WebP source for runtime delivery.
 - Existing publication controls remain unchanged: all case-detail pages and `/contact` and `/assessment` remain `noindex, nofollow`; case-detail URLs remain excluded from `public/sitemap.xml`.
-- Remaining dependencies are approved Spanish homepage copy, approved case evidence and permissions, approved Intelligence articles, final founder portrait and identity review, approved privacy language, assessment routing and response commitments, and Microsoft Bookings configuration.
+- Remaining dependencies are approved Spanish homepage copy, approved case evidence and permissions, approved Intelligence articles, final founder identity review, approved privacy language, assessment routing and response commitments, and Microsoft Bookings configuration.
 
 ## C-04B assessment conversion path
 
 - Established `/contact` as the canonical Sprint 001 assessment route and converted `/assessment` into a replace-navigation alias to `/contact`.
-- Replaced the active React Formspree form with a controlled assessment-status gate. The page collects and transmits no personal information while privacy language, consent language, Formspree ownership and destination routing, submission handling, response expectations, and final success and error messages remain unapproved.
+- Replaced the inactive assessment-status gate with the Founder-supplied Microsoft Forms Assessment Request embed. The public page presents the form without exposing the raw URL and keeps a clean external-open fallback for iframe failures.
 - Added the Founder-approved assessment expectations: submission will not guarantee project acceptance, an immediate proposal, immediate scheduling, a response within an unapproved timeframe, or a paid engagement.
 - Removed the legacy Spanish contact namespace so the controlled English assessment status falls back intact rather than displaying the superseded “Strategic Review” terminology before an approved Spanish assessment translation exists.
 - Converted legacy `/intake.html` and `/thanks.html` into no-index redirects to `/contact`, removed their obsolete intake submission script, and eliminated the alternate public Formspree transmission path and unapproved 24-hour proposal promise.
-- Updated pricing conversion links to route directly to `/contact` using “Start an Assessment” terminology. Microsoft Bookings remains visibly inactive and does not offer appointment selection.
+- Updated pricing conversion links to route directly to `/contact` using “Start an Assessment” terminology. The Pricing page does not embed scheduling, while the canonical contact path now includes a clean external Microsoft booking action for visitors who prefer to request a conversation.
 - Added canonical `/contact` assessment CTAs to Services, Method, and About, and standardized assessment-entry analytics across navigation, homepage, pricing, and those routed pages as `assessment_start` with a source value.
-- Reserved `assessment_submit` and `assessment_success` for the approved form activation package; neither event fires while submissions are disabled.
-- Preserved no-index controls for `/contact`, `/privacy`, and the redirected assessment path. No scheduling, external form connection, legal privacy language, success promise, response window, or paid-engagement implication was introduced.
-- Remaining activation dependencies are approved privacy and consent language, confirmed Formspree account ownership and destination routing, assigned submission-handling responsibilities, approved response expectations, and approved success and error messages.
+- Reserved `assessment_submit` and `assessment_success` for a future analytics package because Microsoft Forms submission completion is not tracked inside the React application.
+- Preserved no-index controls for `/contact`, `/privacy`, and the redirected assessment path. The booking action is presented as optional conversation scheduling and does not create a scheduling promise, legal privacy language, success promise, response window, or paid-engagement implication.
+- Remaining activation dependencies are approved privacy and consent language, assigned submission-handling responsibilities, approved response expectations, and approved success and error messages.
 
 ## C-08 Work and proof readiness
 
@@ -137,15 +137,15 @@ These dependencies must not be resolved through implementation assumptions.
 - Preserved the controlled Assessment conversion path with one `Start an Assessment` CTA to `/contact`; no scheduling promise, Microsoft Bookings activation, testimonials, awards, certifications, or case claims were introduced.
 - Updated About metadata and analytics using `about_view`, `founder_section_view`, and `assessment_start`.
 - Removed the Spanish About and Founder namespaces so `/about` falls back to approved English copy until final Spanish About translation is approved.
-- Remaining About dependencies include approved Spanish About copy, future Founder media, professional photography, executive timeline, company milestones, awards section, team expansion, and video introduction.
+- Remaining About dependencies include approved Spanish About copy, future Founder media beyond the current portrait, professional photography, executive timeline, company milestones, awards section, team expansion, and video introduction.
 
 ## C-09 Pricing production
 
 - Reworked `/pricing` from rate-card-style starting points into an engagement-based model organized around the approved service categories: Strategy & Intelligence, Brand & Experience, Websites & Digital Platforms, Content & Campaigns, and Systems & Automation.
 - Clarified that every engagement begins with an Assessment and that recommendations depend on objectives, scope, technical complexity, existing assets, and operational priorities.
 - Replaced fixed amount, checkout, payment, and scheduling placeholder language with qualitative pricing guidance: custom proposals, phased implementation, project-based pricing, scalable engagements, and ongoing support where appropriate.
-- Preserved one controlled conversion path with `Start an Assessment` CTAs to `/contact`; Microsoft Bookings, Stripe, online checkout, subscriptions, retainers, proposal automation, and payment portals were not activated.
-- Updated Pricing metadata and public Pricing analytics using `pricing_view`, `pricing_engagement_select`, and `assessment_start`.
+- Preserved one controlled conversion path with a single Pricing-page `Start an Assessment` CTA to `/contact`; Microsoft Bookings, Stripe, online checkout, subscriptions, retainers, proposal automation, and payment portals were not activated.
+- Updated Pricing metadata and public Pricing analytics using `pricing_view` and `assessment_start`; repeated engagement-card assessment CTAs and their select-style analytics were removed.
 - Removed the stale Spanish Pricing metadata namespace so `/pricing` metadata falls back to approved English copy while the page content uses the controlled Pricing content model. Final Spanish Pricing copy remains an approval dependency.
 - Remaining Pricing dependencies include proposal automation, Microsoft Bookings integration, Stripe integration, subscription management, recurring billing, maintenance plans, client portal, CRM synchronization, and final Spanish Pricing copy.
 
@@ -165,7 +165,7 @@ These dependencies must not be resolved through implementation assumptions.
   - Publications section showing published articles or controlled empty state
   - Editorial standards section documenting publication requirements
   - Research areas section (via reused Labs component)
-  - Assessment CTA routing to `/contact`
+  - No page-level Assessment CTA; the global navigation remains the single assessment entry point on `/intelligence`
 - Updated `IntelligenceArticlePage` to support future published articles:
   - Article header with category, title, summary, author, publication date, update date, reading time
   - Structured article sections (title + body)
@@ -189,6 +189,6 @@ These dependencies must not be resolved through implementation assumptions.
 
 - Approved Intelligence articles (first publication)
 - Approved article sources and citations
-- Final approved portrait and founder-authority confirmation
+- Final founder-authority confirmation
 - Confirmed Spanish Intelligence copy (if different from English fallback)
 - Assessment routing confirmation for Intelligence page CTAs
