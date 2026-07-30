@@ -414,13 +414,13 @@ textarea { resize: vertical; }
 .ruby-reflection-1 { width: 66%; top: 34%; left: 17%; transform: rotate(-17deg); }
 .ruby-reflection-2 { width: 54%; bottom: 22%; left: 23%; opacity: .36; transform: rotate(10deg); }
 .hero-signal-network { position: absolute; inset: 4%; z-index: 2; width: 92%; height: 92%; pointer-events: none; overflow: visible; }
-.hero-signal-route { fill: none; stroke: rgba(140,29,64,.32); stroke-width: 1; stroke-linecap: round; stroke-dasharray: 6 18; opacity: .58; vector-effect: non-scaling-stroke; }
-.hero-signal-route.route-2, .hero-signal-route.route-4 { stroke: rgba(206,221,234,.18); }
-.hero-signal-packet { fill: rgba(244,246,248,.72); opacity: 0; filter: drop-shadow(0 0 8px rgba(140,29,64,.72)); }
+.hero-signal-route { fill: none; stroke: rgba(140,29,64,.5); stroke-width: 1.15; stroke-linecap: round; stroke-dasharray: 6 18; opacity: .72; filter: drop-shadow(0 0 5px rgba(140,29,64,.38)); vector-effect: non-scaling-stroke; }
+.hero-signal-route.route-2, .hero-signal-route.route-4 { stroke: rgba(206,221,234,.3); }
+.hero-signal-packet { fill: rgba(255,214,226,.86); opacity: 0; filter: drop-shadow(0 0 10px rgba(140,29,64,.86)); }
 .hero-data-layer { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
-.hero-data-element { position: absolute; width: 34px; height: 1px; opacity: .28; background: linear-gradient(90deg, transparent, rgba(140,29,64,.72), transparent); transform-origin: center; }
-.hero-data-element::before { content: ""; position: absolute; right: 0; top: -2px; width: 5px; height: 5px; border-radius: 50%; background: rgba(206,221,234,.56); box-shadow: 0 0 10px rgba(140,29,64,.46); }
-.hero-data-element::after { content: ""; position: absolute; left: 12px; top: -7px; width: 1px; height: 14px; background: rgba(140,29,64,.18); }
+.hero-data-element { position: absolute; width: 38px; height: 1px; opacity: .38; background: linear-gradient(90deg, transparent, rgba(140,29,64,.86), transparent); transform-origin: center; }
+.hero-data-element::before { content: ""; position: absolute; right: 0; top: -2px; width: 6px; height: 6px; border-radius: 50%; background: rgba(255,214,226,.68); box-shadow: 0 0 12px rgba(140,29,64,.64); }
+.hero-data-element::after { content: ""; position: absolute; left: 12px; top: -8px; width: 1px; height: 16px; background: rgba(140,29,64,.28); }
 .hero-data-element.data-1 { --data-rotation: 18deg; top: 22%; left: 26%; transform: rotate(var(--data-rotation)); }
 .hero-data-element.data-2 { --data-rotation: -24deg; top: 30%; right: 18%; transform: rotate(var(--data-rotation)); }
 .hero-data-element.data-3 { --data-rotation: -8deg; top: 61%; left: 15%; transform: rotate(var(--data-rotation)); }
@@ -573,9 +573,9 @@ summary:focus-visible { border-radius: 4px; }
   @keyframes rubyHaze { from { opacity: .2; transform: translate3d(-1%, 0, 0) scale(1); } to { opacity: .32; transform: translate3d(1%, -1%, 0) scale(1.025); } }
   @keyframes rubyReflection { from { opacity: .32; filter: blur(.2px); } to { opacity: .58; filter: blur(.8px); } }
   @keyframes rubyPulse { 0%, 70%, 100% { opacity: 0; transform: scale(.76); } 78% { opacity: .36; } 92% { opacity: 0; transform: scale(1.18); } }
-  @keyframes routeActivation { 0%, 62%, 100% { opacity: .34; stroke-dashoffset: 0; } 72%, 82% { opacity: .72; } 96% { stroke-dashoffset: -24; } }
-  @keyframes packetVisibility { 0%, 12%, 88%, 100% { opacity: 0; } 28%, 70% { opacity: .78; } }
-  @keyframes dataTelemetry { 0%, 58%, 100% { opacity: .12; transform: translate3d(0,0,0) rotate(var(--data-rotation, 0deg)); } 66%, 76% { opacity: .42; } 88% { opacity: .18; transform: translate3d(10px,-4px,0) rotate(var(--data-rotation, 0deg)); } }
+  @keyframes routeActivation { 0%, 62%, 100% { opacity: .48; stroke-dashoffset: 0; } 72%, 82% { opacity: .9; } 96% { stroke-dashoffset: -24; } }
+  @keyframes packetVisibility { 0%, 12%, 88%, 100% { opacity: 0; } 28%, 70% { opacity: .94; } }
+  @keyframes dataTelemetry { 0%, 58%, 100% { opacity: .22; transform: translate3d(0,0,0) rotate(var(--data-rotation, 0deg)); } 66%, 76% { opacity: .58; } 88% { opacity: .28; transform: translate3d(10px,-4px,0) rotate(var(--data-rotation, 0deg)); } }
   @keyframes gridBreath { 0%, 100% { opacity: .1; } 44%, 56% { opacity: .2; } }
   @keyframes verificationSweep { 0%, 68%, 100% { opacity: 0; transform: translate3d(-42%, 0, 0) skewX(-12deg); } 74%, 82% { opacity: .54; } 94% { opacity: 0; transform: translate3d(42%, 0, 0) skewX(-12deg); } }
   @keyframes heroEnvironmentIn { from { opacity: .72; transform: translate3d(0, 8px, 0); } to { opacity: 1; transform: none; } }

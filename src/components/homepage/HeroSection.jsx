@@ -30,16 +30,16 @@ export default function HeroSection() {
           <path className="hero-signal-route route-3" d="M88 258 C154 244 200 242 260 250" />
           <path className="hero-signal-route route-4" d="M430 270 C360 262 314 256 260 250" />
           <path className="hero-signal-route route-5" d="M260 414 C260 350 260 306 260 250" />
-          <circle className="hero-signal-packet packet-1" r="2.8">
+          <circle className="hero-signal-packet packet-1" r="3.6">
             <animateMotion dur="13s" repeatCount="indefinite" path="M110 95 C180 140 218 176 260 250" />
           </circle>
-          <circle className="hero-signal-packet packet-2" r="2.4">
+          <circle className="hero-signal-packet packet-2" r="3.2">
             <animateMotion dur="16s" begin="4s" repeatCount="indefinite" path="M410 116 C348 154 304 194 260 250" />
           </circle>
-          <circle className="hero-signal-packet packet-3" r="2.2">
+          <circle className="hero-signal-packet packet-3" r="3">
             <animateMotion dur="18s" begin="7s" repeatCount="indefinite" path="M88 258 C154 244 200 242 260 250" />
           </circle>
-          <circle className="hero-signal-packet packet-4" r="2.5">
+          <circle className="hero-signal-packet packet-4" r="3.3">
             <animateMotion dur="21s" begin="11s" repeatCount="indefinite" path="M260 414 C260 350 260 306 260 250" />
           </circle>
         </svg>
