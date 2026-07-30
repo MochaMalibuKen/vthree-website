@@ -407,6 +407,10 @@ textarea { resize: vertical; }
 .ruby-reflection { z-index: 2; height: 1px; opacity: .44; background: linear-gradient(90deg, transparent, rgba(140,29,64,.72), rgba(244,246,248,.16), transparent); transform-origin: center; }
 .ruby-reflection-1 { width: 64%; top: 34%; left: 18%; transform: rotate(-17deg); }
 .ruby-reflection-2 { width: 52%; bottom: 22%; left: 24%; opacity: .28; transform: rotate(10deg); }
+.hero-signal-network { position: absolute; inset: 4%; z-index: 2; width: 92%; height: 92%; pointer-events: none; overflow: visible; }
+.hero-signal-route { fill: none; stroke: rgba(140,29,64,.32); stroke-width: 1; stroke-linecap: round; stroke-dasharray: 6 18; opacity: .58; vector-effect: non-scaling-stroke; }
+.hero-signal-route.route-2, .hero-signal-route.route-4 { stroke: rgba(206,221,234,.18); }
+.hero-signal-packet { fill: rgba(244,246,248,.72); opacity: 0; filter: drop-shadow(0 0 8px rgba(140,29,64,.72)); }
 .home-system-core { position: absolute; z-index: 3; inset: 50% auto auto 50%; width: 148px; height: 148px; display: grid; place-items: center; border: 1px solid rgba(140,29,64,.54); border-radius: 50%; background: radial-gradient(circle at 50% 45%, rgba(140,29,64,.28), transparent 48%), #070b11; transform: translate(-50%, -50%); overflow: hidden; }
 .home-system-core::before { content: ""; position: absolute; inset: 18%; z-index: 0; border-radius: 50%; background: radial-gradient(circle, rgba(140,29,64,.5), rgba(140,29,64,.18) 38%, transparent 72%); filter: blur(12px); opacity: .62; }
 .home-system-core::after { content: ""; position: absolute; inset: 0; z-index: 2; background: linear-gradient(135deg, transparent 20%, rgba(244,246,248,.1) 44%, transparent 54%); opacity: .42; mix-blend-mode: screen; }
@@ -511,6 +515,15 @@ summary:focus-visible { border-radius: 4px; }
   .ruby-haze { animation: rubyHaze 15s ease-in-out infinite alternate; }
   .ruby-reflection { animation: rubyReflection 11s ease-in-out infinite alternate; }
   .ruby-pulse { animation: rubyPulse 26s ease-in-out infinite; }
+  .hero-signal-route { animation: routeActivation 18s ease-in-out infinite; }
+  .hero-signal-route.route-2 { animation-delay: 3s; }
+  .hero-signal-route.route-3 { animation-delay: 6s; }
+  .hero-signal-route.route-4 { animation-delay: 9s; }
+  .hero-signal-route.route-5 { animation-delay: 12s; }
+  .hero-signal-packet { animation: packetVisibility 13s ease-in-out infinite; }
+  .hero-signal-packet.packet-2 { animation-duration: 16s; animation-delay: 4s; }
+  .hero-signal-packet.packet-3 { animation-duration: 18s; animation-delay: 7s; }
+  .hero-signal-packet.packet-4 { animation-duration: 21s; animation-delay: 11s; }
   .home-system-core::before { animation: rubyCore 11s ease-in-out infinite alternate; }
   .method-grid li { animation: revealStep .55s ease both; animation-timeline: view(); animation-range: entry 12% cover 28%; }
   @keyframes drift { to { transform: scale(1.05) translateX(-1%); } }
@@ -521,12 +534,15 @@ summary:focus-visible { border-radius: 4px; }
   @keyframes rubyHaze { from { opacity: .14; transform: translate3d(-1%, 0, 0) scale(1); } to { opacity: .23; transform: translate3d(1%, -1%, 0) scale(1.025); } }
   @keyframes rubyReflection { from { opacity: .2; filter: blur(.2px); } to { opacity: .46; filter: blur(.8px); } }
   @keyframes rubyPulse { 0%, 70%, 100% { opacity: 0; transform: scale(.76); } 78% { opacity: .24; } 92% { opacity: 0; transform: scale(1.18); } }
+  @keyframes routeActivation { 0%, 62%, 100% { opacity: .34; stroke-dashoffset: 0; } 72%, 82% { opacity: .72; } 96% { stroke-dashoffset: -24; } }
+  @keyframes packetVisibility { 0%, 12%, 88%, 100% { opacity: 0; } 28%, 70% { opacity: .78; } }
   @keyframes rubyCore { from { opacity: .46; transform: scale(.975); } to { opacity: .66; transform: scale(1.025); } }
   @keyframes revealStep { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+  .hero-signal-packet { display: none; }
 }
 @media (max-width: 1050px) {
   .menu-toggle { display: grid; }
