@@ -1,8 +1,10 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import PageMeta from "../components/PageMeta.jsx";
 import Insights from "../components/Insights.jsx";
 import Labs from "../components/Labs.jsx";
 import { getPublishedIntelligenceArticles } from "../content/intelligence.js";
+import intelligenceHeroImage from "../assets/images/proof system/v3clientzeroPIB.png";
 
 export default function IntelligencePage() {
   const { t } = useTranslation();
@@ -18,18 +20,25 @@ export default function IntelligencePage() {
       
       {/* Intelligence Hero */}
       <section className="section intelligence-hero" aria-labelledby="intelligence-hero-title">
-        <div className="container">
-          <p className="eyebrow">{t("intelligence.hero.eyebrow")}</p>
-          <h1 id="intelligence-hero-title" className="section-title">{t("intelligence.hero.title")}</h1>
-          <p className="sub section-intro">{t("intelligence.hero.subtitle")}</p>
+        <div className="container intelligence-hero-layout">
+          <div className="intelligence-hero-copy">
+            <p className="eyebrow">{t("intelligence.hero.eyebrow")}</p>
+            <h1 id="intelligence-hero-title" className="section-title">{t("intelligence.hero.title")}</h1>
+            <p className="sub section-intro">{t("intelligence.hero.subtitle")}</p>
+          </div>
         </div>
       </section>
 
       {/* Purpose */}
       <section className="section intelligence-purpose" aria-labelledby="intelligence-purpose-title">
         <div className="container">
-          <h2 id="intelligence-purpose-title">{t("intelligence.purpose.title")}</h2>
-          <p>{t("intelligence.purpose.body")}</p>
+          <div className="intelligence-purpose-content">
+            <h2 id="intelligence-purpose-title">{t("intelligence.purpose.title")}</h2>
+            <p>{t("intelligence.purpose.body")}</p>
+          </div>
+          <div className="intelligence-hero-media">
+            <img src={intelligenceHeroImage} alt={t("intelligence.hero.imageAlt", { defaultValue: "Visual overview of the VThree intelligence framework" })} />
+          </div>
         </div>
       </section>
 
