@@ -589,7 +589,8 @@ summary:focus-visible { border-radius: 4px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
-  .hero-signal-packet { display: none; }
+  .hero-signal-packet, .hero-verification-sweep, .ruby-pulse { display: none; }
+  .hero-data-element { opacity: .3; }
 }
 @media (max-width: 1050px) {
   .menu-toggle { display: grid; }
@@ -684,6 +685,11 @@ summary:focus-visible { border-radius: 4px; }
   .home-hero::before { background-position: 54% center; opacity: .72; }
   .home-hero .cta { align-items: stretch; flex-direction: column; }
   .home-system-visual { min-height: 350px; border-radius: 16px; }
+  .ruby-bloom { opacity: .34; filter: blur(30px); }
+  .ruby-spill { opacity: .34; }
+  .ruby-haze { opacity: .22; }
+  .hero-signal-route { opacity: .58; filter: drop-shadow(0 0 4px rgba(140,29,64,.32)); }
+  .hero-grid-field { opacity: .18; }
   .hero-data-element.data-4, .hero-data-element.data-5 { display: none; }
   .home-system-core { width: 105px; height: 105px; }
   .home-system-node { width: 43%; padding: .5rem; font-size: .62rem; }
