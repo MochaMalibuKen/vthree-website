@@ -393,6 +393,12 @@ textarea { resize: vertical; }
 .home-hero-copy { position: relative; z-index: 1; min-width: 0; }
 .home-hero h1 { max-width: 790px; font-size: clamp(3rem, 6.6vw, 6rem); text-shadow: 0 8px 36px rgba(0,0,0,.68); text-wrap: balance; }
 .home-hero-lead { max-width: 760px; margin: 1.5rem 0; color: #d4dbe2; font-size: clamp(1.02rem, 1.45vw, 1.22rem); text-shadow: 0 4px 20px rgba(0,0,0,.72); }
+.home-hero-primary, .home-hero-secondary { position: relative; overflow: hidden; }
+.home-hero-primary { box-shadow: 0 0 0 1px rgba(140,29,64,.22), 0 14px 42px rgba(140,29,64,.22); }
+.home-hero-primary::after { content: ""; position: absolute; inset: -30% auto -30% -45%; width: 38%; pointer-events: none; background: linear-gradient(90deg, transparent, rgba(244,246,248,.38), transparent); opacity: 0; transform: skewX(-18deg) translateX(0); }
+.home-hero-primary:hover, .home-hero-primary:focus-visible { box-shadow: 0 0 0 1px rgba(140,29,64,.38), 0 18px 52px rgba(140,29,64,.3); }
+.home-hero-primary:hover::after, .home-hero-primary:focus-visible::after { opacity: .8; transform: skewX(-18deg) translateX(360%); transition: transform 1.1s ease, opacity .28s ease; }
+.home-hero-secondary:hover, .home-hero-secondary:focus-visible { border-color: rgba(140,29,64,.72); color: var(--ink); box-shadow: inset 0 0 24px rgba(140,29,64,.12), 0 12px 34px rgba(0,0,0,.18); }
 .home-proof-cues { display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; margin: 1.5rem 0 0; padding: 0; color: var(--muted); font-size: .76rem; font-weight: 700; letter-spacing: .04em; list-style: none; }
 .home-proof-cues li { display: flex; align-items: center; gap: .55rem; }
 .home-proof-cues li::before { content: ""; width: 6px; height: 6px; flex: 0 0 auto; border-radius: 50%; background: var(--emerald); box-shadow: 0 0 0 4px rgba(67,214,156,.08); }
@@ -400,12 +406,34 @@ textarea { resize: vertical; }
 .home-system-visual::before, .home-system-visual::after { content: ""; position: absolute; inset: 11% 16%; z-index: 1; border: 1px solid rgba(206,221,234,.12); border-radius: 50%; }
 .home-system-visual::after { inset: 24% 29%; border-color: rgba(140,29,64,.28); }
 .ruby-environment { position: absolute; pointer-events: none; }
-.ruby-bloom { inset: 8% 4% 0; z-index: 0; opacity: .34; background: radial-gradient(circle at 50% 54%, rgba(140,29,64,.34), rgba(140,29,64,.13) 26%, transparent 62%); filter: blur(28px); transform: translate3d(0,0,0); }
-.ruby-spill { inset: 24% 6% 12%; z-index: 1; opacity: .34; background: linear-gradient(110deg, transparent 8%, rgba(140,29,64,.2) 42%, rgba(140,29,64,.08) 61%, transparent 86%); filter: blur(18px); transform: rotate(-8deg) translate3d(0,0,0); }
-.ruby-haze { inset: -16% -18%; z-index: 1; opacity: .22; background: radial-gradient(ellipse at 52% 48%, rgba(140,29,64,.18), transparent 42%), radial-gradient(ellipse at 36% 72%, rgba(140,29,64,.08), transparent 32%); filter: blur(36px); transform: translate3d(0,0,0); }
+.ruby-bloom { inset: 8% 4% 0; z-index: 0; opacity: .3; background: radial-gradient(circle at 50% 54%, rgba(140,29,64,.34), rgba(140,29,64,.13) 26%, transparent 62%); filter: blur(28px); transform: translate3d(0,0,0); }
+.ruby-spill { inset: 24% 6% 12%; z-index: 1; opacity: .3; background: linear-gradient(110deg, transparent 8%, rgba(140,29,64,.2) 42%, rgba(140,29,64,.08) 61%, transparent 86%); filter: blur(18px); transform: rotate(-8deg) translate3d(0,0,0); }
+.ruby-haze { inset: -16% -18%; z-index: 1; opacity: .2; background: radial-gradient(ellipse at 52% 48%, rgba(140,29,64,.18), transparent 42%), radial-gradient(ellipse at 36% 72%, rgba(140,29,64,.08), transparent 32%); filter: blur(36px); transform: translate3d(0,0,0); }
+.ruby-pulse { inset: 20% 18%; z-index: 1; border: 1px solid rgba(140,29,64,.22); border-radius: 50%; opacity: 0; transform: scale(.76); }
 .ruby-reflection { z-index: 2; height: 1px; opacity: .44; background: linear-gradient(90deg, transparent, rgba(140,29,64,.72), rgba(244,246,248,.16), transparent); transform-origin: center; }
 .ruby-reflection-1 { width: 64%; top: 34%; left: 18%; transform: rotate(-17deg); }
 .ruby-reflection-2 { width: 52%; bottom: 22%; left: 24%; opacity: .28; transform: rotate(10deg); }
+.hero-signal-network { position: absolute; inset: 4%; z-index: 2; width: 92%; height: 92%; pointer-events: none; overflow: visible; }
+.hero-signal-route { fill: none; stroke: rgba(140,29,64,.32); stroke-width: 1; stroke-linecap: round; stroke-dasharray: 6 18; opacity: .58; vector-effect: non-scaling-stroke; }
+.hero-signal-route.route-2, .hero-signal-route.route-4 { stroke: rgba(206,221,234,.18); }
+.hero-signal-packet { fill: rgba(244,246,248,.72); opacity: 0; filter: drop-shadow(0 0 8px rgba(140,29,64,.72)); }
+.hero-data-layer { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.hero-data-element { position: absolute; width: 34px; height: 1px; opacity: .28; background: linear-gradient(90deg, transparent, rgba(140,29,64,.72), transparent); transform-origin: center; }
+.hero-data-element::before { content: ""; position: absolute; right: 0; top: -2px; width: 5px; height: 5px; border-radius: 50%; background: rgba(206,221,234,.56); box-shadow: 0 0 10px rgba(140,29,64,.46); }
+.hero-data-element::after { content: ""; position: absolute; left: 12px; top: -7px; width: 1px; height: 14px; background: rgba(140,29,64,.18); }
+.hero-data-element.data-1 { --data-rotation: 18deg; top: 22%; left: 26%; transform: rotate(var(--data-rotation)); }
+.hero-data-element.data-2 { --data-rotation: -24deg; top: 30%; right: 18%; transform: rotate(var(--data-rotation)); }
+.hero-data-element.data-3 { --data-rotation: -8deg; top: 61%; left: 15%; transform: rotate(var(--data-rotation)); }
+.hero-data-element.data-4 { --data-rotation: 12deg; top: 63%; right: 13%; transform: rotate(var(--data-rotation)); }
+.hero-data-element.data-5 { --data-rotation: 90deg; bottom: 17%; left: 40%; transform: rotate(var(--data-rotation)); }
+.hero-data-element.data-6 { --data-rotation: 82deg; top: 18%; left: 50%; transform: rotate(var(--data-rotation)); }
+.hero-data-element.data-7 { --data-rotation: 35deg; top: 42%; left: 31%; transform: rotate(var(--data-rotation)); }
+.hero-data-element.data-8 { --data-rotation: -38deg; top: 44%; right: 28%; transform: rotate(var(--data-rotation)); }
+.hero-data-element.data-9 { --data-rotation: 6deg; bottom: 28%; left: 23%; transform: rotate(var(--data-rotation)); }
+.hero-data-element.data-10 { --data-rotation: -14deg; bottom: 30%; right: 22%; transform: rotate(var(--data-rotation)); }
+.hero-verification-layer { position: absolute; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; }
+.hero-grid-field { position: absolute; inset: 9% 10%; opacity: .16; background-image: linear-gradient(rgba(140,29,64,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(206,221,234,.09) 1px, transparent 1px); background-size: 34px 34px; mask-image: radial-gradient(ellipse at 50% 50%, #000 0 36%, transparent 72%); }
+.hero-verification-sweep { position: absolute; inset: -22% 12%; opacity: 0; background: linear-gradient(100deg, transparent 16%, rgba(140,29,64,.14) 46%, rgba(244,246,248,.05) 52%, transparent 78%); filter: blur(10px); transform: translate3d(-42%, 0, 0) skewX(-12deg); }
 .home-system-core { position: absolute; z-index: 3; inset: 50% auto auto 50%; width: 148px; height: 148px; display: grid; place-items: center; border: 1px solid rgba(140,29,64,.54); border-radius: 50%; background: radial-gradient(circle at 50% 45%, rgba(140,29,64,.28), transparent 48%), #070b11; transform: translate(-50%, -50%); overflow: hidden; }
 .home-system-core::before { content: ""; position: absolute; inset: 18%; z-index: 0; border-radius: 50%; background: radial-gradient(circle, rgba(140,29,64,.5), rgba(140,29,64,.18) 38%, transparent 72%); filter: blur(12px); opacity: .62; }
 .home-system-core::after { content: ""; position: absolute; inset: 0; z-index: 2; background: linear-gradient(135deg, transparent 20%, rgba(244,246,248,.1) 44%, transparent 54%); opacity: .42; mix-blend-mode: screen; }
@@ -509,21 +537,59 @@ summary:focus-visible { border-radius: 4px; }
   .ruby-spill { animation: rubySpill 12s ease-in-out infinite alternate; }
   .ruby-haze { animation: rubyHaze 15s ease-in-out infinite alternate; }
   .ruby-reflection { animation: rubyReflection 11s ease-in-out infinite alternate; }
-  .home-system-core::before { animation: rubyCore 10s ease-in-out infinite alternate; }
+  .ruby-pulse { animation: rubyPulse 26s ease-in-out infinite; }
+  .hero-signal-route { animation: routeActivation 18s ease-in-out infinite; }
+  .hero-signal-route.route-2 { animation-delay: 3s; }
+  .hero-signal-route.route-3 { animation-delay: 6s; }
+  .hero-signal-route.route-4 { animation-delay: 9s; }
+  .hero-signal-route.route-5 { animation-delay: 12s; }
+  .hero-signal-packet { animation: packetVisibility 13s ease-in-out infinite; }
+  .hero-signal-packet.packet-2 { animation-duration: 16s; animation-delay: 4s; }
+  .hero-signal-packet.packet-3 { animation-duration: 18s; animation-delay: 7s; }
+  .hero-signal-packet.packet-4 { animation-duration: 21s; animation-delay: 11s; }
+  .hero-data-element { animation: dataTelemetry 17s ease-in-out infinite; }
+  .hero-data-element.data-2, .hero-data-element.data-7 { animation-duration: 19s; animation-delay: 2s; }
+  .hero-data-element.data-3, .hero-data-element.data-8 { animation-duration: 23s; animation-delay: 5s; }
+  .hero-data-element.data-4, .hero-data-element.data-9 { animation-duration: 21s; animation-delay: 8s; }
+  .hero-data-element.data-5, .hero-data-element.data-10 { animation-duration: 25s; animation-delay: 11s; }
+  .hero-grid-field { animation: gridBreath 24s ease-in-out infinite; }
+  .hero-verification-sweep { animation: verificationSweep 28s ease-in-out infinite; }
+  .home-system-visual { animation: heroEnvironmentIn 1.35s ease-out both; }
+  .home-system-core { animation: coreActivate 1.25s .28s ease-out both; }
+  .hero-signal-network { animation: signalNetworkIn 1.35s .48s ease-out both; }
+  .hero-data-layer, .hero-verification-layer, .home-system-node { animation: systemLayerIn 1.2s .58s ease-out both; }
+  .home-hero-copy .eyebrow { animation: heroCopyResolve .8s .72s ease-out both; }
+  .home-hero h1 { animation: heroCopyResolve .9s .86s ease-out both; }
+  .home-hero-lead { animation: heroCopyResolve .9s 1s ease-out both; }
+  .home-proof-cues { animation: heroCopyResolve .8s 1.12s ease-out both; }
+  .home-hero .cta { animation: heroCopyResolve .8s 1.24s ease-out both; }
+  .home-system-core::before { animation: rubyCore 11s ease-in-out infinite alternate; }
   .method-grid li { animation: revealStep .55s ease both; animation-timeline: view(); animation-range: entry 12% cover 28%; }
   @keyframes drift { to { transform: scale(1.05) translateX(-1%); } }
   @keyframes signalTravel { 0% { transform: translateX(0); opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { transform: translateX(34vw); opacity: 0; } }
   @keyframes blueprintSignal { to { stroke-dashoffset: -76; } }
-  @keyframes rubyBloom { from { opacity: .27; transform: scale(.98) translate3d(-1%, 1%, 0); } to { opacity: .39; transform: scale(1.04) translate3d(1%, -1%, 0); } }
-  @keyframes rubySpill { from { opacity: .26; transform: rotate(-8deg) translate3d(-1.5%, 1%, 0); } to { opacity: .38; transform: rotate(-7deg) translate3d(1.5%, -1%, 0); } }
-  @keyframes rubyHaze { from { opacity: .16; transform: translate3d(-1%, 0, 0) scale(1); } to { opacity: .25; transform: translate3d(1%, -1%, 0) scale(1.03); } }
+  @keyframes rubyBloom { from { opacity: .24; transform: scale(.985) translate3d(-1%, 1%, 0); } to { opacity: .36; transform: scale(1.035) translate3d(1%, -1%, 0); } }
+  @keyframes rubySpill { from { opacity: .24; transform: rotate(-8deg) translate3d(-1.2%, 1%, 0); } to { opacity: .34; transform: rotate(-7deg) translate3d(1.2%, -1%, 0); } }
+  @keyframes rubyHaze { from { opacity: .14; transform: translate3d(-1%, 0, 0) scale(1); } to { opacity: .23; transform: translate3d(1%, -1%, 0) scale(1.025); } }
   @keyframes rubyReflection { from { opacity: .2; filter: blur(.2px); } to { opacity: .46; filter: blur(.8px); } }
-  @keyframes rubyCore { from { opacity: .48; transform: scale(.96); } to { opacity: .7; transform: scale(1.04); } }
+  @keyframes rubyPulse { 0%, 70%, 100% { opacity: 0; transform: scale(.76); } 78% { opacity: .24; } 92% { opacity: 0; transform: scale(1.18); } }
+  @keyframes routeActivation { 0%, 62%, 100% { opacity: .34; stroke-dashoffset: 0; } 72%, 82% { opacity: .72; } 96% { stroke-dashoffset: -24; } }
+  @keyframes packetVisibility { 0%, 12%, 88%, 100% { opacity: 0; } 28%, 70% { opacity: .78; } }
+  @keyframes dataTelemetry { 0%, 58%, 100% { opacity: .12; transform: translate3d(0,0,0) rotate(var(--data-rotation, 0deg)); } 66%, 76% { opacity: .42; } 88% { opacity: .18; transform: translate3d(10px,-4px,0) rotate(var(--data-rotation, 0deg)); } }
+  @keyframes gridBreath { 0%, 100% { opacity: .1; } 44%, 56% { opacity: .2; } }
+  @keyframes verificationSweep { 0%, 68%, 100% { opacity: 0; transform: translate3d(-42%, 0, 0) skewX(-12deg); } 74%, 82% { opacity: .54; } 94% { opacity: 0; transform: translate3d(42%, 0, 0) skewX(-12deg); } }
+  @keyframes heroEnvironmentIn { from { opacity: .72; transform: translate3d(0, 8px, 0); } to { opacity: 1; transform: none; } }
+  @keyframes coreActivate { from { opacity: .78; transform: translate(-50%, -50%) scale(.96); } to { opacity: 1; transform: translate(-50%, -50%) scale(1); } }
+  @keyframes signalNetworkIn { from { opacity: 0; transform: scale(.985); } to { opacity: 1; transform: scale(1); } }
+  @keyframes systemLayerIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes heroCopyResolve { from { opacity: .001; transform: translate3d(0, 10px, 0); } to { opacity: 1; transform: none; } }
+  @keyframes rubyCore { from { opacity: .46; transform: scale(.975); } to { opacity: .66; transform: scale(1.025); } }
   @keyframes revealStep { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+  .hero-signal-packet { display: none; }
 }
 @media (max-width: 1050px) {
   .menu-toggle { display: grid; }
@@ -539,6 +605,7 @@ summary:focus-visible { border-radius: 4px; }
   .discovery-timeline { grid-template-columns: repeat(4, 1fr); row-gap: 1rem; }
   .home-hero-layout { grid-template-columns: minmax(0, 1fr) minmax(320px, .72fr); gap: 2.5rem; }
   .home-system-visual { min-height: 440px; }
+  .hero-data-element.data-8, .hero-data-element.data-9, .hero-data-element.data-10 { display: none; }
   .home-problem-grid, .home-capability-grid { grid-template-columns: repeat(3, 1fr); }
   .home-method-list { grid-template-columns: repeat(4, 1fr); }
   .home-method-list li { min-height: 150px; }
@@ -556,6 +623,7 @@ summary:focus-visible { border-radius: 4px; }
   .services-engagement { grid-template-columns: 1fr; }
   .home-hero-layout { gap: 3rem; }
   .home-system-visual { width: min(100%, 520px); min-height: 410px; margin-inline: auto; }
+  .hero-data-element.data-6, .hero-data-element.data-7 { display: none; }
   .home-problem-grid, .home-capability-grid, .home-method-list { grid-template-columns: 1fr 1fr; }
   .home-signal-card, .home-capability-card { min-height: 0; }
   .home-signal-card h3, .home-capability-card h3 { margin-top: 1.8rem; }
@@ -616,6 +684,7 @@ summary:focus-visible { border-radius: 4px; }
   .home-hero::before { background-position: 54% center; opacity: .72; }
   .home-hero .cta { align-items: stretch; flex-direction: column; }
   .home-system-visual { min-height: 350px; border-radius: 16px; }
+  .hero-data-element.data-4, .hero-data-element.data-5 { display: none; }
   .home-system-core { width: 105px; height: 105px; }
   .home-system-node { width: 43%; padding: .5rem; font-size: .62rem; }
   .home-system-node-1 { top: 6%; left: 4%; }
