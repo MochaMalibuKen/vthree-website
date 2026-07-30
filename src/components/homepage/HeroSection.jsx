@@ -55,6 +55,10 @@ export default function HeroSection() {
           <span className="hero-data-element data-9" />
           <span className="hero-data-element data-10" />
         </div>
+        <div className="hero-verification-layer" aria-hidden="true">
+          <span className="hero-grid-field" />
+          <span className="hero-verification-sweep" />
+        </div>
         <span className="ruby-environment ruby-reflection ruby-reflection-1" />
         <span className="ruby-environment ruby-reflection ruby-reflection-2" />
         <span className="home-system-core"><img src="/images/branding/vthree512microcoremarkv1.webp" alt="" /></span>

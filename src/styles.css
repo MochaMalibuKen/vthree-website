@@ -425,6 +425,9 @@ textarea { resize: vertical; }
 .hero-data-element.data-8 { --data-rotation: -38deg; top: 44%; right: 28%; transform: rotate(var(--data-rotation)); }
 .hero-data-element.data-9 { --data-rotation: 6deg; bottom: 28%; left: 23%; transform: rotate(var(--data-rotation)); }
 .hero-data-element.data-10 { --data-rotation: -14deg; bottom: 30%; right: 22%; transform: rotate(var(--data-rotation)); }
+.hero-verification-layer { position: absolute; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; }
+.hero-grid-field { position: absolute; inset: 9% 10%; opacity: .16; background-image: linear-gradient(rgba(140,29,64,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(206,221,234,.09) 1px, transparent 1px); background-size: 34px 34px; mask-image: radial-gradient(ellipse at 50% 50%, #000 0 36%, transparent 72%); }
+.hero-verification-sweep { position: absolute; inset: -22% 12%; opacity: 0; background: linear-gradient(100deg, transparent 16%, rgba(140,29,64,.14) 46%, rgba(244,246,248,.05) 52%, transparent 78%); filter: blur(10px); transform: translate3d(-42%, 0, 0) skewX(-12deg); }
 .home-system-core { position: absolute; z-index: 3; inset: 50% auto auto 50%; width: 148px; height: 148px; display: grid; place-items: center; border: 1px solid rgba(140,29,64,.54); border-radius: 50%; background: radial-gradient(circle at 50% 45%, rgba(140,29,64,.28), transparent 48%), #070b11; transform: translate(-50%, -50%); overflow: hidden; }
 .home-system-core::before { content: ""; position: absolute; inset: 18%; z-index: 0; border-radius: 50%; background: radial-gradient(circle, rgba(140,29,64,.5), rgba(140,29,64,.18) 38%, transparent 72%); filter: blur(12px); opacity: .62; }
 .home-system-core::after { content: ""; position: absolute; inset: 0; z-index: 2; background: linear-gradient(135deg, transparent 20%, rgba(244,246,248,.1) 44%, transparent 54%); opacity: .42; mix-blend-mode: screen; }
@@ -543,6 +546,8 @@ summary:focus-visible { border-radius: 4px; }
   .hero-data-element.data-3, .hero-data-element.data-8 { animation-duration: 23s; animation-delay: 5s; }
   .hero-data-element.data-4, .hero-data-element.data-9 { animation-duration: 21s; animation-delay: 8s; }
   .hero-data-element.data-5, .hero-data-element.data-10 { animation-duration: 25s; animation-delay: 11s; }
+  .hero-grid-field { animation: gridBreath 24s ease-in-out infinite; }
+  .hero-verification-sweep { animation: verificationSweep 28s ease-in-out infinite; }
   .home-system-core::before { animation: rubyCore 11s ease-in-out infinite alternate; }
   .method-grid li { animation: revealStep .55s ease both; animation-timeline: view(); animation-range: entry 12% cover 28%; }
   @keyframes drift { to { transform: scale(1.05) translateX(-1%); } }
@@ -556,6 +561,8 @@ summary:focus-visible { border-radius: 4px; }
   @keyframes routeActivation { 0%, 62%, 100% { opacity: .34; stroke-dashoffset: 0; } 72%, 82% { opacity: .72; } 96% { stroke-dashoffset: -24; } }
   @keyframes packetVisibility { 0%, 12%, 88%, 100% { opacity: 0; } 28%, 70% { opacity: .78; } }
   @keyframes dataTelemetry { 0%, 58%, 100% { opacity: .12; transform: translate3d(0,0,0) rotate(var(--data-rotation, 0deg)); } 66%, 76% { opacity: .42; } 88% { opacity: .18; transform: translate3d(10px,-4px,0) rotate(var(--data-rotation, 0deg)); } }
+  @keyframes gridBreath { 0%, 100% { opacity: .1; } 44%, 56% { opacity: .2; } }
+  @keyframes verificationSweep { 0%, 68%, 100% { opacity: 0; transform: translate3d(-42%, 0, 0) skewX(-12deg); } 74%, 82% { opacity: .54; } 94% { opacity: 0; transform: translate3d(42%, 0, 0) skewX(-12deg); } }
   @keyframes rubyCore { from { opacity: .46; transform: scale(.975); } to { opacity: .66; transform: scale(1.025); } }
   @keyframes revealStep { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 }
