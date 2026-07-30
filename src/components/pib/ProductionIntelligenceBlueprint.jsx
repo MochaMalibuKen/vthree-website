@@ -42,11 +42,11 @@ export default function ProductionIntelligenceBlueprint() {
           <p>Intelligence synthesized. Strategy engineered. Results produced.</p>
         </div>
 
-        <p className="sr-only">
+        <p id="pib-accessible-summary" className="sr-only">
           The Production Intelligence Blueprint synthesizes eleven intelligence inputs into a central production plan that produces seven operational outputs, including strategic direction, design, content, development, launch, measurement, and continuous improvement.
         </p>
 
-        <div className="pib-diagram" aria-label="Production Intelligence Blueprint system diagram">
+        <div className="pib-diagram" aria-label="Production Intelligence Blueprint system diagram" aria-describedby="pib-accessible-summary">
           <svg className="pib-connectors" viewBox="0 0 1200 760" preserveAspectRatio="none" aria-hidden="true" focusable="false">
             <path className="pib-orbit orbit-1" d="M420 332a180 154 0 1 0 360 0a180 154 0 1 0 -360 0" />
             <path className="pib-orbit orbit-2" d="M366 332a234 196 0 1 0 468 0a234 196 0 1 0 -468 0" />
@@ -70,10 +70,10 @@ export default function ProductionIntelligenceBlueprint() {
             <path className="pib-output-line" d="M600 642H953V704" />
             <path className="pib-output-line" d="M600 642H1130V704" />
           </svg>
-          <div className="pib-inputs" aria-label="Intelligence inputs">
+          <div className="pib-inputs" aria-label="Intelligence inputs" role="list">
             <p className="pib-group-label">Intelligence Inputs</p>
             {inputs.map(input => (
-              <article className={`pib-input-node ${input.position}`} key={input.title}>
+              <article className={`pib-input-node ${input.position}`} key={input.title} role="listitem">
                 <span className="pib-node-icon" aria-hidden="true">{input.icon}</span>
                 <div>
                   <h3>{input.title}</h3>
@@ -101,10 +101,10 @@ export default function ProductionIntelligenceBlueprint() {
             ))}
           </dl>
 
-          <div className="pib-outputs" aria-label="Intelligence outputs">
+          <div className="pib-outputs" aria-label="Intelligence outputs" role="list">
             <p className="pib-group-label">Intelligence Outputs</p>
             {outputs.map(output => (
-              <article className="pib-output-node" key={output.title}>
+              <article className="pib-output-node" key={output.title} role="listitem">
                 <h3>{output.title}</h3>
                 <p>{output.description}</p>
               </article>
