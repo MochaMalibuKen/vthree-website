@@ -23,6 +23,7 @@ export default function HeroSection() {
         <span className="ruby-environment ruby-bloom" />
         <span className="ruby-environment ruby-spill" />
         <span className="ruby-environment ruby-haze" />
+        <span className="ruby-environment ruby-pulse" />
         <span className="ruby-environment ruby-reflection ruby-reflection-1" />
         <span className="ruby-environment ruby-reflection ruby-reflection-2" />
         <span className="home-system-core"><img src="/images/branding/vthree512microcoremarkv1.webp" alt="" /></span>
