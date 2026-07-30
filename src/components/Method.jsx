@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { MethodIcon } from "./VisualDiagrams.jsx";
+import ProductionIntelligenceBlueprint from "./pib/ProductionIntelligenceBlueprint.jsx";
 
 const stages = ["discover", "assess", "design", "build", "launch", "optimize", "grow"];
 
@@ -34,6 +35,7 @@ export default function Method({ headingLevel = "h2" }) {
           </div>
           <ul>{Array.isArray(principles) && principles.map(item => <li key={item}>{item}</li>)}</ul>
         </div>
+        <ProductionIntelligenceBlueprint />
         <ol className="method-grid method-visual">
           {stages.map((stage, index) => (
             <li key={stage} className="method-card">
