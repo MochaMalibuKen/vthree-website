@@ -65,14 +65,14 @@
       "cta": "See How We Work"
     },
     "capabilities": {
-      "eyebrow": "COORDINATED CAPABILITIES",
-      "title": "Build what the organization needs—and connect it to the larger system.",
+      "eyebrow": "CONNECTED CAPABILITIES",
+      "title": "Build a connected operating system, not a collection of one-off services.",
       "groups": [
-        "Strategy & Intelligence",
-        "Brand & Experience",
-        "Websites & Digital Platforms",
-        "Content & Campaigns",
-        "Systems & Automation"
+        "Strategy & direction",
+        "Brand & experience",
+        "Digital platforms",
+        "Content & campaigns",
+        "Systems & automation"
       ],
       "cta": "View Services"
     },
