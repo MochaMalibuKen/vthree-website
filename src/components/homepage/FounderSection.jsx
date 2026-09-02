@@ -7,8 +7,15 @@ export default function FounderSection() {
     <div className="container home-founder-layout">
       <figure className="home-founder-portrait">
         <picture>
-          <source srcSet="/images/founder/v3founder_photo.webp" type="image/webp" />
-          <img src="/images/founder/v3founder_photo.png" alt="Portrait of Kennieth Allen, Founder and Digital Architect of VThree" loading="lazy" decoding="async" />
+          <source srcSet="/images/founder/v3founder_photo.webp?v=20260901" type="image/webp" />
+          <img
+            src="/images/founder/v3founder_photo.png?v=20260901"
+            alt="Portrait of Kennieth Allen, Founder and Digital Architect of VThree"
+            width="1122"
+            height="1402"
+            loading="eager"
+            decoding="async"
+          />
         </picture>
       </figure>
       <div>
