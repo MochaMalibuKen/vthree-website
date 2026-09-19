@@ -51,3 +51,14 @@ test("initial register and next target are honest", () => {
     assert.equal(project.title, project.publicTitle);
   }
 });
+
+test("visual countdown targets Chicago launch and exclusive sprint end", async () => {
+  const { getSprintCountdown } = await import("../src/utils/sprint.js");
+  assert.deepEqual(getSprintCountdown(new Date("2026-09-22T04:00:00Z")), { days: 1, hours: 1, minutes: 0, seconds: 0 });
+  assert.deepEqual(getSprintCountdown(new Date("2026-09-23T04:59:59Z")), { days: 0, hours: 0, minutes: 0, seconds: 1 });
+  // The active sprint includes the extra hour from Chicago's fall DST change.
+  assert.deepEqual(getSprintCountdown(new Date("2026-09-23T05:00:00Z")), { days: 100, hours: 1, minutes: 0, seconds: 0 });
+  assert.deepEqual(getSprintCountdown(new Date("2027-01-01T05:59:59Z")), { days: 0, hours: 0, minutes: 0, seconds: 1 });
+  assert.equal(getSprintCountdown(new Date("2027-01-01T06:00:00Z")), null);
+  assert.deepEqual(getSprintCountdown(new Date("2026-09-22T23:59:59Z"), "UTC"), { days: 0, hours: 0, minutes: 0, seconds: 1 });
+});

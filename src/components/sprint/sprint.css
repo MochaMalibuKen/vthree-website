@@ -50,3 +50,12 @@
   .sprint-metrics > div + div { padding-top: 1rem; border-top: 1px solid var(--line); }
   .sprint-page h2 { font-size: 2rem; }
 }
+.sprint-clock { padding: clamp(1rem, 3vw, 1.75rem); margin-bottom: 2rem; background: var(--bg); border: 1px solid var(--line-strong); border-left: 3px solid var(--ruby); border-radius: var(--radius); }
+.sprint-clock-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .5rem 1rem; margin-bottom: 1.2rem; }
+.sprint-clock-heading .sprint-label { margin: 0; color: var(--ink); }
+.sprint-clock-heading > span, .sprint-clock-note { color: var(--muted); font-size: .78rem; }
+.sprint-clock-digits { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(.4rem, 1.5vw, 1rem); max-width: 720px; }
+.sprint-clock-unit { display: grid; text-align: center; gap: .4rem; padding: clamp(.65rem, 2vw, 1.25rem) .25rem; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; }
+.sprint-clock-unit strong { font-size: clamp(1.6rem, 5vw, 3.4rem); line-height: 1.1; font-variant-numeric: tabular-nums; letter-spacing: -.025em; }
+.sprint-clock-unit span { font-size: clamp(.6rem, 1.5vw, .75rem); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.sprint-clock-note { margin: 1rem 0 0; }

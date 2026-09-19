@@ -12,6 +12,13 @@ export default function SprintSummary({ compact = false }) {
   return <section className={`sprint-summary ${compact ? "section sprint-home" : ""}`} aria-label="100 Day Implementation Sprint" lang="en">
     <div className={compact ? "container" : undefined}>
       {compact && <><p className="eyebrow">Applied implementation</p><h2>100 Day Implementation Sprint</h2></>}
+      {state?.status !== "complete" && <div className="sprint-clock">
+        <div className="sprint-clock-heading"><p className="sprint-label">{state?.status === "active" ? "Time left in the sprint" : "Countdown to launch"}</p><span>September 23–December 31, 2026</span></div>
+        <div className="sprint-clock-digits" role="timer" aria-live="off" aria-label={state?.status === "active" ? "Time remaining until the sprint closes" : "Time remaining until the sprint begins"}>
+          {["days", "hours", "minutes", "seconds"].map(unit => <div className="sprint-clock-unit" key={unit}><strong>{state?.countdown ? String(state.countdown[unit]).padStart(2, "0") : "—"}</strong><span>{unit}</span></div>)}
+        </div>
+        <p className="sprint-clock-note">{state?.status === "active" ? "Time remaining in the scheduled sprint. Verified delivery is tracked below." : "The countdown to 100 days of applied implementation."}</p>
+      </div>}
       <div className="sprint-metrics">
         <div><p className="sprint-label">Sprint status</p><strong className="sprint-count">{label}</strong>
           {state?.status === "pre" && <p>The 100 Day Sprint begins September 23, 2026<br />{state.daysUntilLaunch} days until launch</p>}
