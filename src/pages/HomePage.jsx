@@ -13,6 +13,8 @@ import IntelligenceSection from "../components/homepage/IntelligenceSection.jsx"
 import FounderSection from "../components/homepage/FounderSection.jsx";
 import AssessmentCTASection from "../components/homepage/AssessmentCTASection.jsx";
 
+import SprintSummary from "../components/sprint/SprintSummary.jsx";
+
 export default function HomePage() {
   const { t } = useTranslation();
   return <main>
@@ -24,6 +26,7 @@ export default function HomePage() {
     <MethodSection />
     <ServicesSection />
     <ProofSection />
+    <SprintSummary compact />
     <AudienceFitSection />
     <PricingGuidanceSection />
     <IntelligenceSection />

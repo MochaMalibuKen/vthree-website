@@ -16,6 +16,8 @@ import ContactPage from "./pages/ContactPage.jsx";
 import PrivacyPage from "./pages/PrivacyPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 
+import SprintPage from "./pages/SprintPage.jsx";
+
 export default function App() {
   const { t } = useTranslation();
   return (
@@ -26,6 +28,7 @@ export default function App() {
       <div id="site-content" tabIndex="-1">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/100-day-sprint" element={<SprintPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/method" element={<MethodPage />} />
           <Route path="/work" element={<WorkPage />} />

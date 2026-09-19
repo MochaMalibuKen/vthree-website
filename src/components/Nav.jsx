@@ -52,6 +52,7 @@ export default function Nav() {
         <NavLink to="/method" className={navClass}>{t("nav.method", { defaultValue: "Method" })}</NavLink>
         <NavLink to="/work" className={navClass}>{t("nav.work", { defaultValue: "Work" })}</NavLink>
         <NavLink to="/intelligence" className={navClass}>{t("nav.insights", { defaultValue: "Intelligence" })}</NavLink>
+        <NavLink to="/100-day-sprint" className={navClass}>100 Day Sprint</NavLink>
         <NavLink to="/about" className={navClass}>{t("nav.about", { defaultValue: "About" })}</NavLink>
         <NavLink to="/pricing" className={navClass}>{t("nav.pricing", { defaultValue: "Pricing" })}</NavLink>
         <NavLink to="/contact" className={navClass}>{t("nav.contact", { defaultValue: "Contact" })}</NavLink>
